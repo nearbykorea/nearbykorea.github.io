@@ -1,0 +1,1234 @@
+{
+  "title": "Korean culture: learning platforms and discovery resources",
+  "reviewed_at": "2026-09-29",
+  "scope": "An English-first research catalogue for people in the UK. Services, learning resources and UK participation routes are counted, not every individual course, branch, app or social account.",
+  "completeness": "Broad first-pass research, not an exhaustive census. Search discoverability, language, access restrictions and changing services limit coverage.",
+  "verification": "Provider pages, official institutional sources and publisher-owned UK app listings checked. Search-index evidence is used where full pages were unavailable. No paid purchase, account registration, app installation or UK playback test was performed.",
+  "cost_note": "Cost labels describe the reviewed offer only. Public resources do not mean all products are free. Check plan, course and certificate conditions.",
+  "excluded_from_scope": [
+    "Every individual social-media creator or lesson",
+    "Universities offering only on-campus courses in Korea",
+    "Shopping-only stores",
+    "Unverified event dates",
+    "General entertainment subscriptions without a distinct Korean learning or discovery route"
+  ],
+  "demand_sources": [
+    {
+      "url": "https://kofice.or.kr/www/bbs/view.do?bbsSn=53378&mnucd=103&scBbsMngSn=5",
+      "title": "2026 Overseas Hallyu Survey (2025 reference year)",
+      "note": "27,400 Korean-content-experienced respondents aged 15–59 across 30 countries/regions. Global sample figures are not UK population figures."
+    },
+    {
+      "url": "https://blog.duolingo.com/2025-duolingo-language-report/",
+      "title": "2025 Duolingo Language Report",
+      "note": "Korean ranks sixth among languages studied on Duolingo globally. Platform-specific evidence, not a UK market-share estimate."
+    }
+  ],
+  "entries": [
+    {
+      "id": "online-king-sejong-institute",
+      "name": "Online King Sejong Institute",
+      "korean_name": "온라인 세종학당",
+      "category": "Korean language",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Free courses",
+      "url": "https://www.iksi.or.kr/index.html",
+      "summary": "Korean courses and cultural programmes, including food and festivals.",
+      "note": "Self-study and teacher-supported formats have different registration periods. The English introductory course is complimentary.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.iksi.or.kr/index.html",
+        "https://www.iksi.or.kr/lms/crse/crseApply.do?crseNo=119369"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "nuri-sejong-hakdang",
+      "name": "Nuri Sejong Hakdang",
+      "korean_name": "누리 세종학당",
+      "category": "Korean language",
+      "kind": "Reference",
+      "mode": "Online",
+      "cost": "Free resources",
+      "url": "https://nuri.iksi.or.kr/front/main/main.do",
+      "summary": "Textbooks, audio and materials for learning Korean language and culture.",
+      "note": "A resource portal in the same Sejong network; some resources require an account. Kept separate from the course platform because the user task differs.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://nuri.iksi.or.kr/front/main/main.do"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "talk-to-me-in-korean",
+      "name": "Talk To Me In Korean",
+      "korean_name": "톡투미인코리안",
+      "category": "Korean language",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Paid courses; public samples",
+      "url": "https://courses.talktomeinkorean.com/",
+      "summary": "Structured Korean lessons, listening practice and everyday conversations.",
+      "note": "TTMIK Stories and its book shop are part of this entry, rather than extra platform counts.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://courses.talktomeinkorean.com/",
+        "https://blog.talktomeinkorean.com/ttmikstories-daily-reading/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "how-to-study-korean",
+      "name": "How to Study Korean",
+      "korean_name": "",
+      "category": "Korean language",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Free lessons; paid extras",
+      "url": "https://www.howtostudykorean.com/",
+      "summary": "A sequenced written course from Hangeul to advanced grammar.",
+      "note": "A language course; wider culture is supplementary.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.howtostudykorean.com/",
+        "https://www.howtostudykorean.com/store/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "koreanclass101",
+      "name": "KoreanClass101",
+      "korean_name": "",
+      "category": "Korean language",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Free and paid access",
+      "url": "https://www.koreanclass101.com/lesson-library/beginner",
+      "summary": "Audio and video lessons with dedicated culture, holidays and society series.",
+      "note": "Check which lessons and teacher features are included in each plan.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.koreanclass101.com/lesson-library/beginner",
+        "https://www.koreanclass101.com/pricing?intcmp=site_25daychallenge_basicconversationalfluency"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "90-day-korean",
+      "name": "90 Day Korean",
+      "korean_name": "",
+      "category": "Korean language",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Paid membership; public articles",
+      "url": "https://www.90daykorean.com/",
+      "summary": "Structured Korean courses, cultural explainers and coaching options.",
+      "note": "Official homepage read directly after search-tool fetch errors. Marketing promises about fluency are not treated as verified outcomes.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.90daykorean.com/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "go-billy-korean",
+      "name": "GO! Billy Korean",
+      "korean_name": "",
+      "category": "Korean language",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Public videos; paid books",
+      "url": "https://gobillykorean.com/",
+      "summary": "Korean explanations, video lessons and supporting study books.",
+      "note": "A teacher-led learning site and channel, rather than a formal qualification.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://gobillykorean.com/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "seemile",
+      "name": "SEEMILE",
+      "korean_name": "씨마일",
+      "category": "Korean language",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Check current plan",
+      "url": "https://www.seemile.com/",
+      "summary": "Korean video lessons and speaking practice.",
+      "note": "Some learning is delivered through apps; device and regional store availability need checking.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.seemile.com/",
+        "https://seemile.com/korean/en/speaking"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "teuida",
+      "name": "TEUIDA",
+      "korean_name": "트이다",
+      "category": "Korean language",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Check current plan",
+      "url": "https://www.teuida.net/en/learn/korean",
+      "summary": "Speaking practice through simulated everyday situations.",
+      "note": "The provider announced a Korean-for-English-speakers web version on 24 September 2026; app installation is not the only route.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.teuida.net/en/learn/korean",
+        "https://www.teuida.net/en/blog/teuidas-web-app-is-here-for-korean-english"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "lingory",
+      "name": "Lingory",
+      "korean_name": "링고리",
+      "category": "Korean language",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Free with in-app purchases",
+      "url": "https://apps.apple.com/gb/app/lingory/id1556564572",
+      "summary": "Daily Korean lessons with vocabulary, listening and review exercises.",
+      "note": "UK Apple App Store listing checked; the separate website could not be fetched.",
+      "access": "UK app listing",
+      "language": "English support",
+      "sources": [
+        "https://apps.apple.com/gb/app/lingory/id1556564572"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "lingodeer",
+      "name": "LingoDeer",
+      "korean_name": "",
+      "category": "Korean language",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Check current plan",
+      "url": "https://www.lingodeer.com/language/korean",
+      "summary": "A general language app with a Korean course and grammar explanations.",
+      "note": "Useful for language foundations; not a dedicated Korean-culture curriculum.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.lingodeer.com/language/korean"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "duolingo",
+      "name": "Duolingo",
+      "korean_name": "",
+      "category": "Korean language",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Free learning; optional paid plans",
+      "url": "https://www.duolingo.com/course/ko/en/%ED%95%99%EC%8A%B5-%ED%95%9C%EA%B5%AD%EC%96%B4-%EC%98%A8%EB%9D%BC%EC%9D%B8",
+      "summary": "Short Korean language exercises on a general language-learning platform.",
+      "note": "Useful for a daily habit; do not treat app popularity as a measure of cultural understanding.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.duolingo.com/course/ko/en/%ED%95%99%EC%8A%B5-%ED%95%9C%EA%B5%AD%EC%96%B4-%EC%98%A8%EB%9D%BC%EC%9D%B8"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "drops",
+      "name": "Drops",
+      "korean_name": "",
+      "category": "Korean language",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Check current plan",
+      "url": "https://languagedrops.com/language/learn-korean",
+      "summary": "Visual Korean vocabulary practice.",
+      "note": "A vocabulary supplement, rather than a complete culture course.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://languagedrops.com/language/learn-korean"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "memrise",
+      "name": "Memrise",
+      "korean_name": "",
+      "category": "Korean language",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Check current plan",
+      "url": "https://www.memrise.com/en/learn-korean",
+      "summary": "Korean words and phrases supported by video and practice activities.",
+      "note": "A general language platform with a Korean learning route.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.memrise.com/en/learn-korean"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "lingq",
+      "name": "LingQ",
+      "korean_name": "",
+      "category": "Korean language",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Check current plan",
+      "url": "https://www.lingq.com/en/learn-korean-online/",
+      "summary": "Korean reading and listening with vocabulary tools.",
+      "note": "Most useful as a way to learn from content; not a dedicated culture syllabus.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.lingq.com/en/learn-korean-online/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "korean-english-learners-dictionary",
+      "name": "Korean-English Learners’ Dictionary",
+      "korean_name": "한국어기초사전",
+      "category": "Korean language",
+      "kind": "Reference",
+      "mode": "Online",
+      "cost": "Free resources",
+      "url": "https://krdict.korean.go.kr/m/eng",
+      "summary": "An official learner dictionary for meanings and usage.",
+      "note": "A reference tool from the National Institute of Korean Language.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://krdict.korean.go.kr/m/eng"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "coursera-korean-courses",
+      "name": "Coursera — Korean courses",
+      "korean_name": "",
+      "category": "Culture courses",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Access varies by course",
+      "url": "https://www.coursera.org/learn/introduction-to-korean-philosophy-and-culture",
+      "summary": "University teaching on Korean philosophy and culture, plus language courses such as Yonsei’s First Step Korean.",
+      "note": "Check preview, full-course and certificate access separately; enrolment wording does not guarantee a free full course.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.coursera.org/learn/introduction-to-korean-philosophy-and-culture",
+        "https://www.coursera.org/learn/learn-korean/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "futurelearn-k-culture-studies",
+      "name": "FutureLearn — K-Culture Studies",
+      "korean_name": "",
+      "category": "Culture courses",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Limited free access; paid upgrades",
+      "url": "https://www.futurelearn.com/courses/the-rise-of-k-culture-discover-the-korean-wave-hallyu",
+      "summary": "Hanyang University’s introduction to Hallyu, K-pop, dramas, webtoons and digital culture.",
+      "note": "The reviewed course offers six weeks of limited free access; extended access and certificates are paid options.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.futurelearn.com/courses/the-rise-of-k-culture-discover-the-korean-wave-hallyu"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "k-mooc",
+      "name": "K-MOOC",
+      "korean_name": "한국형 온라인 공개강좌",
+      "category": "Culture courses",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Check course conditions",
+      "url": "https://www.kmooc.kr/view/course/detail/12485",
+      "summary": "University courses including Korean language and culture, leisure, and Korean thought.",
+      "note": "English materials and subtitles vary. A listed syllabus does not guarantee that the current enrolment window is open.",
+      "access": "Public offer",
+      "language": "English varies by course",
+      "sources": [
+        "https://www.kmooc.kr/view/course/detail/12485",
+        "https://www.kmooc.kr/view/course/detail/17127"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "class101",
+      "name": "CLASS101",
+      "korean_name": "",
+      "category": "Culture courses",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Check course or subscription",
+      "url": "https://class101.net/en/topic/korean",
+      "summary": "Creator courses covering Korean language and Korean cooking.",
+      "note": "An English catalogue does not guarantee English narration or subtitles for every class; inspect the individual course.",
+      "access": "Public offer",
+      "language": "English varies by course",
+      "sources": [
+        "https://class101.net/en/topic/korean"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "maangchi",
+      "name": "Maangchi",
+      "korean_name": "망치",
+      "category": "Food & cooking",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Free recipes; paid books",
+      "url": "https://www.maangchi.com/recipes",
+      "summary": "Step-by-step Korean recipes including kimchi, ingredient guidance and cooking videos.",
+      "note": "A useful bridge from learning a dish to finding ingredients in the UK.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.maangchi.com/recipes"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "korean-bapsang",
+      "name": "Korean Bapsang",
+      "korean_name": "한국 밥상",
+      "category": "Food & cooking",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Free web recipes",
+      "url": "https://www.koreanbapsang.com/",
+      "summary": "Home cooking, side dishes and recipes for Korean celebrations.",
+      "note": "",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.koreanbapsang.com/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "my-korean-kitchen",
+      "name": "My Korean Kitchen",
+      "korean_name": "",
+      "category": "Food & cooking",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Free web recipes; paid books",
+      "url": "https://mykoreankitchen.com/",
+      "summary": "Korean recipes and food explanations, with written instructions and videos.",
+      "note": "",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://mykoreankitchen.com/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "beyond-kimchee",
+      "name": "Beyond Kimchee",
+      "korean_name": "",
+      "category": "Food & cooking",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Free web recipes; paid books",
+      "url": "https://www.beyondkimchee.com/world-cuisine/korean/",
+      "summary": "Korean home cooking with photographs and step-by-step tutorials.",
+      "note": "",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.beyondkimchee.com/world-cuisine/korean/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "future-neighbor-futuredish",
+      "name": "Future Neighbor / FutureDish",
+      "korean_name": "",
+      "category": "Food & cooking",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Free web recipes",
+      "url": "https://futuredish.com/",
+      "summary": "Korean home recipes with video walkthroughs.",
+      "note": "Future Neighbor and FutureDish are one entry, not two platforms.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://futuredish.com/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "aaron-and-claire",
+      "name": "Aaron and Claire",
+      "korean_name": "",
+      "category": "Food & cooking",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Free web recipes; paid books",
+      "url": "https://aaronandclaire.com/",
+      "summary": "Practical Korean cooking tutorials and recipes.",
+      "note": "The wider recipe collection also includes other cuisines.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://aaronandclaire.com/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "seonkyoung-longest-asian-at-home",
+      "name": "Seonkyoung Longest — Asian at Home",
+      "korean_name": "",
+      "category": "Food & cooking",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Free web recipes",
+      "url": "https://seonkyounglongest.com/",
+      "summary": "Recipe and video instruction including Korean cooking.",
+      "note": "An Asian cooking resource; not every recipe is Korean.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://seonkyounglongest.com/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "hansik-korean-food-promotion-institute",
+      "name": "Hansik — Korean Food Promotion Institute",
+      "korean_name": "한식진흥원",
+      "category": "Food & cooking",
+      "kind": "Reference",
+      "mode": "Online",
+      "cost": "Public articles",
+      "url": "https://www.hansik.or.kr/magazines/list/magazineDetail/288/4041",
+      "summary": "English articles explaining Korean food, tableware and everyday eating culture.",
+      "note": "Useful for understanding a meal’s context alongside recipe websites.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.hansik.or.kr/magazines/list/magazineDetail/288/4041",
+        "https://www.hansik.or.kr/magazines/list/magazineDetail/125/3877?menuSn=429"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "korea-net",
+      "name": "Korea.net",
+      "korean_name": "",
+      "category": "History, art & society",
+      "kind": "Reference",
+      "mode": "Online",
+      "cost": "Public articles",
+      "url": "https://www.korea.net/NewsFocus/Culture/view?articleId=214296",
+      "summary": "Government cultural explainers and news for international readers.",
+      "note": "This source article is from 2022. Main/category routes returned redirect loops in this review; current navigation needs rechecking.",
+      "access": "Access issue noted",
+      "language": "English support",
+      "sources": [
+        "https://www.korea.net/NewsFocus/Culture/view?articleId=214296"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "koreana",
+      "name": "Koreana",
+      "korean_name": "코리아나",
+      "category": "History, art & society",
+      "kind": "Reference",
+      "mode": "Online",
+      "cost": "Public online articles",
+      "url": "https://www.koreana.or.kr/koreana/main.do",
+      "summary": "The Korea Foundation’s magazine on Korean arts, places and cultural life.",
+      "note": "English and Korean publication continues; the Foundation says other language editions have been on hiatus since 2025.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.koreana.or.kr/koreana/main.do",
+        "https://kf.or.kr/kfEng/cm/cntnts/cntntsView.do?cntntsId=1654&mi=2163"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "aks-understanding-korea",
+      "name": "AKS — Understanding Korea",
+      "korean_name": "한국학중앙연구원 한국이해자료",
+      "category": "History, art & society",
+      "kind": "Reference",
+      "mode": "Online",
+      "cost": "Public resources",
+      "url": "https://www.aks.ac.kr/ikorea/com/cmm/EgovContentView.do?lang=eng&menuNo=3010160000",
+      "summary": "Educational materials on Korean history and culture for international readers and teachers.",
+      "note": "Check individual publication dates for contemporary facts; historical teaching materials may remain useful.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.aks.ac.kr/ikorea/com/cmm/EgovContentView.do?lang=eng&menuNo=3010160000"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "google-arts-culture-korean-heritage",
+      "name": "Google Arts & Culture — Korean Heritage",
+      "korean_name": "",
+      "category": "History, art & society",
+      "kind": "Reference",
+      "mode": "Online",
+      "cost": "Free exhibitions",
+      "url": "https://artsandculture.google.com/project/korean-heritage",
+      "summary": "Museum partner stories on Korean dynasties, crafts, royal life and heritage.",
+      "note": "Use the online exhibits. Older references to separate Google products on the page are not evidence that those products still operate.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://artsandculture.google.com/project/korean-heritage"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "encyclopedia-of-korean-folk-culture",
+      "name": "Encyclopedia of Korean Folk Culture",
+      "korean_name": "한국민속대백과사전",
+      "category": "History, art & society",
+      "kind": "Reference",
+      "mode": "Online",
+      "cost": "Free resources",
+      "url": "https://folkency.nfm.go.kr/en/",
+      "summary": "English reference entries on customs, celebrations and folk life.",
+      "note": "Published by the National Folk Museum of Korea.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://folkency.nfm.go.kr/en/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "national-museum-of-korea",
+      "name": "National Museum of Korea",
+      "korean_name": "국립중앙박물관",
+      "category": "History, art & society",
+      "kind": "Reference",
+      "mode": "Online",
+      "cost": "Public online collection",
+      "url": "https://www.museum.go.kr/ENG/main/index.do",
+      "summary": "English collection information and links to online exhibits.",
+      "note": "Some immersive experiences described by the museum are inside the Seoul venue; do not label every VR attraction as remotely available.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.museum.go.kr/ENG/main/index.do"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "v-a-korea",
+      "name": "V&A — Korea",
+      "korean_name": "",
+      "category": "History, art & society",
+      "kind": "Reference",
+      "mode": "Online",
+      "cost": "Free online collection",
+      "url": "https://www.vam.ac.uk/collections/korea",
+      "summary": "Korean ceramics, textiles, fashion, design and digital art in the V&A collection.",
+      "note": "A collection record does not guarantee that an object is currently on display.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.vam.ac.uk/collections/korea"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "british-museum-korea",
+      "name": "British Museum — Korea",
+      "korean_name": "",
+      "category": "History, art & society",
+      "kind": "Reference",
+      "mode": "Hybrid",
+      "cost": "Free online resources",
+      "url": "https://www.britishmuseum.org/collection/galleries/korea",
+      "summary": "Korean art and history through Room 67, object highlights and a virtual tour.",
+      "note": "Check visiting arrangements separately from the online tour.",
+      "access": "UK venue and online resources",
+      "language": "English support",
+      "sources": [
+        "https://www.britishmuseum.org/collection/galleries/korea"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "lti-korea-digital-library",
+      "name": "LTI Korea — Digital Library",
+      "korean_name": "한국문학번역원 디지털도서관",
+      "category": "Books & film",
+      "kind": "Reference",
+      "mode": "Online",
+      "cost": "Access varies by item",
+      "url": "https://library.ltikorea.or.kr/ebooks",
+      "summary": "A discovery library for Korean literature translated into many languages.",
+      "note": "Catalogue visibility is not a promise that every book is freely readable. Some reading or lending services require login.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://library.ltikorea.or.kr/ebooks",
+        "https://library.ltikorea.or.kr/about/askLibrarian"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "korean-literature-now",
+      "name": "Korean Literature Now",
+      "korean_name": "",
+      "category": "Books & film",
+      "kind": "Reference",
+      "mode": "Online",
+      "cost": "Public articles",
+      "url": "https://klwave.or.kr/klw/magazines/aboutus.do",
+      "summary": "English fiction, poetry, interviews and essays from LTI Korea’s literary magazine.",
+      "note": "Use KLWAVE’s current magazine route; the older standalone domain could not be fetched.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://klwave.or.kr/klw/magazines/aboutus.do"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "korean-film-archive-korean-classic-film",
+      "name": "Korean Film Archive — Korean Classic Film",
+      "korean_name": "한국영상자료원",
+      "category": "Books & film",
+      "kind": "Reference",
+      "mode": "Online",
+      "cost": "Public films; title restrictions vary",
+      "url": "https://eng.koreafilm.or.kr/kofa/news/BC_0000056614",
+      "summary": "The archive’s official route to restored classic films and its YouTube channel.",
+      "note": "The linked guide is archival. English subtitles are available for some works; confirm playback and subtitles per film in the UK.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://eng.koreafilm.or.kr/kofa/news/BC_0000056614"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "the-korea-society",
+      "name": "The Korea Society",
+      "korean_name": "",
+      "category": "History, art & society",
+      "kind": "Reference",
+      "mode": "Online",
+      "cost": "Public recordings; events vary",
+      "url": "https://www.koreasociety.org/general/arts-culture/",
+      "summary": "Author talks, art, food and society programmes with recordings and webcasts.",
+      "note": "Based in New York. Recorded material is useful from the UK; live events may follow US time zones.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.koreasociety.org/general/arts-culture/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "e-gugak-academy",
+      "name": "e-Gugak Academy",
+      "korean_name": "국립국악원 e-국악아카데미",
+      "category": "Music & dance",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Public learning resources",
+      "url": "https://academy.gugak.go.kr/open/foreigner/main.do",
+      "summary": "An English-facing introduction to traditional music, instruments and Korean dance.",
+      "note": "Course language, instrument needs and account requirements vary.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://academy.gugak.go.kr/open/foreigner/main.do"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "steezy-studio",
+      "name": "STEEZY Studio",
+      "korean_name": "",
+      "category": "Music & dance",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Paid subscription; trial offered",
+      "url": "https://www.steezy.co/",
+      "summary": "Online dance lessons with a K-pop category and video practice controls.",
+      "note": "A general dance platform, not a Korean culture school.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.steezy.co/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "keens-academy",
+      "name": "Keens Academy",
+      "korean_name": "구 ED KPOP",
+      "category": "Music & dance",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Paid training",
+      "url": "https://keensacademy.com/",
+      "summary": "K-pop dance and vocal training, including programmes to follow from home.",
+      "note": "Formerly ED KPOP. Online training and paid travel-to-Seoul programmes are different offerings; check the selected product.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://keensacademy.com/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "korean-cultural-centre-uk",
+      "name": "Korean Cultural Centre UK",
+      "korean_name": "주영한국문화원",
+      "category": "UK classes & community",
+      "kind": "Lessons",
+      "mode": "Hybrid",
+      "cost": "Varies by programme",
+      "url": "https://uk.korean-culture.org/en",
+      "summary": "Korean language, dance, literature, exhibitions and cultural programmes in the UK.",
+      "note": "The 2026 language programme includes both in-person and Zoom classes. Check the format and intake for each event.",
+      "access": "UK provider",
+      "language": "English support",
+      "sources": [
+        "https://uk.korean-culture.org/en",
+        "https://uk.korean-culture.org/en/1993/board/1600/list"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "korean-education-centre-uk",
+      "name": "Korean Education Centre UK",
+      "korean_name": "영국한국교육원",
+      "category": "UK classes & community",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Paid term courses",
+      "url": "https://koreaneducentreinuk.org/en/korean-language-courses-2/",
+      "summary": "Live Korean language classes through Zoom, with beginner and higher levels.",
+      "note": "Ages 14+; under-18s need parental consent. All listed Term 2 places are closed as of this review; watch for a future intake.",
+      "access": "UK provider; current intake closed",
+      "language": "English support",
+      "sources": [
+        "https://koreaneducentreinuk.org/en/korean-language-courses-2/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "soas-language-centre",
+      "name": "SOAS Language Centre",
+      "korean_name": "",
+      "category": "UK classes & community",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Paid term courses",
+      "url": "https://www.soas.ac.uk/korean-language-courses",
+      "summary": "Online Korean short courses with a teacher at several levels.",
+      "note": "The October–December 2026 enrolment deadline has passed; do not present it as open for immediate booking.",
+      "access": "UK provider; current intake closed",
+      "language": "English support",
+      "sources": [
+        "https://www.soas.ac.uk/korean-language-courses",
+        "https://www.soas.ac.uk/korean-short-courses-timetable",
+        "https://www.soas.ac.uk/language-centre-course-fees"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "lingoclass",
+      "name": "LingoClass",
+      "korean_name": "",
+      "category": "UK classes & community",
+      "kind": "Lessons",
+      "mode": "UK venues",
+      "cost": "Paid classes",
+      "url": "https://www.lingoclass.co.uk/",
+      "summary": "Korean teaching within an Asian-language school serving London and Manchester.",
+      "note": "Check the exact venue, course level and delivery format before booking.",
+      "access": "UK provider",
+      "language": "English support",
+      "sources": [
+        "https://www.lingoclass.co.uk/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "korean-british-cultural-exchange",
+      "name": "Korean British Cultural Exchange",
+      "korean_name": "한영문화교류",
+      "category": "UK classes & community",
+      "kind": "Experiences",
+      "mode": "UK venues",
+      "cost": "Varies by event",
+      "url": "https://www.kbce.org.uk/",
+      "summary": "A UK cultural charity with community activities and a Kimchi School initiative.",
+      "note": "Some prominent programme notices are from 2024–2025. They establish the activity, not a confirmed new class date.",
+      "access": "UK provider; check new dates",
+      "language": "English support",
+      "sources": [
+        "https://www.kbce.org.uk/",
+        "https://www.kbce.org.uk/contact-us"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "dgc-dance",
+      "name": "DGC Dance",
+      "korean_name": "",
+      "category": "Music & dance",
+      "kind": "Experiences",
+      "mode": "UK venues",
+      "cost": "Paid classes",
+      "url": "https://bookwhen.com/dgcdance",
+      "summary": "London K-pop choreography classes with a provider booking calendar.",
+      "note": "A digital booking service for physical classes, not a remote learning platform.",
+      "access": "UK provider",
+      "language": "English support",
+      "sources": [
+        "https://bookwhen.com/dgcdance"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "kpopinlondonmin-kmdc",
+      "name": "Kpopinlondonmin — KMDC",
+      "korean_name": "",
+      "category": "Music & dance",
+      "kind": "Experiences",
+      "mode": "UK venues",
+      "cost": "Check class fees",
+      "url": "https://www.kpopinlondonmin.com/",
+      "summary": "A London K-pop dance class and community.",
+      "note": "Check the class level, venue and current timetable.",
+      "access": "UK provider",
+      "language": "English support",
+      "sources": [
+        "https://www.kpopinlondonmin.com/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "british-taekwondo-club-finder",
+      "name": "British Taekwondo — Club Finder",
+      "korean_name": "태권도",
+      "category": "Sport & martial arts",
+      "kind": "Experiences",
+      "mode": "UK venues",
+      "cost": "Finder free; club fees vary",
+      "url": "https://www.britishtaekwondo.org.uk/find-a-club/",
+      "summary": "Find a local club for martial arts, sport or poomsae training.",
+      "note": "A route to supervised in-person learning; the directory itself does not teach taekwondo.",
+      "access": "UK club directory",
+      "language": "English support",
+      "sources": [
+        "https://www.britishtaekwondo.org.uk/find-a-club/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "hellotalk",
+      "name": "HelloTalk",
+      "korean_name": "",
+      "category": "Conversation & exchange",
+      "kind": "Exchange",
+      "mode": "Online",
+      "cost": "Check current plan",
+      "url": "https://www.hellotalk.com/en/learn/korean",
+      "summary": "Korean conversation partners, voice rooms and community language practice.",
+      "note": "Peer exchange, not a verified cultural curriculum.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.hellotalk.com/en/learn/korean"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "tandem",
+      "name": "Tandem",
+      "korean_name": "",
+      "category": "Conversation & exchange",
+      "kind": "Exchange",
+      "mode": "Online",
+      "cost": "Check current plan",
+      "url": "https://tandem.net/en/learn/korean/seoul",
+      "summary": "Find Korean speakers for mutual language exchange.",
+      "note": "The Seoul page lists potential partners; it does not require a physical visit to Seoul.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://tandem.net/en/learn/korean/seoul"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "italki",
+      "name": "italki",
+      "korean_name": "",
+      "category": "Conversation & exchange",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Paid lessons",
+      "url": "https://www.italki.com/en/teachers/korean",
+      "summary": "A marketplace for individual online Korean lessons.",
+      "note": "Choose teachers by learning goals, teaching language and availability. Official page read directly after search failures.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.italki.com/en/teachers/korean"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "preply",
+      "name": "Preply",
+      "korean_name": "",
+      "category": "Conversation & exchange",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Paid lessons",
+      "url": "https://preply.com/en/online/korean-tutors",
+      "summary": "Online Korean tutors with profile, schedule and price filters.",
+      "note": "Culture coverage depends on the tutor and the agreed lesson plan.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://preply.com/en/online/korean-tutors"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "hinative",
+      "name": "HiNative",
+      "korean_name": "",
+      "category": "Conversation & exchange",
+      "kind": "Exchange",
+      "mode": "Online",
+      "cost": "Free with in-app purchases",
+      "url": "https://apps.apple.com/gb/app/hinative-language-learning/id923920480",
+      "summary": "A language Q&A community for asking about wording, usage and cultural context.",
+      "note": "UK Apple App Store listing checked. Community answers should not be treated as official facts.",
+      "access": "UK app listing",
+      "language": "English support",
+      "sources": [
+        "https://apps.apple.com/gb/app/hinative-language-learning/id923920480"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "viki",
+      "name": "Viki",
+      "korean_name": "",
+      "category": "Watch & discover",
+      "kind": "Media & discovery",
+      "mode": "Online",
+      "cost": "Free and paid access varies",
+      "url": "https://www.viki.com/",
+      "summary": "Subtitled drama and entertainment for cultural exposure.",
+      "note": "Not a teaching course. Learn Mode was removed on 31 July 2023; UK availability is title-dependent.",
+      "access": "Regional catalogue",
+      "language": "English support",
+      "sources": [
+        "https://support.viki.com/hc/en-us/articles/17924295071251-Sunsetting-of-Learn-Mode-Feature"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "kocowa",
+      "name": "KOCOWA+",
+      "korean_name": "",
+      "category": "Watch & discover",
+      "kind": "Media & discovery",
+      "mode": "Online",
+      "cost": "Paid streaming; offers vary",
+      "url": "https://www.kocowa.com/",
+      "summary": "Korean drama, variety and music programmes.",
+      "note": "The provider lists Europe as a supported region. Check UK catalogue and plan before subscribing; its Viki partnership ended in November 2025.",
+      "access": "Regional catalogue",
+      "language": "English support",
+      "sources": [
+        "https://help.kocowa.com/hc/en-us/articles/115004038593-What-is-KOCOWA",
+        "https://help.kocowa.com/hc/en-us/articles/53193087932697-Is-KOCOWA-Available-on-Viki"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "weverse",
+      "name": "Weverse",
+      "korean_name": "위버스",
+      "category": "Watch & discover",
+      "kind": "Media & discovery",
+      "mode": "Online",
+      "cost": "Free and paid features",
+      "url": "https://weverse.io/",
+      "summary": "Official artist communities and fan content.",
+      "note": "A fandom platform; it should not be presented as a Korean language or culture course.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://weverse.io/notice/281",
+        "https://weverse.io/notice/23154"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "webtoon",
+      "name": "WEBTOON",
+      "korean_name": "웹툰",
+      "category": "Books & film",
+      "kind": "Media & discovery",
+      "mode": "Online",
+      "cost": "Access varies by series",
+      "url": "https://www.webtoons.com/en/",
+      "summary": "Digital comics, including translated Korean works.",
+      "note": "A global comics service. Neither every work nor every creator is Korean.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://about.webtoon.com/our-brands?company=wattpadWebtoonStudios"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "kbs-world-let-s-learn-korean",
+      "name": "KBS WORLD — Let’s Learn Korean",
+      "korean_name": "",
+      "category": "Korean language",
+      "kind": "Lessons",
+      "mode": "Online",
+      "cost": "Public learning resources",
+      "url": "https://world.kbs.co.kr/service/contents_list.htm?lang=e&menu_cate=letslearnkorean",
+      "summary": "Broadcaster learning materials for Korean expressions and everyday situations.",
+      "note": "A learning section within a wider broadcasting service; older lessons may use older player technology.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://world.kbs.co.kr/service/contents_list.htm?lang=e&menu_cate=letslearnkorean"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "arirang-radio",
+      "name": "Arirang Radio",
+      "korean_name": "아리랑 라디오",
+      "category": "Watch & discover",
+      "kind": "Media & discovery",
+      "mode": "Online",
+      "cost": "Public programmes",
+      "url": "https://www.arirang.com/Radio/",
+      "summary": "English-language programmes discussing K-pop, Korean media and daily life.",
+      "note": "Useful listening and cultural commentary, rather than a structured class.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://www.arirang.com/Radio/"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "wishtrend-glam",
+      "name": "Wishtrend — Glam",
+      "korean_name": "",
+      "category": "Beauty & lifestyle",
+      "kind": "Media & discovery",
+      "mode": "Online",
+      "cost": "Public articles",
+      "url": "https://wishtrend.com/blogs/glam",
+      "summary": "Beauty tutorials and Korean skincare product explainers.",
+      "note": "A retailer’s editorial content with a commercial perspective; not independent education or medical guidance. Link corrected on 30 September 2026.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://wishtrend.com/blogs/glam"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "visitkorea",
+      "name": "VISITKOREA",
+      "korean_name": "한국관광공사",
+      "category": "Travel & everyday life",
+      "kind": "Media & discovery",
+      "mode": "Online",
+      "cost": "Public travel information",
+      "url": "https://english.visitkorea.or.kr/svc/main/index.do",
+      "summary": "Official travel planning, cultural attractions and practical information about Korea.",
+      "note": "Helpful background for travellers; UK-based events and Korean travel experiences are separate categories.",
+      "access": "Public offer",
+      "language": "English support",
+      "sources": [
+        "https://english.visitkorea.or.kr/svc/main/index.do"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "study-korean",
+      "name": "Study Korean",
+      "korean_name": "스터디코리안",
+      "category": "Families & heritage",
+      "kind": "Reference",
+      "mode": "Online",
+      "cost": "Check resource access",
+      "url": "https://study.korean.net/servlet/action.csc.GuideInfoAction?p_menuCd=m501",
+      "summary": "Korean language, history and culture materials for overseas Korean communities and teachers.",
+      "note": "A heritage-learning audience, often requiring Korean. Do not assume an English-speaking beginner or non-Korean child can use every resource.",
+      "access": "Public offer",
+      "language": "Mainly Korean",
+      "sources": [
+        "https://study.korean.net/servlet/action.csc.GuideInfoAction?p_menuCd=m501"
+      ],
+      "reviewed_at": "2026-09-29"
+    },
+    {
+      "id": "kf-global-e-school",
+      "name": "KF Global e-School",
+      "korean_name": "KF 글로벌 e-스쿨",
+      "category": "Culture courses",
+      "kind": "Institutional",
+      "mode": "Online",
+      "cost": "Institutional conditions",
+      "url": "https://m.kf.or.kr/kfEng/cm/cntnts/cntntsView.do?cntntsId=1643&mi=2157",
+      "summary": "Korean studies and language lectures shared through university partnerships.",
+      "note": "Usually accessed through participating universities; not a public sign-up MOOC.",
+      "access": "Partner institution required",
+      "language": "Varies by programme",
+      "sources": [
+        "https://m.kf.or.kr/kfEng/cm/cntnts/cntntsView.do?cntntsId=1643&mi=2157"
+      ],
+      "reviewed_at": "2026-09-29"
+    }
+  ]
+}

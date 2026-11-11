@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Korea, Nearby — Korean places in the UK & discoveries online</title>
+  <meta name="description" content="Find Korean grocers, restaurants, language schools, taekwondo, culture and online resources. An independent directory for the Korea-curious in the UK.">
+  <meta name="theme-color" content="#193b45">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23193b45'/%3E%3Cpath d='M13 10v20m15-20L16 20l12 10' stroke='%23fffaf4' stroke-width='4' fill='none'/%3E%3Ccircle cx='31' cy='8' r='5' fill='%23ef694c'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css"><script defer src="directory.js"></script><script defer src="app.js"></script>
+<link rel="stylesheet" href="/analytics.css"><script defer src="/analytics.js" data-base-path="/" data-api-origin="https://nearbykorea.sound88sound.chatgpt.site"></script></head>
+<body>
+<a class="skip" href="#directory">Skip to the directory</a>
+<header class="site-header"><div class="header-inner wrap">
+  <a class="brand" href="./" aria-label="Korea, Nearby home"><span class="brand-mark">k<span></span></span><span>Korea<span class="comma">,</span> Nearby<span class="brand-korean" lang="ko">가까이 만나는 한국</span></span></a>
+  <nav aria-label="Main navigation"><a class="nav-active" href="#directory" data-reset>Explore</a><a href="?category=restaurants#directory">Food</a><a href="platforms.html">Learn & culture</a><a href="magazine.html">Magazine</a><a href="#our-story">Our story</a></nav>
+  <span class="header-caption">For the Korea-curious.</span>
+</div></header>
+<main class="wrap">
+  <section class="intro" aria-labelledby="title"><div><p class="eyebrow">A LITTLE CLOSER TO KOREA</p><h1 id="title">Your next Korean<br> discovery is <em>nearby.</em></h1><p class="intro-copy">Discover Korean food, culture & places across the UK. Explore more online.</p></div><div class="intro-aside"><span lang="ko">안녕하세요!</span><p>Annyeonghaseyo.<br>There’s a whole world to say hello to.</p></div></section>
+  <form class="searchbar" id="search-form" role="search"><label class="search-field"><span data-icon="search"></span><span class="sr-only">Search the directory</span><input id="search" type="search" placeholder="Try kimchi, Korean classes, or a place…" autocomplete="off"></label><label class="region-field"><span data-icon="pin"></span><span class="sr-only">Choose a city</span><select id="city"><option value="all">Anywhere in the UK</option></select></label><button type="submit" class="search-submit">Find a discovery</button></form>
+  <nav class="entry-cards" aria-label="Ideas to explore">
+    <button class="entry-card food-entry" data-category="restaurants"><div><span class="entry-kicker">A TASTE OF KOREA</span><h2>Find your next<br>Korean table.</h2><span class="entry-caption">Restaurants, cafés & street food</span></div><img src="assets/bibimbap.jpg" alt="Bibimbap and Korean side dishes" width="200" height="200"></button>
+    <button class="entry-card learn-entry" data-category="language"><div><span class="entry-kicker">START WITH 안녕</span><h2>A new way<br>to say hello.</h2><span class="entry-caption">Korean classes & schools</span></div><span class="type-art" lang="ko" aria-hidden="true">한<br>글</span></button>
+    <button class="entry-card online-entry" data-online><div><span class="entry-kicker">NO TRAIN TICKET NEEDED</span><h2>Korea, from<br>your sofa.</h2><span class="entry-caption">Learn, cook & explore online</span></div><span class="online-art" data-icon="globe" aria-hidden="true"></span></button>
+  </nav>
+  <a class="magazine-teaser" href="magazine.html"><span class="teaser-label">THE NEARBY EDIT <small>Issue 01</small></span><span>Good people. New food shops. Stories to get curious about.</span><strong>Read the magazine ↗</strong></a>
+  <section class="festival-discovery" id="jung-festival" aria-labelledby="jung-home-title">
+    <div class="festival-wordmark" aria-hidden="true">JUNG.<span lang="ko">정</span></div>
+    <div class="festival-home-copy"><p class="eyebrow">FOOD, FESTIVALS & COMMUNITY</p><h2 id="jung-home-title">A taste of JUNG,<br>in the heart of London.</h2><p>Meet JUNG Festival and its seasonal Korean street-food pop-up at Tod’s Festive Feast.</p><p class="festival-home-dates"><strong>12 November 2026 – 3 January 2027</strong><span>Tottenham Court Road · London</span></p><a class="festival-home-link" href="stories-jung-festival.html">Discover JUNG & check the details <span aria-hidden="true">↗</span></a><p class="festival-home-note">Seasonal pop-up; next full festival dates to be announced. Checked 11 November 2026.</p></div>
+  </section>
+  <section class="directory" id="directory" aria-labelledby="directory-title">
+    <div class="directory-heading"><div><p class="eyebrow">FOLLOW YOUR CURIOSITY</p><h2 id="directory-title">Explore the directory</h2></div><div class="view-switch" aria-label="Display"><button id="cards-view" aria-pressed="true"><span data-icon="grid"></span>Cards</button><button id="map-view" aria-pressed="false"><span data-icon="map"></span>Map</button></div></div>
+    <div class="mode-row"><div class="mode-switch" aria-label="Where to explore"><button data-mode="all" aria-pressed="true">Everything <span id="all-count"></span></button><button data-mode="visit" aria-pressed="false">Visit a place</button><button data-mode="online" aria-pressed="false">Explore online</button></div><span class="edition">Expanded edition · September 2026</span></div>
+    <div class="categories" id="categories" aria-label="Filter by interest"></div>
+    <div class="results-meta"><p id="result-count" aria-live="polite"></p><button id="reset" class="text-button" hidden>Clear filters</button></div><p id="scope-note" class="scope-note" hidden></p>
+    <div id="map-panel" hidden><div class="map-layout"><div class="map-container"><div id="map" aria-label="Map of Korean places in the UK"></div><p class="map-footnote">Pins show postcode areas, not exact entrances. Check the full address before travelling.</p></div><aside class="map-sidebar"><h3 id="map-list-title">Places on this map</h3><div id="map-list"></div></aside></div><div id="unmapped"></div></div>
+    <div id="results" class="results-grid"></div><div id="empty" class="empty" hidden><span data-icon="search"></span><h3>No discoveries here just yet.</h3><p>Try a broader search or another city. This directory is still growing.</p><button class="primary" data-reset>Show everything</button></div>
+  </section>
+  <section class="trust-strip"><span data-icon="book"></span><div><h2>Curiosity welcome. Sources included.</h2><p>An independent, growing directory. Each listing links to its provider or an official organisation. Prices, opening times and availability can change.</p></div><button class="text-button" data-about>How we choose</button></section>
+  <section class="founder-story" id="our-story" aria-labelledby="our-story-title"><figure><img src="assets/our-story-family.png" alt="An illustration of a family discovering a Korean grocery shop on a British high street" width="1536" height="1024" loading="lazy"><figcaption>A little piece of Korea, a little closer to home.</figcaption></figure><div class="founder-copy"><p class="eyebrow">OUR STORY · 만든 이유</p><h2 id="our-story-title">Why we made<br>Korea, Nearby.</h2><p>We’re a Korean mum and dad living in the UK. When our children miss Korea, we look for a little piece of it nearby.</p><p>Along the way, we found that our friends loved those places too. So we created Korea, Nearby: a collection of Korean places and experiences across the UK, making it easier to find a little Korea, wherever you are.</p><p class="founder-signoff">From our family, to your next discovery.<span lang="ko">한국을 조금 더 가까이.</span></p><details class="story-korean"><summary>한국어로 읽기</summary><p lang="ko">영국에 사는 한국인 엄마아빠입니다. 아이들이 종종 한국을 그리워할 때 가까운 한국을 찾아가는데, 제 주변 친구들도 그곳을 좋아하더라고요. 그래서 영국 전 지역에서 만나기 쉬운 한국을 큐레이팅해서 소개하는 사이트를 만들었습니다.</p></details></div></section>
+</main>
+<footer class="wrap"><div class="footer-brand">Korea, Nearby<span>한국을 조금 더 가까이.</span></div><p>Made for small discoveries.<br>Across the UK. Wherever you are.</p><button class="text-button" data-about>Sources, coverage & photo credit</button></footer>
+<dialog id="details" aria-labelledby="detail-title"><button class="close-dialog" aria-label="Close details">×</button><div id="detail-content"></div></dialog>
+<noscript><p class="wrap">Please enable JavaScript to search and filter. You can also <a href="directory.json">read the full directory data</a>.</p></noscript>
+<div class="analytics-footer"><a href="/privacy.html">Privacy & statistics</a><button type="button" data-analytics-settings>Statistics preferences</button><a data-analytics-owner href="https://nearbykorea.sound88sound.chatgpt.site/admin/analytics">Owner statistics</a></div></body></html>
