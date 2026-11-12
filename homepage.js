@@ -12,7 +12,7 @@ import {filterDiscoveries} from './homepage-search.mjs';
       let current=0,discovery=0,compact=false;
       const places=JSON.parse(root.querySelector('#kn-uk-data').textContent);
       const england=JSON.parse(root.querySelector('#kn-uk-geometry').textContent);
-      const uk={category:'all',city:'all',page:0,version:2};
+      const uk={category:'all',city:'all',query:'',page:0,version:2};
       const ukCities=[...new Set(places.map(p=>p.city_group))].sort();
       const ukCity=root.querySelector('#kn-uk-city');
       const devonOption=document.createElement('option');devonOption.value='Devon';devonOption.textContent='Devon · Exeter & Plymouth';ukCity.append(devonOption);
@@ -28,10 +28,10 @@ import {filterDiscoveries} from './homepage-search.mjs';
           return '';
         },
         requestPosition:(success,failure)=>navigator.geolocation.getCurrentPosition(success,failure,{enableHighAccuracy:false,timeout:10000,maximumAge:60000}),
-        changed:()=>{if(nearby.phase==='active'){uk.city='all';uk.page=0;}renderUK();}
+        changed:()=>{if(nearby.phase==='active'){uk.city='all';uk.query='';uk.page=0;}renderUK();}
       });
       const cityShort=c=>c==='Newcastle upon Tyne'?'Newcastle':c==='Staines-upon-Thames'?'Staines':c;
-      const ukBase=()=>places.filter(p=>uk.category==='all'||p.category===uk.category);
+      const ukBase=()=>filterDiscoveries({places,online:[]},{category:uk.category,query:uk.query});
       const inArea=p=>uk.city==='all'||p.city_group===uk.city||p.county===uk.city;
       function renderUK(){
         const base=ukBase().filter(inArea);
@@ -46,7 +46,7 @@ import {filterDiscoveries} from './homepage-search.mjs';
         const pages=Math.max(1,Math.ceil(filtered.length/3));uk.page=Math.min(Math.max(0,uk.page),pages-1);
         root.querySelectorAll('[data-category]').forEach(b=>{const key=b.dataset.category,n=key==='all'?places.length:places.filter(p=>p.category===key).length;b.setAttribute('aria-pressed',String(key===uk.category));b.innerHTML=escapeText(categoryLabels[key])+(n?' <span>'+n+'</span>':'');});
         ukCity.value=uk.city;
-        root.querySelector('#kn-uk-result-title').textContent=uk.category==='groceries'&&!filtered.length?'Shops & markets':filtered.length+' '+(filtered.length===1?'place':'places')+(uk.city==='all'?' across England':' · '+cityShort(uk.city));
+        root.querySelector('#kn-uk-result-title').textContent=filtered.length+' '+(filtered.length===1?'place':'places')+(uk.city==='all'?' across England':' · '+cityShort(uk.city))+(uk.query?' · '+uk.query:'');
         root.querySelector('#kn-uk-page-count').textContent=filtered.length?(uk.page+1)+' / '+pages:'';
         root.querySelector('#kn-uk-results').innerHTML=filtered.length?filtered.slice(uk.page*3,uk.page*3+3).map(p=>{
           const school=p.category==='schools';
@@ -89,7 +89,7 @@ import {filterDiscoveries} from './homepage-search.mjs';
           });
         });
       }
-      root.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>{const chosen=button.dataset.category;uk.category=uk.category===chosen?'all':chosen;if(uk.category!=='restaurants')nearby.clear();uk.city='all';uk.page=0;renderUK();}));
+      root.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>{const chosen=button.dataset.category;uk.category=uk.category===chosen?'all':chosen;if(uk.category!=='restaurants')nearby.clear();uk.city='all';uk.query='';uk.page=0;renderUK();}));
       const locationDialog=root.querySelector('#kn-location-dialog');
       root.querySelector('#kn-uk-locate').addEventListener('click',()=>locationDialog.showModal());
       root.querySelector('#kn-location-allow').addEventListener('click',()=>{locationDialog.close();nearby.request();});
@@ -98,7 +98,7 @@ import {filterDiscoveries} from './homepage-search.mjs';
       root.querySelector('#kn-uk-clear-location').addEventListener('click',()=>{nearby.clear();uk.page=0;renderUK();});
       window.addEventListener('pagehide',()=>nearby.clear());
       ukCity.addEventListener('change',()=>{uk.city=ukCity.value;uk.page=0;renderUK();});
-      root.querySelector('#kn-uk-reset').addEventListener('click',()=>{nearby.clear();uk.category='all';uk.city='all';uk.page=0;renderUK();});
+      root.querySelector('#kn-uk-reset').addEventListener('click',()=>{nearby.clear();uk.category='all';uk.city='all';uk.query='';uk.page=0;renderUK();});
       root.querySelector('#kn-uk-prev').addEventListener('click',()=>{uk.page--;renderUK();});
       root.querySelector('#kn-uk-next').addEventListener('click',()=>{uk.page++;renderUK();});
       new ResizeObserver(entries=>{const r=entries[0].contentRect;if(r.width!==ukMapW||r.height!==ukMapH)drawUKMap();}).observe(root.querySelector('#kn-uk-map'));
@@ -161,6 +161,16 @@ import {filterDiscoveries} from './homepage-search.mjs';
         setSearchMode(query.get('mode')==='online'?'online':'places');runSearch();
       }
 
+      if(query.get('view')==='map'){
+        discovery=1;
+        if(['all','restaurants','groceries','schools','culture'].includes(query.get('category')))uk.category=query.get('category');
+        uk.query=(query.get('q')||'').slice(0,200);
+        const requestedCity=query.get('city');
+        if(requestedCity==='Devon'||ukCities.includes(requestedCity))uk.city=requestedCity;
+        else if(['New Malden','Kingston upon Thames'].includes(requestedCity)){uk.city='London';uk.query=[uk.query,requestedCity].filter(Boolean).join(' ');}
+        history.replaceState(null,'',location.pathname+location.search+'#kn-discover');
+        requestAnimationFrame(()=>root.querySelector('#kn-discover').scrollIntoView({block:'start'}));
+      }
       render();
       new ResizeObserver(render).observe(root);
     })();
