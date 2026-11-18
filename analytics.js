@@ -27,7 +27,8 @@
  function track(kind,value=''){
   if(choice()!=='accepted'||excluded()||deleting||!isPublic()||document.visibilityState==='prerender')return;
   try{
-   const payload={id:crypto.randomUUID(),consent:true,kind,path:path(),value,...identity()};
+   const reportingPath=settings.reportingSection==='/magazine'?settings.reportingSection:path();
+   const payload={id:crypto.randomUUID(),consent:true,kind,path:reportingPath,value,...identity()};
    const body=JSON.stringify(payload);
    const sending=fetch(endpoint('collect'),{method:'POST',headers:{'Content-Type':'application/json'},body,keepalive:true,credentials}).catch(()=>{});
    pending.add(sending);sending.finally(()=>pending.delete(sending));

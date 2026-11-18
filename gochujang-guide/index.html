@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en-GB">
+<head><base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to choose a good gochujang · Korea, Nearby</title>
+  <meta name="description" content="Learn to read a gochujang label, compare two products sold in Britain and watch gochujang being tasted side by side.">
+  <link rel="canonical" href="https://nearbykorea.github.io/gochujang-guide.html">
+  <meta property="og:title" content="How to choose a good gochujang · Korea, Nearby">
+  <meta property="og:image" content="https://nearbykorea.github.io/assets/gochujang/seoul-shelf-2005.webp">
+  <link rel="icon" href="assets/editorial/favicon.svg" type="image/svg+xml">
+  <script>
+    const edition = new URLSearchParams(location.search).get('lang') === 'ko' ? 'ko' : 'en';
+    document.documentElement.dataset.edition = edition;
+    document.documentElement.lang = edition === 'ko' ? 'ko' : 'en-GB';
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f2f3ef;
+      --hanji: url("assets/editorial/hanji.svg");
+      --ink: #272824;
+      --muted: #50544f;
+      --rule: #bdc1b9;
+      --red: #842d23;
+      --serif: Baskerville, Georgia, serif;
+      --sans: Inter, "Apple SD Gothic Neo", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { background: #e4e7e2; }
+    body { margin: 0; color: var(--ink); font: 16px/1.5 var(--sans); }
+    h1, h2, h3, p, figure, dl, dd { margin: 0; }
+    h1, h2, h3, .masthead { font-family: var(--serif); }
+    h1, h2, h3 { text-wrap: balance; }
+    h1 { font-size: clamp(2.65rem, 5.1vw, 4.2rem); line-height: 1; letter-spacing: -.04em; }
+    h2 { font-size: clamp(1.9rem, 3.3vw, 2.75rem); line-height: 1.04; letter-spacing: -.032em; }
+    h3 { font-size: clamp(1.25rem, 2.5vw, 1.7rem); line-height: 1.12; letter-spacing: -.015em; }
+    a { color: var(--red); text-underline-offset: .19em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
+    .sheet {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 28px clamp(18px, 5vw, 58px) 37px;
+      background-color: var(--paper);
+      background-image: linear-gradient(#f4f5f38c, #f4f5f38c), var(--hanji);
+      background-position: center top;
+      background-size: auto, cover;
+      background-repeat: no-repeat;
+      box-shadow: 0 3px 16px #2d342419;
+    }
+    .masthead { text-align: center; font-size: clamp(2.35rem, 5vw, 3.7rem); line-height: 1; letter-spacing: -.055em; margin-bottom: 14px; }
+    .issue { border-block: 1px solid var(--ink); display: flex; justify-content: space-between; gap: .5rem; padding: .38rem 0; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+    .issue a { color: inherit; }
+    .issue { align-items: center; flex-wrap: wrap; }
+    .edition-nav { display: flex; align-items: center; gap: .8rem; }
+    .edition-nav a { display: inline-flex; align-items: center; padding: .38rem 0; text-decoration: none; }
+    .edition-nav [aria-current="page"] { text-decoration: underline; text-underline-offset: .3em; }
+    html[data-edition="en"] [data-copy="ko"], html[data-edition="ko"] [data-copy="en"] { display: none; }
+    html:lang(ko) { word-break: keep-all; overflow-wrap: break-word; }
+    html:lang(ko) h1, html:lang(ko) h2, html:lang(ko) h3 { font-family: "AppleMyungjo", "Nanum Myeongjo", serif; line-height: 1.25; }
+    .lead { margin: 26px 0 24px; }
+    .shelf-photo { margin-top: clamp(1rem, 2.1vw, 1.65rem); }
+    .shelf-frame { position: relative; overflow: hidden; aspect-ratio: 2.65 / 1; }
+    .shelf-frame img {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      display: block; object-fit: cover; object-position: center top;
+    }
+    .shelf-photo figcaption {
+      display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;
+      gap: .15rem 1rem; font-size: .77rem; line-height: 1.45;
+    }
+    .shelf-photo figcaption a { color: inherit; text-decoration-color: var(--rule); }
+    .korean { color: var(--red); font-size: .83rem; font-weight: 650; margin-top: .35rem; }
+    .opening { margin-top: 1.1rem; max-width: 65ch; line-height: 1.65; }
+    .opening p + p { margin-top: .55rem; }
+    .opening p:first-child { font: 1.38rem/1.45 var(--serif); }
+    .opening:lang(ko) p:first-child { font-family: "AppleMyungjo", "Nanum Myeongjo", serif; }
+    .feature { border-top: 1px solid var(--ink); padding-top: 19px; margin-top: 1.35rem; }
+    .feature { display: grid; grid-template-columns: minmax(0, 1.62fr) minmax(0, 1fr); gap: 25px; align-items: start; }
+    .video { position: relative; display: grid; place-items: center; aspect-ratio: 16 / 8; overflow: hidden; background: #442219; }
+    .video img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
+    .video::after { position: absolute; inset: 0; content: ""; background: #2b191642; pointer-events: none; }
+    .video-link { position: relative; z-index: 1; color: var(--ink); font-size: .88rem; font-weight: 700; background: var(--paper); padding: .55rem .8rem; text-decoration: none; }
+    figcaption, .chapter { color: var(--muted); font-size: .81rem; margin-top: .42rem; }
+    .video-note { padding-left: 20px; border-left: 1px solid var(--rule); }
+    .video-note > p:not(.korean) { margin-top: .56rem; }
+    .buying { border-top: 1px solid var(--ink); padding-top: 20px; margin-top: 22px; display: grid; grid-template-columns: minmax(0, .83fr) minmax(0, 1.17fr); gap: 29px; align-items: start; }
+    .label-guide > p { margin: .55rem 0 .8rem; color: var(--muted); font-size: .91rem; }
+    .label-guide dl > div { padding: .68rem 0; border-top: 1px solid var(--rule); font-size: .97rem; }
+    .label-guide dt { font-weight: 670; }
+    .label-guide dd { margin-top: .18rem; color: var(--muted); }
+    .picks { border-left: 1px solid var(--rule); padding-left: 25px; }
+    .picks h2 { color: var(--red); margin-bottom: .8rem; }
+    .product {
+      display: grid;
+      grid-template-columns: clamp(80px, 11vw, 119px) minmax(0, 1fr);
+      align-items: center;
+      gap: 16px;
+      border-top: 1px solid var(--rule);
+      padding: 13px 0 14px;
+    }
+    .product-photo { width: 100%; height: 117px; object-fit: contain; background: #fff; font-size: .72rem; }
+    .need { text-transform: uppercase; letter-spacing: .075em; font-weight: 720; font-size: .71rem; color: var(--red); margin-bottom: .2rem; }
+    .weight { color: var(--muted); font-size: .82rem; margin-top: .22rem; }
+    .product-note { font-size: .97rem; line-height: 1.55; margin: .45rem 0; }
+    .label-guide dd a, .product-note a, .chapter a { font-size: .85rem; }
+    .shops { list-style: none; display: flex; flex-wrap: wrap; padding: 0; margin: .4rem 0 0; gap: 0 14px; }
+    .shops a { display: inline-flex; align-items: center; column-gap: 4px; min-height: 30px; font-size: .86rem; font-weight: 670; white-space: nowrap; }
+    .coming-soon {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      align-items: end;
+      gap: .65rem 24px;
+      border-top: 1px solid var(--rule);
+      margin-top: 16px;
+      padding: 16px 0 14px;
+    }
+    .coming-soon h2 { font-size: clamp(1.65rem, 3.1vw, 2.35rem); }
+    .usage-teaser { color: var(--muted); font-size: .91rem; }
+    .upcoming-cover {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: clamp(106px, 30vw, 140px) minmax(0, 1fr);
+      width: min(100%, 27rem);
+      margin-top: .35rem;
+      border: 1px solid #9fa69c;
+      background: #fbfcfaad;
+      box-shadow: 2px 3px 0 #49524622;
+    }
+    .upcoming-cover img { display: block; width: 100%; height: auto; }
+    .upcoming-cover figcaption {
+      align-self: center;
+      margin: 0;
+      padding: 1rem clamp(.85rem, 3vw, 1.65rem);
+      color: var(--ink);
+      font: 1.45rem/1.12 var(--serif);
+    }
+    .related { border-top: 1px solid var(--rule); display: flex; justify-content: space-between; flex-wrap: wrap; gap: .35rem .8rem; padding-top: .65rem; margin-top: 7px; color: var(--muted); font-size: .79rem; }
+    .related [lang="ko"] { color: var(--red); margin-left: .35rem; }
+    .sweet-note { border-top: 1px solid var(--rule); margin-top: 1.2rem; padding-top: 1rem; }
+    .sweet-note h2 { font-size: 1.55rem; }
+    .sweet-note p { max-width: 62ch; margin-top: .35rem; }
+    @media (max-width: 670px) {
+      .shelf-frame { aspect-ratio: 1.78 / 1; }
+      .shelf-frame img { width: 140%; left: -8%; }
+      .feature, .buying { grid-template-columns: 1fr; gap: 18px; }
+      .video { aspect-ratio: 16 / 9; }
+      .video-note, .picks { border-left: 0; border-top: 1px solid var(--rule); padding-left: 0; padding-top: .82rem; }
+      .product { gap: 11px; }
+      .product-photo { height: 102px; }
+      .shops { column-gap: 12px; }
+      .coming-soon { grid-template-columns: 1fr; }
+    }
+    @media (pointer: coarse) {
+      .shops a, .edition-nav a { min-height: 44px; }
+    }
+  </style>
+<link rel="stylesheet" href="/analytics.css"><script defer src="/analytics.js?v=20261118" data-base-path="/" data-api-origin="https://nearbykorea.sound88sound.chatgpt.site" data-reporting-section="/magazine"></script></head>
+<body>
+  <main class="sheet">
+    <header>
+      <p class="masthead">Korea, Nearby</p>
+      <div class="issue">
+        <a href="gochujang.html">← <span data-copy="en">Magazine</span><span data-copy="ko" lang="ko">매거진 표지</span></a>
+        <span>Gochujang 02</span>
+        <nav class="edition-nav" aria-label="Article language · 본문 언어">
+          <a href="gochujang-guide.html?lang=en" lang="en-GB" hreflang="en-GB" data-edition-link="en">English</a>
+          <a href="gochujang-guide.html?lang=ko" lang="ko" hreflang="ko" data-edition-link="ko">한국어</a>
+        </nav>
+      </div>
+      <div class="lead">
+        <h1><span data-copy="en">How to choose a good gochujang</span><span data-copy="ko" lang="ko">좋은 고추장 고르는 방법</span></h1>
+        <figure class="shelf-photo">
+          <div class="shelf-frame">
+            <img src="assets/gochujang/seoul-shelf-2005.webp" width="1280" height="960" fetchpriority="high"
+                 alt="Red tubs of gochujang stacked two high above rows of green ssamjang and brown doenjang tubs."
+                 data-alt-ko="빨간 고추장 통이 두 단으로 쌓이고 아래로 초록색 쌈장 통과 갈색 된장 통이 보이는 매대.">
+          </div>
+          <figcaption>
+            <span data-copy="en">Gochujang on a shop shelf in Seoul, May 2005.</span>
+            <span data-copy="ko" lang="ko">서울의 장류 매대, 2005년 5월.</span>
+            <span><a href="https://www.flickr.com/photos/ayustety/12744278/">ayustety, <span lang="ja">コチュジャン</span></a> · <a href="https://creativecommons.org/licenses/by-sa/2.0/" rel="license">CC BY-SA 2.0</a> · <span data-copy="en">Detail</span><span data-copy="ko" lang="ko">사진 일부</span></span>
+          </figcaption>
+        </figure>
+        <div class="opening" data-copy="en" lang="en-GB">
+          <p>Both my grandmothers sent us gochujang. Even the colours were different.</p>
+          <p>One was less sweet, with a deep, full flavour. The other tasted bright and fresh. Kimchi tastes different from one home to the next. So did their gochujang.</p>
+          <p>I lived in Korea for forty years. These days I shop in Britain. When I want gochujang to stir through warm rice and vegetables with a few drops of sesame oil, which pot do I pick? I read the labels on two sold here. One lists barley malt, the other fermented rice syrup. What can I tell before I lift the lid?</p>
+        </div>
+        <div class="opening" data-copy="ko" lang="ko">
+          <p>외할머니와 친할머니가 보내주신 고추장은 색부터 달랐어요.</p>
+          <p>하나는 덜 달고 묵직했어요. 다른 하나는 조금 상큼했고요. 김치가 집집마다 맛이 다르듯, 두 분의 고추장도 그랬어요.</p>
+          <p>한국에서 마흔 해를 살고, 지금은 영국에서 장을 봐요. 따뜻한 밥에 채소를 얹고 참기름 몇 방울 떨어뜨려 비벼 먹고 싶은 날, 여기선 어떤 고추장을 고르면 좋을까요? 영국에서 파는 두 통의 재료표를 읽어봤어요. 한쪽에는 ‘엿기름’, 다른 쪽에는 ‘발효 쌀시럽’. 뚜껑을 열기 전에 이 말들로 무엇을 알 수 있을까요?</p>
+        </div>
+      </div>
+    </header>
+    <div class="buying" id="choosing">
+      <section class="label-guide">
+        <h2><span data-copy="en">Turn the jar round</span><span data-copy="ko" lang="ko">고추장 통을 뒤집어 보면</span></h2>
+        <dl data-copy="en" lang="en-GB">
+          <div><dt>Barley malt and sweetness</dt><dd>Yeotgireum (엿기름) is barley that has been sprouted and dried. Its enzymes turn some of the starch in cooked rice into sugars. That’s one way a rice gochujang develops sweetness. To compare how much sugar two pastes contain, look for ‘of which sugars’ per 100&nbsp;g on both packs. <a href="https://encykorea.aks.ac.kr/Article/E0052700">How malt works</a></dd></div>
+          <div><dt>What exactly was fermented?</dt><dd>On the Sempio tub, ‘fermented’ describes the rice paste and the rice syrup. Sempio gives no ageing time for the finished gochujang on this label. On the Sunchang jar, the seller does give a time. <a href="https://en.sempio.com/product/jangpaste/view/1016">Sempio’s ingredients</a></dd></div>
+          <div><dt>How much chilli went in?</dt><dd>On the Sunchang jar, 23% refers to the gochugaru (고춧가루), or ground red chilli. That’s 23&nbsp;g of chilli per 100&nbsp;g of paste. The figure tells you the amount. For heat, look for a mild, medium or hot marking if the pack gives one. <a href="https://jungdam.co.uk/products/moonokrye-traditional-gochujang">Sunchang jar details</a></dd></div>
+        </dl>
+        <dl data-copy="ko" lang="ko">
+          <div><dt>엿기름은 어떤 단맛을 낼까요?</dt><dd>엿기름은 싹을 틔워 말린 보리예요. 그 안의 효소가 익힌 쌀의 전분 일부를 당으로 바꿔요. 찹쌀고추장에서 단맛이 나는 한 가지 이유예요. 두 통에 당이 얼마나 들었는지 비교하고 싶다면 영국 영양표에서 같은 100g 기준의 ‘of which sugars’를 보세요. <a href="https://encykorea.aks.ac.kr/Article/E0052700">엿기름과 당화</a></dd></div>
+          <div><dt>무엇을 발효했을까요?</dt><dd>샘표 통의 ‘발효’는 재료인 쌀 반죽과 쌀시럽에 붙은 말이에요. 이 표기에는 완성된 고추장이 얼마나 익었는지 나오지 않아요. 순창문옥례 고추장은 판매처에서 장독에 두는 기간까지 알려줘요. <a href="https://en.sempio.com/product/jangpaste/view/1016">샘표 원재료표</a></dd></div>
+          <div><dt>고춧가루는 얼마나 넣었을까요?</dt><dd>순창문옥례 제품의 23%는 고춧가루 함량이에요. 고추장 100g을 만들 때 고춧가루가 23g 들어갔다는 뜻이에요. 매운맛이 궁금하다면 포장에 순한맛·중간맛·매운맛 같은 별도 표시가 있는지도 보세요. <a href="https://jungdam.co.uk/products/moonokrye-traditional-gochujang">순창문옥례 제품 설명</a></dd></div>
+        </dl>
+      </section>
+      <aside class="picks" aria-labelledby="which-gochujang">
+        <h2 id="which-gochujang"><span data-copy="en">Which gochujang is right for me?</span><span data-copy="ko" lang="ko">나에게 맞는 고추장은?</span></h2>
+        <article class="product">
+          <img class="product-photo" src="https://jungdam.co.uk/cdn/shop/files/Gochujang_with_award_2.png?v=1785254150&amp;width=460"
+               alt="Sunchang Moon Okrye traditional gochujang in its glass jar"
+               data-alt-ko="유리병에 담긴 순창문옥례 전통 찹쌀고추장" loading="lazy" referrerpolicy="no-referrer">
+          <div>
+            <p class="need"><span data-copy="en">Traditional style</span><span data-copy="ko" lang="ko">전통 장독 고추장을 찾는다면</span></p>
+            <h3><span data-copy="en">Sunchang Moon Okrye Traditional Gochujang</span><span data-copy="ko" lang="ko">순창문옥례 전통 찹쌀고추장</span></h3>
+            <p class="weight"><span data-copy="en">450&nbsp;g glass jar</span><span data-copy="ko" lang="ko">450g 유리병</span></p>
+            <p class="product-note" data-copy="en" lang="en-GB">Jungdam lists Korean-grown chillies, glutinous rice, fermented soya bean powder and barley malt. What drew me to this jar was a detail about the paste itself. Jungdam says it spends over a year fermenting in a jangdok (장독), a Korean earthenware jar.</p>
+            <p class="product-note" data-copy="ko" lang="ko">정담 원재료표에는 한국산 고춧가루와 찹쌀, 메줏가루, 보리 엿기름이 있어요. 제가 이 병을 눈여겨본 이유는 장독 이야기예요. 정담은 재료를 섞은 고추장을 장독에서 1년 넘게 발효한다고 밝혀요.</p>
+            <ul class="shops" aria-label="UK shops for Sunchang Moon Okrye gochujang">
+              <li><a href="https://jungdam.co.uk/products/moonokrye-traditional-gochujang" target="_blank" rel="noopener noreferrer">Jungdam <span aria-hidden="true">↗</span></a></li>
+            </ul>
+          </div>
+        </article>
+        <article class="product">
+          <img class="product-photo" src="https://www.ocado.com/images-v3/eafa5127-d256-497b-9609-4869092accd6/30a8d169-262d-40c5-9a1a-8df82cac4eee/300x300.jpg"
+               alt="Sempio Gluten-Free Gochujang, 250 gram pack"
+               data-alt-ko="샘표 글루텐프리 고추장 250g 포장" loading="lazy" referrerpolicy="no-referrer">
+          <div>
+            <p class="need"><span data-copy="en">Gluten-free</span><span data-copy="ko" lang="ko">글루텐프리가 중요하다면</span></p>
+            <h3><span data-copy="en">Sempio Gluten-Free Gochujang</span><span data-copy="ko" lang="ko">샘표 글루텐프리 고추장</span></h3>
+            <p class="weight">250&nbsp;g</p>
+            <p class="product-note" data-copy="en" lang="en-GB">Look for ‘Gluten Free’ on this particular pack. Sempio lists fermented rice paste and fermented rice syrup. The same brand also sells a 500&nbsp;g paste in the UK that lists wheat, so the wording on the tub matters. <a href="https://www.ocado.com/products/sempio-gochujang-korean-chili-paste/675677011">Compare the 500&nbsp;g label</a></p>
+            <p class="product-note" data-copy="ko" lang="ko">이 통에서 찾을 말은 ‘Gluten Free’예요. 발효 쌀 반죽과 발효 쌀시럽을 썼어요. 같은 샘표의 영국 판매용 일반 고추장 500g에는 밀이 들어가니, 살 때는 손에 든 통의 표시를 확인하세요. <a href="https://www.ocado.com/products/sempio-gochujang-korean-chili-paste/675677011">500g 일반 제품 원재료표</a></p>
+            <ul class="shops" aria-label="UK shops for Sempio Gluten-Free Gochujang">
+              <li><a href="https://www.ocado.com/products/sempio-gochujang-korean-chili-paste-gluten-free/675678011" target="_blank" rel="noopener noreferrer">Ocado <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://www.orientalmart.co.uk/sempio-gluten-free-gochujang-korean-red-pepper-chilli-paste-vegan" target="_blank" rel="noopener noreferrer">Oriental Mart <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://tuktukmart.co.uk/products/sempio-gochujang-korean-chili-paste-250g" target="_blank" rel="noopener noreferrer">Tuk Tuk Mart <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://www.amazon.co.uk/dp/B09BQG3VPB" target="_blank" rel="noopener noreferrer">Amazon UK <span aria-hidden="true">↗</span></a></li>
+            </ul>
+          </div>
+        </article>
+        <p class="chapter"><a href="stories-grocers.html"><span data-copy="en">Shopping in person? Our guide to Korean grocers in Britain</span><span data-copy="ko" lang="ko">매장에서 라벨을 보고 싶다면 · 영국 한인 식료품점 안내</span></a></p>
+      </aside>
+    </div>
+    <div class="feature">
+      <figure>
+        <div class="video">
+          <img src="assets/gochujang/paste.webp" alt="">
+          <a class="video-link" href="https://www.youtube.com/watch?v=q51wLoJo9D0" target="_blank" rel="noopener noreferrer"><span data-copy="en">Watch the tasting on YouTube ↗</span><span data-copy="ko" lang="ko">유튜브에서 시식 보기 ↗</span></a>
+        </div>
+        <figcaption>America’s Test Kitchen · <span data-copy="en">in English</span><span data-copy="ko" lang="ko">영어 영상</span></figcaption>
+      </figure>
+      <section class="video-note">
+        <h2><span data-copy="en">Gochujang, side by side</span><span data-copy="ko" lang="ko">고추장을 한 술씩 맛보면</span></h2>
+        <p data-copy="en" lang="en-GB">Sarah Ahn and Lisa McManus taste gochujang from small makers and supermarket brands. Start at the first tasting and listen for the words they use for sweetness and heat.</p>
+        <p data-copy="ko" lang="ko">세라 안과 리사 맥매너스가 여러 고추장을 한 술씩 맛봐요. 첫 시식부터 두 사람이 단맛과 매운맛을 어떻게 표현하는지 들어보세요.</p>
+        <p class="chapter"><a href="https://www.youtube.com/watch?v=q51wLoJo9D0&amp;t=113s"><span data-copy="en">First tasting · 1:53</span><span data-copy="ko" lang="ko">첫 시식 · 1:53</span></a> · <a href="https://www.youtube.com/watch?v=q51wLoJo9D0&amp;t=720s"><span data-copy="en">Sempio tasting · 12:00</span><span data-copy="ko" lang="ko">샘표 시식 · 12:00</span></a></p>
+        <p data-copy="en" lang="en-GB">Curious how glutinous rice gochujang is made at home? In a separate film, the cook at 한식집 shows the stage when the paste goes into the earthenware jar. <a href="https://www.youtube.com/watch?v=qddu2s3k3zc&amp;t=487s">Watch the jangdok scene · 8:07</a></p>
+        <p data-copy="ko" lang="ko">집에서 찹쌀고추장을 담그는 모습이 궁금하다면, 한식집의 영상도 보세요. 8분 7초부터 고추장을 장독에 담아 숙성하는 대목이 나와요. <a href="https://www.youtube.com/watch?v=qddu2s3k3zc&amp;t=487s">장독 장면 보기 · 8:07</a></p>
+      </section>
+    </div>
+    <section class="coming-soon" aria-labelledby="how-to-use-gochujang">
+      <div>
+        <h2 id="how-to-use-gochujang"><span data-copy="en">How to use gochujang at home</span><span data-copy="ko" lang="ko">우리 집에서 고추장을 사서 어떻게 먹어볼까?</span></h2>
+      </div>
+      <p class="usage-teaser"><span data-copy="en">Four ways to try gochujang, from bibimbap sauce to gochujang mayo.</span><span data-copy="ko" lang="ko">비빔밥에 넣고, 마요네즈에도 섞어봐요. 고추장 한 통을 즐기는 네 가지 방법을 준비하고 있어요.</span></p>
+      <figure class="upcoming-cover">
+        <img src="assets/gochujang/uses-cover.webp" width="360" height="450" loading="lazy"
+             alt="Red gochujang magazine cover with the title 고추장" data-alt-ko="고추장이라고 쓰인 붉은 매거진 표지">
+        <figcaption>Coming soon<span data-copy="ko" lang="ko"> · 준비 중</span></figcaption>
+      </figure>
+    </section>
+    <section class="sweet-note" aria-labelledby="sweetness">
+      <h2 id="sweetness"><span data-copy="en">A taste of jocheong</span><span data-copy="ko" lang="ko">〈한국의 단맛〉 맛보기</span></h2>
+      <p data-copy="en" lang="en-GB">Try dipping the end of a warm, grilled garaetteok (가래떡), a chewy rice cake, into jocheong (조청), a thick grain syrup. We’ll come back to that spoonful in part two of <i>Sweet flavours in Korean cooking</i>. <a href="https://encykorea.aks.ac.kr/Article/E0052700">More about jocheong</a></p>
+      <p data-copy="ko" lang="ko">따뜻하게 구운 가래떡 끝에 조청을 살짝 찍어 드셔 보세요. 쫄깃한 떡에 묻어나는 그 곡물 단맛은 어떻게 생길까요? 〈한국의 단맛〉 2편에서 계속할게요. <a href="https://encykorea.aks.ac.kr/Article/E0052700">조청 이야기</a></p>
+    </section>
+    <footer class="related">
+      <a href="gochujang.html"><span data-copy="en">Back to the gochujang cover</span><span data-copy="ko" lang="ko">고추장 표지로 돌아가기</span></a>
+      <span data-copy="en">UK product information checked 18 November 2026.</span>
+      <span data-copy="ko" lang="ko">영국 제품 안내 확인일 · 2026년 11월 18일</span>
+    </footer>
+  </main>
+  <script>
+    document.querySelector('[data-edition-link="' + edition + '"]').setAttribute('aria-current', 'page');
+    if (edition === 'ko') {
+      document.title = '좋은 고추장 고르는 방법 · Korea, Nearby';
+      for (const photo of document.querySelectorAll('img[data-alt-ko]')) photo.alt = photo.dataset.altKo;
+    }
+  </script>
+<div class="analytics-footer"><a href="/privacy.html">Privacy & statistics</a><button type="button" data-analytics-settings>Statistics preferences</button><a data-analytics-owner href="https://nearbykorea.sound88sound.chatgpt.site/admin/analytics">Owner statistics</a></div></body>
+</html>

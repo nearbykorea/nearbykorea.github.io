@@ -57,6 +57,10 @@
     #kn-jongno .book-message p { font:27px/1.2 Georgia,serif; letter-spacing:-.7px; }
     #kn-jongno .book-message span { display:block; margin-top:10px; font-size:13px; }
     #kn-jongno .book-note { font-size:11px; letter-spacing:1px; }
+    #kn-jongno .books a.book-issue { padding:0; border:0; background:#b54b40; overflow:hidden; }
+    #kn-jongno .book-issue img { display:block; width:100%; min-height:0; flex:1 1 0; object-fit:contain; }
+    #kn-jongno .book-open { display:flex; justify-content:space-between; align-items:center; gap:8px; padding:6px 12px; color:var(--ink); background:var(--paper); font-size:13px; }
+    #kn-jongno .book-issue:is(:hover,:focus-visible) .book-open { text-decoration:underline; text-underline-offset:3px; }
     #kn-jongno .book-controls { display:none; justify-content:space-between; align-items:center; max-width:290px; margin:22px auto 0; font-size:12px; }
     #kn-jongno .book-controls button { min-width:44px; min-height:44px; border:0; background:transparent; font-size:24px; }
     #kn-jongno .magazine-note { margin:30px auto 0; text-align:center; font:16px/1.5 Georgia,serif; color:var(--muted); }

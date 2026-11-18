@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en-GB">
+<head><base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NearbyKorea · Gochujang magazine</title>
+  <meta name="description" content="Open the Gochujang issue. Read an editor’s letter about two grandmothers’ cooking and a guide to choosing gochujang in Britain.">
+  <link rel="canonical" href="https://nearbykorea.github.io/gochujang.html">
+  <meta property="og:title" content="The Gochujang Issue · Korea, Nearby">
+  <meta property="og:image" content="https://nearbykorea.github.io/assets/gochujang/cover.webp">
+  <link rel="icon" href="assets/editorial/favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      color-scheme: light;
+      --surround: #e7e9e5;
+      --paper: #f3f4f0;
+      --ink: #242622;
+      --soft-ink: #49514b;
+      --rule: #aeb5aa;
+      --cover-ink: #211311;
+      --cover-mat: #f9f5ec;
+      --hanji: url("assets/editorial/hanji.svg");
+      --sans: Inter, "Apple SD Gothic Neo", Arial, sans-serif;
+      --serif: Baskerville, Georgia, serif;
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--surround); }
+    body { margin: 0; color: var(--ink); font: 16px/1.5 var(--sans); }
+    p, h1, h2, figure { margin: 0; }
+    img { display: block; width: 100%; height: auto; }
+    a { color: inherit; text-underline-offset: .2em; }
+    a:focus-visible, button:focus-visible, .magazine-pages:focus-visible {
+      outline: 2px solid #26372c;
+      outline-offset: 4px;
+    }
+    .magazine-carousel { width: min(100%, 940px); margin-inline: auto; padding: 16px clamp(10px, 3vw, 28px) 24px; }
+    .shelf-return { display: block; width: fit-content; margin: 0 auto 12px; padding: .3rem; font-size: .84rem; }
+    .page-controls {
+      width: min(100%, 555px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 auto 12px;
+      gap: 12px;
+    }
+    .page-controls button {
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+      color: var(--ink);
+      font: 1.22rem/1 var(--sans);
+      cursor: pointer;
+    }
+    .page-controls button:disabled { opacity: .44; cursor: default; }
+    .page-position { color: var(--soft-ink); font-size: .85rem; font-weight: 650; text-align: center; }
+    .magazine-pages {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      overflow-x: auto;
+      overflow-y: hidden;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+    .magazine-pages::-webkit-scrollbar { display: none; }
+    .magazine-page { flex: 0 0 100%; min-width: 0; scroll-snap-align: start; }
+    .cover {
+      width: min(100%, 555px);
+      margin-inline: auto;
+      color: var(--cover-ink);
+      box-shadow: 0 2px 12px #1f1e1821;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+    .cover-link { display: block; text-decoration: none; }
+    .cover-action {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: .15rem .7rem;
+      padding: 9px 12px;
+      background: var(--cover-mat);
+      font-weight: 720;
+      font-size: .9rem;
+    }
+    .cover-action [lang="ko"] { font-size: .81rem; }
+    .cover-link:hover .cover-action { text-decoration: underline; text-underline-offset: .22em; }
+    .editor-letter {
+      width: min(100%, 846px);
+      margin-inline: auto;
+      padding: clamp(18px, 4vw, 39px);
+      background-color: var(--paper);
+      background-image: linear-gradient(#f4f5f396, #f4f5f396), var(--hanji);
+      background-position: center top;
+      background-size: auto, cover;
+      background-repeat: no-repeat;
+      border: 1px solid #bcc1b8;
+      box-shadow: 0 2px 12px #1f1e181a;
+    }
+    .letter-imprint {
+      padding-bottom: 9px;
+      border-bottom: 1px solid var(--ink);
+      font: clamp(1.4rem, 3vw, 2rem)/1 var(--serif);
+      letter-spacing: -.035em;
+    }
+    .letter-title {
+      margin-top: 14px;
+      font: 700 clamp(2.05rem, 5vw, 3.35rem)/1.01 var(--serif);
+      letter-spacing: -.047em;
+      text-wrap: balance;
+    }
+    .letter-title-ko { margin-top: 5px; font-size: .9rem; font-weight: 680; color: var(--soft-ink); }
+    .letter-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.09fr);
+      gap: clamp(15px, 3vw, 27px);
+      align-items: start;
+      margin-top: 17px;
+    }
+    .family-photo { border: 6px solid #faf9f4; box-shadow: 0 0 0 1px #acb1a5; }
+    .letter-copy { font-size: .98rem; }
+    .letter-copy p + p { margin-top: .6rem; }
+    .letter-copy [lang="ko"] {
+      margin-top: .8rem;
+      padding-top: .7rem;
+      border-top: 1px solid var(--rule);
+      font-size: .94rem;
+      line-height: 1.65;
+      word-break: keep-all;
+    }
+    .memory-pair {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+      gap: clamp(12px, 2.7vw, 26px);
+      border-top: 1px solid var(--rule);
+      margin-top: 24px;
+      padding-top: 20px;
+    }
+    .memory-pair figcaption {
+      display: grid;
+      gap: .2rem;
+      margin-top: .46rem;
+      color: var(--soft-ink);
+      font-size: .82rem;
+      line-height: 1.43;
+    }
+    .memory-pair figcaption [lang="ko"] { color: var(--ink); font-weight: 680; word-break: keep-all; }
+    .issue-link {
+      display: inline-block;
+      margin-top: .95rem;
+      padding-block: .25rem;
+      color: #334d3d;
+      font-size: .85rem;
+      font-weight: 720;
+    }
+    @media (max-width: 620px) {
+      .letter-layout { grid-template-columns: minmax(0, 1fr); }
+    }
+  </style>
+<link rel="stylesheet" href="/analytics.css"><script defer src="/analytics.js?v=20261118" data-base-path="/" data-api-origin="https://nearbykorea.sound88sound.chatgpt.site" data-reporting-section="/magazine"></script></head>
+<body>
+  <main class="magazine-carousel" aria-label="NearbyKorea magazine" aria-roledescription="carousel">
+    <a class="shelf-return" href="./#kn-magazine">← Magazine <span lang="ko">· 매거진 목록</span></a>
+    <nav class="page-controls" aria-label="Magazine pages">
+      <button type="button" id="previous-page" aria-label="Previous page" aria-controls="magazine-pages" disabled>←</button>
+      <p class="page-position" id="page-position" aria-live="polite">Gochujang cover · 1 of 2</p>
+      <button type="button" id="next-page" aria-label="Next page" aria-controls="magazine-pages">→</button>
+    </nav>
+    <div class="magazine-pages" id="magazine-pages" tabindex="0" aria-label="Gochujang cover and editor’s letter">
+      <section class="magazine-page" role="group" aria-roledescription="slide" aria-label="Gochujang cover, 1 of 2" data-page-name="Gochujang cover">
+        <article class="cover">
+          <h1 class="visually-hidden">NearbyKorea · Gochujang</h1>
+          <a class="cover-link" href="gochujang-guide.html" aria-labelledby="read-cover">
+            <img src="assets/gochujang/cover.webp" width="1080" height="1350"
+                 alt="Cream 고추장 and GOCHUJANG on red chilli paste, with NearbyKorea signed beneath the photograph">
+            <p class="cover-action" id="read-cover">
+              <span>Read part two <span aria-hidden="true">→</span></span>
+              <span lang="ko">고추장 2편 읽기</span>
+            </p>
+          </a>
+        </article>
+      </section>
+      <section class="magazine-page" role="group" aria-roledescription="slide" aria-label="Editor’s letter, 2 of 2" data-page-name="Editor’s letter">
+        <article class="editor-letter">
+          <p class="letter-imprint">Near by Korea</p>
+          <h2 class="letter-title">The flavours I grew up with</h2>
+          <p class="letter-title-ko" lang="ko">내가 먹고 자란 맛</p>
+          <div class="letter-layout">
+            <figure class="family-photo">
+              <img src="assets/gochujang/editor-family.webp" width="900" height="900" loading="lazy"
+                   alt="The editor’s childhood photograph at a table with fruit">
+            </figure>
+            <div class="letter-copy">
+              <p>I was born in Korea and lived there for forty years. I grew up eating the gochujang (고추장), kimchi (김치) and other ingredients that both of my grandmothers sent us.</p>
+              <p>This magazine starts with those memories. I’m tracing the roots of Korean cooking through its traditional fermented foods and looking for familiar flavours beyond Korea.</p>
+              <p lang="ko">저는 한국에서 태어나 40년을 살았습니다. 외할머니와 친할머니가 보내주신 고추장과 김치, 여러 식재료를 먹으며 자랐습니다. 그 기억에서 출발해 한식의 뿌리와 전통 발효음식을 들여다보고, 한국 밖에서도 어린 시절에 먹던 맛과 닮은 맛을 찾아가는 과정을 이 매거진에 담습니다.</p>
+              <a class="issue-link" href="gochujang-guide.html">How to choose a good gochujang <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <div class="memory-pair" role="group" aria-label="Childhood and my grandmother’s yujacheong">
+            <figure>
+              <img class="family-photo" src="assets/gochujang/childhood-print.webp" width="720" height="960" loading="lazy"
+                   alt="A printed photograph of the editor as a child">
+              <figcaption><span lang="ko">어린 시절의 나</span><span>Me as a child</span></figcaption>
+            </figure>
+            <figure>
+              <img class="family-photo" src="assets/gochujang/yuja-preserve.webp" width="720" height="960" loading="lazy"
+                   alt="An open jar of yujacheong with strips of yuja peel">
+              <figcaption>
+                <span lang="ko">돌아가신 할머니가 담가주신 마지막 유자청</span>
+                <span>The last batch of yuja preserve my late grandmother made for me</span>
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+  <script>
+    const pages = document.getElementById('magazine-pages');
+    const slides = Array.from(pages.children);
+    const previous = document.getElementById('previous-page');
+    const next = document.getElementById('next-page');
+    const position = document.getElementById('page-position');
+    let currentPage = 0;
+
+    function updateControls() {
+      currentPage = Math.max(0, Math.min(slides.length - 1, Math.round(pages.scrollLeft / pages.clientWidth)));
+      previous.disabled = currentPage === 0;
+      next.disabled = currentPage === slides.length - 1;
+      const label = `${slides[currentPage].dataset.pageName} · ${currentPage + 1} of ${slides.length}`;
+      if (position.textContent !== label) position.textContent = label;
+      pages.style.height = `${slides[currentPage].offsetHeight}px`;
+      slides.forEach((slide, index) => { slide.inert = index !== currentPage; });
+    }
+
+    function showPage(index) {
+      if (index < 0 || index >= slides.length) return;
+      pages.scrollTo({ left: index * pages.clientWidth });
+      updateControls();
+    }
+
+    previous.addEventListener('click', () => showPage(currentPage - 1));
+    next.addEventListener('click', () => showPage(currentPage + 1));
+    pages.addEventListener('scroll', updateControls, { passive: true });
+    pages.addEventListener('keydown', event => {
+      if (event.altKey || event.ctrlKey || event.metaKey) return;
+      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+        event.preventDefault();
+        showPage(currentPage + (event.key === 'ArrowRight' ? 1 : -1));
+      }
+    });
+    const pageSize = new ResizeObserver(updateControls);
+    slides.forEach(slide => pageSize.observe(slide));
+    updateControls();
+  </script>
+<div class="analytics-footer"><a href="/privacy.html">Privacy & statistics</a><button type="button" data-analytics-settings>Statistics preferences</button><a data-analytics-owner href="https://nearbykorea.sound88sound.chatgpt.site/admin/analytics">Owner statistics</a></div></body>
+</html>
