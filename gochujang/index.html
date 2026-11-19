@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NearbyKorea · Gochujang magazine</title>
-  <meta name="description" content="Open the Gochujang issue. Read an editor’s letter about two grandmothers’ cooking and a guide to choosing gochujang in Britain.">
+  <meta name="description" content="Open the Gochujang issue to read the UK buying guide, compare two jars and preview ways to use gochujang at home.">
   <link rel="canonical" href="https://nearbykorea.github.io/gochujang.html">
   <meta property="og:title" content="The Gochujang Issue · Korea, Nearby">
   <meta property="og:image" content="https://nearbykorea.github.io/assets/gochujang/cover.webp">
@@ -95,78 +95,23 @@
     }
     .cover-action [lang="ko"] { font-size: .81rem; }
     .cover-link:hover .cover-action { text-decoration: underline; text-underline-offset: .22em; }
-    .editor-letter {
-      width: min(100%, 846px);
+    .issue-contents {
+      width: min(100%, 555px);
       margin-inline: auto;
-      padding: clamp(18px, 4vw, 39px);
-      background-color: var(--paper);
-      background-image: linear-gradient(#f4f5f396, #f4f5f396), var(--hanji);
-      background-position: center top;
-      background-size: auto, cover;
-      background-repeat: no-repeat;
-      border: 1px solid #bcc1b8;
-      box-shadow: 0 2px 12px #1f1e181a;
+      padding: clamp(22px, 5vw, 42px);
+      background: #f2f0e8 var(--hanji) center / cover;
+      border: 1px solid var(--rule);
     }
-    .letter-imprint {
-      padding-bottom: 9px;
-      border-bottom: 1px solid var(--ink);
-      font: clamp(1.4rem, 3vw, 2rem)/1 var(--serif);
-      letter-spacing: -.035em;
-    }
-    .letter-title {
-      margin-top: 14px;
-      font: 700 clamp(2.05rem, 5vw, 3.35rem)/1.01 var(--serif);
-      letter-spacing: -.047em;
-      text-wrap: balance;
-    }
-    .letter-title-ko { margin-top: 5px; font-size: .9rem; font-weight: 680; color: var(--soft-ink); }
-    .letter-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1.09fr);
-      gap: clamp(15px, 3vw, 27px);
-      align-items: start;
-      margin-top: 17px;
-    }
-    .family-photo { border: 6px solid #faf9f4; box-shadow: 0 0 0 1px #acb1a5; }
-    .letter-copy { font-size: .98rem; }
-    .letter-copy p + p { margin-top: .6rem; }
-    .letter-copy [lang="ko"] {
-      margin-top: .8rem;
-      padding-top: .7rem;
-      border-top: 1px solid var(--rule);
-      font-size: .94rem;
-      line-height: 1.65;
-      word-break: keep-all;
-    }
-    .memory-pair {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      align-items: start;
-      gap: clamp(12px, 2.7vw, 26px);
-      border-top: 1px solid var(--rule);
-      margin-top: 24px;
-      padding-top: 20px;
-    }
-    .memory-pair figcaption {
-      display: grid;
-      gap: .2rem;
-      margin-top: .46rem;
-      color: var(--soft-ink);
-      font-size: .82rem;
-      line-height: 1.43;
-    }
-    .memory-pair figcaption [lang="ko"] { color: var(--ink); font-weight: 680; word-break: keep-all; }
-    .issue-link {
-      display: inline-block;
-      margin-top: .95rem;
-      padding-block: .25rem;
-      color: #334d3d;
-      font-size: .85rem;
-      font-weight: 720;
-    }
-    @media (max-width: 620px) {
-      .letter-layout { grid-template-columns: minmax(0, 1fr); }
-    }
+    .issue-contents header { padding-bottom: 1.6rem; }
+    .issue-contents header p { color: #254d70; font-size: .85rem; }
+    .issue-contents h2 { margin-top: .6rem; font: normal clamp(2.1rem, 4.8vw, 3.2rem)/1.05 var(--serif); }
+    .issue-contents h2 [lang="ko"] { display: block; margin-top: .5rem; font: .98rem/1.5 var(--sans); }
+    .issue-contents ul { margin: 0; padding: 0; border-bottom: 1px solid var(--rule); list-style: none; }
+    .issue-contents li { border-top: 1px solid var(--rule); padding-block: .85rem; }
+    .issue-contents li a { display: block; width: fit-content; padding-block: .2rem; text-decoration-color: #6b8091; }
+    .issue-contents li a:first-child, .issue-contents li p:first-child { font: 1.35rem/1.22 var(--serif); }
+    .issue-contents li [lang="ko"] { font-size: .9rem; word-break: keep-all; }
+    .issue-contents .upcoming { display: block; margin-top: .35rem; color: #254d70; font-size: .8rem; }
   </style>
 <link rel="stylesheet" href="/analytics.css"><script defer src="/analytics.js?v=20261118" data-base-path="/" data-api-origin="https://nearbykorea.sound88sound.chatgpt.site" data-reporting-section="/magazine"></script></head>
 <body>
@@ -177,7 +122,7 @@
       <p class="page-position" id="page-position" aria-live="polite">Gochujang cover · 1 of 2</p>
       <button type="button" id="next-page" aria-label="Next page" aria-controls="magazine-pages">→</button>
     </nav>
-    <div class="magazine-pages" id="magazine-pages" tabindex="0" aria-label="Gochujang cover and editor’s letter">
+    <div class="magazine-pages" id="magazine-pages" tabindex="0" aria-label="Gochujang cover and issue contents">
       <section class="magazine-page" role="group" aria-roledescription="slide" aria-label="Gochujang cover, 1 of 2" data-page-name="Gochujang cover">
         <article class="cover">
           <h1 class="visually-hidden">NearbyKorea · Gochujang</h1>
@@ -191,38 +136,27 @@
           </a>
         </article>
       </section>
-      <section class="magazine-page" role="group" aria-roledescription="slide" aria-label="Editor’s letter, 2 of 2" data-page-name="Editor’s letter">
-        <article class="editor-letter">
-          <p class="letter-imprint">Near by Korea</p>
-          <h2 class="letter-title">The flavours I grew up with</h2>
-          <p class="letter-title-ko" lang="ko">내가 먹고 자란 맛</p>
-          <div class="letter-layout">
-            <figure class="family-photo">
-              <img src="assets/gochujang/editor-family.webp" width="900" height="900" loading="lazy"
-                   alt="The editor’s childhood photograph at a table with fruit">
-            </figure>
-            <div class="letter-copy">
-              <p>I was born in Korea and lived there for forty years. I grew up eating the gochujang (고추장), kimchi (김치) and other ingredients that both of my grandmothers sent us.</p>
-              <p>This magazine starts with those memories. I’m tracing the roots of Korean cooking through its traditional fermented foods and looking for familiar flavours beyond Korea.</p>
-              <p lang="ko">저는 한국에서 태어나 40년을 살았습니다. 외할머니와 친할머니가 보내주신 고추장과 김치, 여러 식재료를 먹으며 자랐습니다. 그 기억에서 출발해 한식의 뿌리와 전통 발효음식을 들여다보고, 한국 밖에서도 어린 시절에 먹던 맛과 닮은 맛을 찾아가는 과정을 이 매거진에 담습니다.</p>
-              <a class="issue-link" href="gochujang-guide.html">How to choose a good gochujang <span aria-hidden="true">→</span></a>
-            </div>
-          </div>
-          <div class="memory-pair" role="group" aria-label="Childhood and my grandmother’s yujacheong">
-            <figure>
-              <img class="family-photo" src="assets/gochujang/childhood-print.webp" width="720" height="960" loading="lazy"
-                   alt="A printed photograph of the editor as a child">
-              <figcaption><span lang="ko">어린 시절의 나</span><span>Me as a child</span></figcaption>
-            </figure>
-            <figure>
-              <img class="family-photo" src="assets/gochujang/yuja-preserve.webp" width="720" height="960" loading="lazy"
-                   alt="An open jar of yujacheong with strips of yuja peel">
-              <figcaption>
-                <span lang="ko">돌아가신 할머니가 담가주신 마지막 유자청</span>
-                <span>The last batch of yuja preserve my late grandmother made for me</span>
-              </figcaption>
-            </figure>
-          </div>
+      <section id="contents" class="magazine-page" role="group" aria-roledescription="slide" aria-label="Issue contents, 2 of 2" data-page-name="Issue contents">
+        <article class="issue-contents">
+          <header>
+            <p>The Gochujang Issue · <span lang="ko">고추장 호</span></p>
+            <h2>In this issue <span lang="ko">이번 호 목차</span></h2>
+          </header>
+          <ul>
+            <li>
+              <a href="gochujang-guide.html">How to choose a good gochujang</a>
+              <a href="gochujang-guide.html?lang=ko" lang="ko">좋은 고추장 고르는 방법</a>
+            </li>
+            <li>
+              <a href="gochujang-guide.html#which-gochujang">Which gochujang is right for me?</a>
+              <a href="gochujang-guide.html?lang=ko#which-gochujang" lang="ko">나에게 맞는 고추장은?</a>
+            </li>
+            <li>
+              <p>How to use gochujang at home</p>
+              <p lang="ko">우리 집에서 고추장을 사서 어떻게 먹어볼까?</p>
+              <span class="upcoming">Coming soon · <span lang="ko">준비 중</span></span>
+            </li>
+          </ul>
         </article>
       </section>
     </div>
