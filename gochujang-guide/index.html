@@ -107,7 +107,7 @@
     .label-guide dd a, .product-note a, .chapter a { font-size: .85rem; }
     .shops { list-style: none; display: flex; flex-wrap: wrap; padding: 0; margin: .4rem 0 0; gap: 0 14px; }
     .shops a { display: inline-flex; align-items: center; column-gap: 4px; min-height: 30px; font-size: .86rem; font-weight: 670; white-space: nowrap; }
-    .coming-soon {
+    .recipe-feature {
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
       align-items: end;
@@ -116,7 +116,7 @@
       margin-top: 16px;
       padding: 16px 0 14px;
     }
-    .coming-soon h2 { font-size: clamp(1.65rem, 3.1vw, 2.35rem); }
+    .recipe-feature h2 { font-size: clamp(1.65rem, 3.1vw, 2.35rem); }
     .usage-teaser { color: var(--muted); font-size: .91rem; }
     .upcoming-cover {
       grid-column: 1 / -1;
@@ -150,7 +150,7 @@
       .product { gap: 11px; }
       .product-photo { height: 102px; }
       .shops { column-gap: 12px; }
-      .coming-soon { grid-template-columns: 1fr; }
+      .recipe-feature { grid-template-columns: 1fr; }
     }
     @media (pointer: coarse) {
       .shops a, .edition-nav a { min-height: 44px; }
@@ -264,15 +264,14 @@
         <p data-copy="ko" lang="ko">집에서 찹쌀고추장을 담그는 모습이 궁금하다면, 한식집의 영상도 보세요. 8분 7초부터 고추장을 장독에 담아 숙성하는 대목이 나와요. <a href="https://www.youtube.com/watch?v=qddu2s3k3zc&amp;t=487s">장독 장면 보기 · 8:07</a></p>
       </section>
     </div>
-    <section class="coming-soon" aria-labelledby="how-to-use-gochujang">
+    <section class="recipe-feature" aria-labelledby="how-to-use-gochujang">
       <div>
         <h2 id="how-to-use-gochujang"><span data-copy="en">How to use gochujang at home</span><span data-copy="ko" lang="ko">우리 집에서 고추장을 사서 어떻게 먹어볼까?</span></h2>
       </div>
-      <p class="usage-teaser"><span data-copy="en">Four ways to try gochujang, from bibimbap sauce to gochujang mayo.</span><span data-copy="ko" lang="ko">비빔밥에 넣고, 마요네즈에도 섞어봐요. 고추장 한 통을 즐기는 네 가지 방법을 준비하고 있어요.</span></p>
+      <p class="usage-teaser"><span data-copy="en">Start with a bowl of bibimbap, a little gochujang straight from the tub, or Jamie Oliver’s tofu.</span><span data-copy="ko" lang="ko">비빔밥 한 그릇, 오이에 찍어 먹는 고추장, 제이미 올리버의 두부로 시작해요.</span></p>
       <figure class="upcoming-cover">
-        <img src="assets/gochujang/uses-cover.webp" width="360" height="450" loading="lazy"
-             alt="Red gochujang magazine cover with the title 고추장" data-alt-ko="고추장이라고 쓰인 붉은 매거진 표지">
-        <figcaption>Coming soon<span data-copy="ko" lang="ko"> · 준비 중</span></figcaption>
+        <img src="assets/gochujang/uses-cover.webp" width="360" height="450" loading="lazy" alt="Red gochujang magazine cover" data-alt-ko="고추장 활용편의 붉은 표지">
+        <figcaption><a data-copy="en" href="reader.html#en/first">Read the recipes →</a><a data-copy="ko" lang="ko" href="reader.html#ko/first">레시피 읽기 →</a></figcaption>
       </figure>
     </section>
     <section class="sweet-note" aria-labelledby="sweetness">

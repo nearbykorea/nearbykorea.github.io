@@ -1,0 +1,428 @@
+#kn-jongno .site-header.opening-mast {
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+  gap: 18px; padding: 9px 0; border-bottom-color: var(--ink);
+}
+#kn-jongno .opening-mast .masthead {
+  padding: 0; margin: 0; max-width: none; white-space: nowrap;
+  font: 400 clamp(40px, 4.6vw, 66px)/1.06 Georgia,serif; letter-spacing: -.065em;
+}
+#kn-jongno .opening-mast .navigation { justify-self: end; align-items: center; }
+#kn-jongno .cover.opening-intro { display: block; padding: 0; margin: 0; }
+#kn-jongno .opening-intro summary, #kn-jongno .album-size {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  min-height: 44px; border: 0; background: transparent; color: var(--green);
+}
+#kn-jongno .opening-intro summary { padding: 6px 0; list-style: none; }
+#kn-jongno .opening-intro summary::-webkit-details-marker { display: none; }
+#kn-jongno .intro-motto { color: var(--ink); font: 400 clamp(20px,2.1vw,29px)/1.2 Georgia,serif; letter-spacing: -.04em; }
+#kn-jongno .about-label, #kn-jongno .album-size { font: 12px/1.4 Arial,sans-serif; }
+#kn-jongno .about-label { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+#kn-jongno .expand-mark { font: 16px/1 Arial,sans-serif; }
+#kn-jongno .expand-mark::before { content: "+"; }
+#kn-jongno details[open] .expand-mark::before, #kn-jongno .album-size[aria-expanded="true"] .expand-mark::before { content: "−"; }
+#kn-jongno .opening-intro .intro-copy { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 80ch; padding: 8px 0 20px; font: 16px/1.6 Georgia,serif; }
+#kn-jongno #kn-discover { padding-top: 12px; margin-bottom: 25px; }
+#kn-jongno .discover-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+#kn-jongno .discover-bar h2 { font: 400 clamp(23px,2.4vw,34px)/1.15 Georgia,serif; letter-spacing: -.045em; }
+#kn-jongno .discover-bar .discover-tabs { align-items: center; gap: 21px; margin: 0; border: 0; }
+#kn-jongno .discover-bar .discover-tab { min-height: 44px; padding: 8px 0; font: 15px/1.3 Georgia,serif; }
+#kn-jongno .album-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+#kn-jongno .album-toolbar .chapter-label { margin: 0; font: 12px/1.5 Arial,sans-serif; }
+#kn-jongno .album-size { padding: 0 3px; }
+#kn-jongno .album-size:hover, #kn-jongno .opening-intro summary:hover .about-label { text-decoration: underline; text-underline-offset: 4px; }
+#kn-jongno .album-strip .photo-layout {
+  display: grid; grid-template-columns: 1.12fr 1fr .88fr; gap: clamp(9px,1.6vw,22px);
+}
+#kn-jongno .album-strip .photo-layout > div { display: contents; }
+#kn-jongno .album-strip .photo-side figure:last-child { width: auto; max-width: none; margin: 0; }
+#kn-jongno .album-strip #jongno-photos .photo-frame img {
+  width: 100%; height: clamp(94px,16vh,156px); aspect-ratio: auto; object-fit: cover;
+}
+#kn-jongno .album-strip .photo-main img { object-position: 50% 40%; }
+#kn-jongno .album-strip .photo-side figure:first-child img { object-position: 50% 53%; }
+#kn-jongno .album-strip #jongno-photos .photo-side figure:last-child img { object-position: 50% 60%; }
+#kn-jongno .album-strip .photo-layout figcaption { padding-top: 5px; }
+#kn-jongno .album-strip .photo-layout .place { margin: 0; font: 12px/1.45 Arial,sans-serif; letter-spacing: 0; }
+#kn-jongno .album-strip .photo-layout h3, #kn-jongno .album-strip .editorial-note { display: none; }
+
+#kn-jongno #kn-magazine { padding-top: 12px; }
+#kn-jongno .edition-top { align-items: center; margin-bottom: 15px; }
+#kn-jongno .edition-tools { display: flex; align-items: center; gap: 30px; }
+#kn-jongno .edition-language { display: inline-flex; gap: 3px; align-items: center; }
+#kn-jongno .edition-language button {
+  min-width: 42px; min-height: 44px; padding: 8px 4px; border: 0; background: transparent;
+  font: 12px/1.4 Arial, "Apple SD Gothic Neo", sans-serif; color: var(--muted);
+}
+#kn-jongno .edition-language button[aria-pressed="true"] { text-decoration: underline; text-underline-offset: 6px; color: var(--ink); }
+#kn-jongno .edit-letter {
+  display: grid; grid-template-columns: minmax(0, .83fr) minmax(0, 1.17fr);
+  grid-template-areas: "photo title" "photo copy"; column-gap: clamp(30px, 4.5vw, 68px);
+  padding: 0 clamp(12px, 3vw, 42px) 2px; align-items: start;
+}
+#kn-jongno .edit-letter-head { grid-area: title; align-self: end; padding: 10px 0 0; }
+#kn-jongno .edit-eyebrow {
+  color: var(--green); font: 11px/1.55 Arial, "Apple SD Gothic Neo", sans-serif;
+  text-transform: uppercase; letter-spacing: .12em;
+}
+#kn-jongno .edit-eyebrow :lang(ko) { letter-spacing: .02em; }
+#kn-jongno .edit-dot { padding: 0 9px; }
+#kn-jongno #edit-letter-title {
+  margin: 11px 0 7px; color: var(--ink); font: 400 clamp(40px, 4.95vw, 68px)/.99 Georgia, serif;
+  letter-spacing: -.062em;
+}
+#kn-jongno #edit-letter-title :lang(ko) {
+  font-family: "AppleMyungjo", "Apple Myungjo", "Batang", serif; font-weight: 400; line-height: 1.08; letter-spacing: -.065em;
+}
+#kn-jongno .edit-translation { color: var(--muted); font-size: 14px; line-height: 1.6; }
+#kn-jongno .edit-family { grid-area: photo; width: 100%; max-width: 360px; align-self: center; justify-self: end; }
+#kn-jongno .album-mount { background: #fcfcf9; padding: clamp(8px, 1.1vw, 15px); border: 1px solid #d8d9d1; }
+#kn-jongno .album-mount img { display: block; width: 100%; height: auto; aspect-ratio: 12 / 11; object-fit: cover; object-position: center bottom; }
+#kn-jongno .edit-family figcaption { color: var(--muted); font: 11px/1.6 Arial,sans-serif; padding-top: 9px; }
+#kn-jongno .edit-letter-copy { grid-area: copy; padding: 20px 0 6px; max-width: 39ch; }
+#kn-jongno .edit-intro { font: 17px/1.55 Georgia, serif; }
+#kn-jongno .edit-intro[lang="ko"] { font: 16px/1.85 Arial, "Apple SD Gothic Neo", sans-serif; word-break: keep-all; }
+#kn-jongno .edit-link, #kn-jongno .shelf-line a {
+  display: inline-flex; align-items: center; justify-content: space-between; gap: 13px;
+  min-height: 44px; color: var(--green); font: 13px/1.4 Arial, sans-serif;
+}
+#kn-jongno .edit-link { margin-top: 12px; text-decoration: underline; text-underline-offset: 5px; }
+#kn-jongno .edit-link:hover, #kn-jongno .shelf-line a:hover, #kn-jongno .edition-book:is(:hover,:focus-visible) .shelf-action {
+  text-decoration: underline; text-underline-offset: 4px;
+}
+#kn-jongno .shelf-line { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-top: 1px solid var(--rule); margin: 52px 0 19px; padding-top: 10px; scroll-margin-top: 20px; }
+#kn-jongno .shelf-line h3 { font: 400 29px/1.18 Georgia, "AppleMyungjo", serif; letter-spacing: -.045em; }
+#kn-jongno .edition-books { padding: 0; gap: clamp(24px, 3.1vw, 48px); }
+#kn-jongno .edition-books .edition-book {
+  display: flex; flex-direction: column; align-self: start; padding: 0; border: 0;
+  box-shadow: none; color: var(--ink); background: transparent; aspect-ratio: auto;
+}
+#kn-jongno .edition-art { width: 100%; aspect-ratio: 4/5; overflow: hidden; position: relative; }
+#kn-jongno .edition-art img { display: block; width: 100%; height: 100%; object-fit: cover; }
+#kn-jongno .cover-print { background: #b74c42; }
+#kn-jongno .cover-print img { object-fit: contain; }
+#kn-jongno .egg-print img { object-position: 47% 50%; }
+#kn-jongno .shopping-print {
+  display: flex; flex-direction: column; justify-content: space-between; padding: 8%;
+  background: #dfe4d9; color: #2c4534; border: 1px solid #c1caba;
+}
+#kn-jongno .shop-micro { font: 11px/1.4 Arial,sans-serif; letter-spacing: .07em; text-transform: uppercase; }
+#kn-jongno .shop-type { font: 400 clamp(35px, 4.1vw, 65px)/.99 Georgia,serif; letter-spacing: -.065em; }
+#kn-jongno .shop-foot { border-top: 1px solid #9cab9d; padding-top: 9px; font: 12px/1.65 Arial,sans-serif; }
+#kn-jongno .edition-caption { padding-top: 15px; }
+#kn-jongno .edition-caption h4 { margin: 5px 0 2px; font: 400 clamp(21px, 2.2vw, 31px)/1.18 Georgia, "AppleMyungjo", serif; letter-spacing: -.04em; word-break: keep-all; }
+#kn-jongno .shelf-action, #kn-jongno .shelf-coming { margin-top: 6px; font: 12px/1.6 Arial,sans-serif; }
+#kn-jongno .shelf-action { color: var(--green); }
+#kn-jongno .shelf-coming { color: var(--muted); }
+#kn-jongno .shelf-action span[aria-hidden] { margin-left: 6px; }
+@media (max-width: 800px) and (min-width: 640px) {
+  #kn-jongno .edit-letter { padding: 0; column-gap: 31px; }
+  #kn-jongno #edit-letter-title { font-size: 43px; }
+}
+@media (min-width: 640px) and (max-height: 650px) {
+  #kn-jongno .site-header.opening-mast { padding-block: 3px; }
+  #kn-jongno .opening-mast .masthead { font-size: clamp(33px,4vw,46px); }
+  #kn-jongno #kn-discover:has(.album-strip:not([hidden])) {
+    display: grid; grid-template-columns: minmax(128px, .27fr) minmax(0,1fr);
+    align-items: center; gap: 16px; padding-top: 2px; margin-bottom: 14px;
+  }
+  #kn-jongno #kn-discover:has(.album-strip:not([hidden])) .discover-bar { align-items: flex-start; justify-content: center; flex-direction: column; gap: 0; }
+  #kn-jongno .album-strip #jongno-photos .photo-frame img { height: clamp(58px,14vh,88px); }
+  #kn-jongno #kn-magazine { padding-top: 5px; }
+  #kn-jongno .edition-top { margin-bottom: 7px; }
+  #kn-jongno .edit-letter { grid-template-rows: max-content 1fr; }
+  #kn-jongno .edit-letter-head, #kn-jongno .edit-family { align-self: start; }
+  #kn-jongno .edit-letter-head { padding-top: 0; }
+  #kn-jongno #edit-letter-title { margin: 4px 0; font-size: clamp(30px,4vw,52px); }
+}
+@media (min-width: 640px) and (max-height: 480px) {
+  #kn-jongno .inner:has(#kn-intro:not([open])) { display: grid; grid-template-columns: minmax(0,1fr) auto; }
+  #kn-jongno .inner > .section, #kn-jongno .inner > .site-footer { grid-column: 1 / -1; }
+  #kn-jongno .inner:has(#kn-intro:not([open])) .opening-mast { grid-template-columns: 1fr auto; border: 0; }
+  #kn-jongno .inner:has(#kn-intro:not([open])) .opening-mast .korean { display: none; }
+  #kn-jongno .inner:has(#kn-intro:not([open])) .masthead { justify-self: start; }
+  #kn-jongno .opening-intro:has(details:not([open])) { align-self: center; padding-left: 20px; }
+  #kn-jongno #kn-intro:not([open]) .intro-motto { display: none; }
+  #kn-jongno .edition-top { margin-bottom: 3px; }
+  #kn-jongno .edit-translation { font-size: 12px; line-height: 1.4; }
+}
+@media (max-width: 639px) {
+  #kn-jongno.compact .inner { padding-inline: clamp(16px,5vw,24px); }
+  #kn-jongno .site-header.opening-mast { grid-template-columns: 1fr auto; gap: 8px; padding: 6px 0; }
+  #kn-jongno .opening-mast .korean { display: none; }
+  #kn-jongno .opening-mast .masthead { text-align: left; font-size: clamp(29px,8.7vw,43px); }
+  #kn-jongno .opening-mast .navigation { gap: 12px; }
+  #kn-jongno .intro-motto { font-size: clamp(17px,4.6vw,22px); }
+  #kn-jongno .opening-intro .intro-copy { grid-template-columns: 1fr; gap: 8px; }
+  #kn-jongno #kn-discover { padding-top: 4px; margin-bottom: 14px; }
+  #kn-jongno .discover-bar { gap: 6px; }
+  #kn-jongno .discover-bar .discover-tabs { gap: 13px; }
+  #kn-jongno .discover-bar .discover-tab { font-size: 14px; }
+  #kn-jongno .album-toolbar .chapter-label { font-size: 11px; }
+  #kn-jongno .album-strip .photo-layout { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 7px; }
+  #kn-jongno .album-strip #jongno-photos .photo-frame img { height: clamp(70px,11vh,102px); }
+  #kn-jongno .album-strip .photo-credit { right: 3px; bottom: 3px; padding: 0 2px; background: #17221eb0; font-size: 9px; }
+  #kn-jongno .album-strip .photo-layout .place { font-size: 11px; line-height: 1.3; }
+  #kn-jongno .album-strip .place-dot { display: none; }
+  #kn-jongno .album-strip .place [lang="ko"] { display: block; }
+  #kn-jongno #kn-magazine { padding-top: 6px; }
+  #kn-jongno.compact .edition-top { display: flex; align-items: center; gap: 8px; margin-bottom: 11px; }
+  #kn-jongno.compact .edition-top h2 { font-size: 28px; }
+  #kn-jongno .edition-tools { display: block; }
+  #kn-jongno .edition-top .edition-tools p { display: none; }
+  #kn-jongno .edit-letter { grid-template-columns: minmax(0,.88fr) minmax(0,1.12fr); grid-template-areas: "photo title" "photo action" "summary summary"; padding: 0; column-gap: clamp(12px,3.5vw,20px); }
+  #kn-jongno .edit-letter-head { align-self: end; padding: 0; }
+  #kn-jongno .edit-letter-head .edit-dot, #kn-jongno .edit-letter-head .edit-dot + span { display: none; }
+  #kn-jongno .edit-letter-head:lang(ko) .edit-eyebrow > span:first-child { display: none; }
+  #kn-jongno .edit-letter-head:lang(ko) .edit-eyebrow > span:last-child { display: inline; }
+  #kn-jongno .edit-letter-copy { display: contents; }
+  #kn-jongno #edit-letter-title { font-size: clamp(25px,7.1vw,43px); margin: 6px 0 5px; }
+  #kn-jongno .edit-translation { font-size: 12px; }
+  #kn-jongno .edit-family { align-self: start; max-width: none; }
+  #kn-jongno .album-mount { padding: 4px; }
+  #kn-jongno .edit-family figcaption { padding-top: 5px; line-height: 1.3; }
+  #kn-jongno .edit-family figcaption span:not(:first-child) { display: none; }
+  #kn-jongno .edit-family:lang(ko) figcaption span:first-child { display: none; }
+  #kn-jongno .edit-family:lang(ko) figcaption span:last-child { display: inline; }
+  #kn-jongno .edit-link { grid-area: action; align-self: start; justify-self: start; margin: 0; }
+  #kn-jongno .edit-intro { grid-area: summary; margin-top: 15px; }
+  #kn-jongno .shelf-line { margin: 34px 0 13px; align-items: center; }
+  #kn-jongno .shelf-line h3 { font-size: 24px; }
+  #kn-jongno .shelf-line a { flex-shrink: 0; font-size: 12px; }
+  #kn-jongno.compact .edition-books, #kn-jongno.compact .book-controls { max-width: 340px; }
+  #kn-jongno.compact .book-controls { margin-top: 12px; border-top: 1px solid var(--rule); }
+  #kn-jongno.compact .edition-books { touch-action: pan-y; }
+  #kn-jongno .shop-type { font-size: clamp(52px, 16vw, 75px); }
+  #kn-jongno .edition-caption h4 { font-size: 25px; }
+}
+
+:is(#kn-jongno, #nk-supper) {
+  --dye-ink: #255077;
+  --dye-mid: #467a9e;
+  --dye-light: #9ccae8;
+  --dye-wash: #d2eef2;
+}
+.cloth-signet {
+  display: inline-block;
+  width: .65em;
+  height: .67em;
+  margin-inline-end: .24em;
+  vertical-align: -.035em;
+  background: linear-gradient(to right,
+    var(--dye-ink) 0 27%, transparent 27% 34%,
+    var(--dye-mid) 34% 60%, transparent 60% 67%,
+    var(--dye-light) 67% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 67%, 67% 72%, 67% 0, 60% 0, 60% 98%, 34% 100%, 34% 0, 27% 0, 27% 81%, 0 86%);
+}
+#nk-supper .letter-underline {
+  color: var(--dye-ink);
+  background: linear-gradient(transparent 67%, var(--dye-wash) 67% 94%, transparent 94%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+#nk-supper .nk-label, #nk-supper .nk-linkback { color: var(--dye-ink); }
+
+#kn-jongno #kn-magazine,
+#kn-jongno #kn-culture,
+#kn-jongno .family-recipes {
+  position: relative;
+  border-top: 1px solid #aab9c0;
+}
+#kn-jongno #kn-magazine::before,
+#kn-jongno #kn-culture::before,
+#kn-jongno .family-recipes::before {
+  content: "";
+  position: absolute;
+  inset: -2px auto auto 0;
+  width: clamp(54px, 10%, 116px);
+  height: 3px;
+  background: var(--dye-ink);
+}
+#kn-jongno .edition-top .edition-language button[aria-pressed=true],
+#kn-jongno .edit-eyebrow, #kn-jongno .edit-link, #kn-jongno .shelf-action,
+#kn-jongno .shelf-line a, #kn-jongno .recipe-role { color: var(--dye-ink); }
+#kn-jongno .edit-link, #kn-jongno .shelf-line a { text-decoration-color: #7499ae; }
+#kn-magazine .shelf-line [data-copy="ko"] { word-break: keep-all; }
+
+#kn-jongno .recipes-intro {max-width:64ch; margin:0 0 16px; font-size:15px; line-height:1.55;}
+#kn-jongno #kn-culture {padding-top:12px;}
+#kn-jongno .artist-entry {display:grid; grid-template-columns:minmax(96px,240px) minmax(0,1fr); align-items:center; gap:clamp(16px,3.5vw,46px);}
+#kn-jongno .artist-portrait-link {display:block; background:#f2f0e8;}
+#kn-jongno .artist-portrait-link img {display:block; width:100%; height:auto;}
+#kn-jongno .artist-portrait {margin:0;}
+#kn-jongno .artist-portrait figcaption {margin-top:6px; color:var(--muted); font-size:12px; line-height:1.4; word-break:keep-all;}
+#kn-jongno .culture-episodes {margin:14px 0 0; padding:0; max-width:46ch; list-style:none;}
+#kn-jongno .culture-episodes a {display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:44px; padding:5px 0; border-top:1px solid #bec9ce; color:#254d70; font-size:15px; line-height:1.4; word-break:keep-all;}
+#kn-jongno .culture-episodes a::after {content:'→' / '';}
+#kn-jongno .culture-episodes a:hover {text-decoration:underline;}
+#kn-jongno .artist-entry h3 {margin:4px 0; font:400 clamp(28px,3.2vw,44px)/1.12 var(--serif,Georgia,serif); word-break:keep-all;}
+#kn-jongno .artist-entry .edit-translation {margin-bottom:12px; font:400 17px/1.35 var(--serif,Georgia,serif); color:#254d70;}
+#kn-jongno .artist-entry .edit-link {color:#254d70;}
+#kn-jongno .artist-entry-deck {max-width:48ch; margin:0; font-size:16px; line-height:1.55;}
+#kn-jongno .artist-entry-deck:lang(ko) {word-break:keep-all; text-wrap:pretty;}
+@media (max-width:374px) {
+  #kn-jongno .opening-mast .navigation .direct-culture {display:none;}
+}
+@media (max-width:639px) {
+  #kn-jongno .artist-entry {grid-template-columns:minmax(64px,.6fr) minmax(0,1fr); gap:16px;}
+  #kn-jongno .artist-entry-deck {font-size:14px;}
+}
+
+#kn-jongno .opening-mast .navigation { gap: clamp(12px, 1.7vw, 26px); }
+#kn-jongno .menu-trigger, #kn-jongno #section-menu-close {
+  display: inline-grid; place-items: center; width: 44px; height: 44px; padding: 0;
+  border: 0; color: var(--dye-ink); background: transparent;
+}
+#kn-jongno .navigation .menu-trigger span {
+  width: 19px; height: 13px; min-height: 0; padding: 0; border-block: 1.5px solid;
+  background: linear-gradient(currentColor,currentColor) center/100% 1.5px no-repeat;
+}
+html:has(#section-menu[open]) { overflow: hidden; }
+#kn-jongno #section-menu {
+  box-sizing: border-box; position: fixed; inset: 0 auto 0 0; margin: 0;
+  width: min(355px, calc(100% - 40px)); max-width: none;
+  height: 100dvh; max-height: 100%; padding: 12px 24px 32px;
+  border: 0; border-right: 1px solid #a6b7c0; overflow-y: auto;
+  color: var(--ink); background: #f6f7f3;
+}
+#kn-jongno #section-menu:not([open]) { display: none; }
+#kn-jongno #section-menu::backdrop { background: rgb(20 34 42 / 40%); }
+#kn-jongno #section-menu header,
+#kn-jongno #section-menu nav a { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+#kn-jongno .drawer-brand { font: 29px/1.1 Georgia, serif; letter-spacing: -.06em; }
+#kn-jongno #section-menu-close { font: 32px/1 Arial, sans-serif; }
+#kn-jongno #section-menu h2 { margin: 25px 0 8px; font: 27px/1.3 Georgia, serif; }
+#kn-jongno #section-menu h2 small, #kn-jongno #section-menu nav a span {
+  color: #51636a; font: 12px/1.3 Arial, "Apple SD Gothic Neo", sans-serif;
+}
+#kn-jongno #section-menu nav { border-top: 2px solid var(--dye-ink); }
+#kn-jongno #section-menu nav a { min-height: 53px; padding: 6px 0; border-bottom: 1px solid #cdd6d8; font: 19px/1.35 Georgia, serif; }
+#kn-jongno #section-menu nav a:is(:hover,:focus-visible) { color: var(--dye-ink); background: #e8f1f3; }
+
+#kn-jongno .family-recipes { margin-top: clamp(38px,5vw,72px); padding-top: 15px; scroll-margin-top: 20px; }
+#kn-jongno .recipes-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+#kn-jongno .recipes-heading h3 {
+  margin: 0; font: 400 clamp(28px,3vw,41px)/1.13 Georgia, "AppleMyungjo", serif; letter-spacing: -.046em;
+}
+#kn-jongno .recipes-heading p { color: #526369; font: 12px/1.4 Arial, sans-serif; white-space: nowrap; }
+#kn-jongno .family-recipe-feature {display:grid; grid-template-columns:minmax(110px,230px) minmax(0,1fr); align-items:center; gap:clamp(16px,3vw,42px); margin:0 0 24px; color:inherit; text-decoration:none;}
+#kn-jongno .family-recipe-feature img {display:block; width:100%; height:auto;}
+#kn-jongno .family-recipe-feature h4 {max-width:22ch; margin:6px 0 10px; font:400 clamp(23px,3.2vw,40px)/1.18 Georgia,"AppleMyungjo",serif; word-break:keep-all; text-wrap:balance;}
+#kn-jongno .family-recipe-feature:is(:hover,:focus-visible) h4 {text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:.15em;}
+#kn-jongno .family-next {margin:18px 0 10px; padding-top:10px; border-top:1px solid #bbc6ca; color:var(--muted); font-size:13px;}
+@media (max-width:639px) {
+  #kn-jongno .family-recipe-feature {grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr); gap:14px;}
+}
+#kn-jongno .recipe-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: clamp(14px,2vw,29px); }
+#kn-jongno .recipe-grid img { display: block; width: 100%; height: auto; aspect-ratio: 1.62; object-fit: cover; }
+#kn-jongno .recipe-grid figcaption { padding-top: 12px; }
+#kn-jongno .recipe-role { font: 12px/1.4 Arial, "Apple SD Gothic Neo", sans-serif; }
+#kn-jongno .recipe-grid h4 { margin: 4px 0 0; font: 400 clamp(20px,2vw,28px)/1.17 Georgia, "AppleMyungjo", serif; letter-spacing: -.04em; word-break: keep-all; }
+#kn-jongno .dish-gyeranjang img { object-position: 50% 47%; }
+#kn-jongno .dish-miyeokguk img { object-position: 50% 53%; }
+#kn-jongno .dish-soy-sauce-pork img { object-position: 50% 52%; }
+#kn-jongno .dish-yangnyeom-chicken img { object-position: 50% 55%; }
+#kn-jongno [data-layout=kitchen] > .family-recipes { margin: 0 0 clamp(32px,4vw,55px); padding: 0 0 clamp(24px,3vw,40px); border-top: 0; border-bottom: 1px solid var(--rule); }
+#kn-jongno [data-layout=kitchen] > .family-recipes::before { display: none; }
+#kn-jongno [data-layout=kitchen] .recipes-heading h3 { font-size: clamp(35px,5.2vw,70px); line-height: 1.03; }
+#kn-jongno [data-layout=kitchen] .recipes-heading { margin-bottom: clamp(14px,1.65vw,25px); }
+
+#kn-jongno .issue-feature:not([hidden]) {
+  display: grid; grid-template-columns: minmax(0, .87fr) minmax(0, 1.13fr);
+  align-items: center; gap: clamp(30px,6vw,78px); padding: 0 0 28px;
+  margin-bottom: clamp(24px,3vw,44px); border-bottom: 1px solid var(--rule);
+}
+#kn-jongno .issue-feature-copy { padding-left: clamp(0px,1.8vw,26px); }
+#kn-jongno .issue-feature h3 {
+  margin: 12px 0 17px; font: 400 clamp(48px,6.3vw,88px)/.95 Georgia, "AppleMyungjo", serif;
+  letter-spacing: -.065em; color: var(--ink);
+}
+#kn-jongno .issue-feature h3 em { font-weight: 400; }
+#kn-jongno .lead-deck { font: 18px/1.48 Georgia, "AppleMyungjo", serif; max-width: 35ch; word-break: keep-all; }
+#kn-jongno .cover-display {
+  display: grid; place-items: center; min-height: 0; padding: 18px;
+  background: #e2eaeb; border-block: 1px solid #cad7da;
+}
+#kn-jongno .cover-display img {
+  display: block; width: auto; max-width: 100%; height: clamp(240px,24vw,315px); object-fit: contain;
+  box-shadow: 2px 5px 8px #263b4826;
+}
+@media (min-width: 940px) {
+  #kn-jongno .magazine-spread {
+    display: grid; grid-template-columns: minmax(0, 3.35fr) minmax(218px,1fr);
+    align-items: start; column-gap: clamp(22px,2.6vw,41px);
+  }
+  #kn-jongno .magazine-spread .edit-letter {
+    grid-template-columns: minmax(0,.97fr) minmax(0,1fr);
+    grid-template-areas: "title photo" "copy photo";
+    grid-template-rows: max-content 1fr; gap: 0 clamp(18px,2.7vw,42px); padding: 0;
+  }
+  #kn-jongno .magazine-spread .edit-letter-head { padding-top: 10px; align-self: start; }
+  #kn-jongno .magazine-spread #edit-letter-title { font-size: clamp(42px,4.25vw,67px); }
+  #kn-jongno .magazine-spread .edit-family { max-width: none; align-self: start; }
+  #kn-jongno .magazine-spread .edit-letter-copy { padding: 12px 0 0; }
+  #kn-jongno .magazine-spread .edit-intro { font-size: 17px; line-height: 1.48; }
+  #kn-jongno .magazine-spread .edit-intro[lang=ko] { font-size: 15px; line-height: 1.72; }
+  #kn-jongno .edition-rail { border-left: 1px solid #c4ced0; padding-left: clamp(14px,1.5vw,21px); }
+  #kn-jongno .edition-rail .shelf-line { margin: 0 0 9px; border: 0; padding: 0; gap: 6px; align-items: baseline; }
+  #kn-jongno .edition-rail .shelf-line h3 { font-size: clamp(18px,1.55vw,23px); line-height: 1.15; }
+  #kn-jongno .edition-rail .shelf-line a { font-size: 11px; gap: 2px; min-height: 34px; white-space: nowrap; }
+  #kn-jongno .edition-rail .books { display: grid; grid-template-columns: 1fr; gap: 0; padding: 0; }
+  #kn-jongno .edition-rail .edition-book {
+    display: grid; grid-template-columns: minmax(48px,.57fr) minmax(0,1fr);
+    align-items: center; gap: 10px; padding: 12px 0; border-top: 1px solid #cdd3d1;
+  }
+  #kn-jongno .edition-rail .edition-caption { padding: 0; }
+  #kn-jongno .edition-rail .edition-caption h4 { font-size: clamp(18px,1.5vw,23px); line-height: 1.07; margin: 4px 0 0; }
+  #kn-jongno .edition-rail .edition-art { width: 100%; max-height: 113px; }
+  #kn-jongno .edition-rail .edit-eyebrow { font-size: 10px; letter-spacing: .045em; }
+  #kn-jongno .edition-rail .shelf-action, #kn-jongno .edition-rail .shelf-coming { font-size: 11px; margin-top: 5px; line-height: 1.35; }
+  #kn-jongno .edition-rail .shopping-print { justify-content: center; background: #e5ecec; color: var(--dye-ink); border-color: #c7d5d8; }
+  #kn-jongno .edition-rail .shop-micro, #kn-jongno .edition-rail .shop-foot { display: none; }
+  #kn-jongno .edition-rail .shop-type { font-size: clamp(15px,1.1vw,17px); letter-spacing: -.065em; }
+}
+@media (max-width: 939px) {
+  #kn-jongno .recipe-grid { grid-template-columns: repeat(2,minmax(0,1fr)); row-gap: 23px; }
+}
+@media (max-width: 639px) {
+  #kn-jongno .opening-mast .navigation { gap: 4px; }
+  #kn-jongno .opening-mast .navigation .direct-explore { display: none; }
+  #kn-jongno .opening-mast .navigation a { display: inline-flex; align-items: center; }
+  #kn-jongno .masthead .cloth-signet { width: .53em; margin-inline-end: .19em; }
+  #kn-jongno .recipe-grid { gap: 18px 12px; }
+  #kn-jongno .recipe-grid figcaption { padding-top: 6px; }
+  #kn-jongno .recipe-grid h4 { font-size: 20px; }
+  #kn-jongno .recipe-role { font-size: 11px; }
+  #kn-jongno .issue-feature:not([hidden]) {
+    grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); gap: 0 14px;
+    grid-template-areas: "label cover" "title cover" "link cover" "deck deck";
+    align-items: end; padding-bottom: 20px;
+  }
+  #kn-jongno .issue-feature-copy { display: contents; }
+  #kn-jongno .issue-feature .edit-eyebrow { grid-area: label; }
+  #kn-jongno .issue-feature h3 { grid-area: title; font-size: clamp(32px,9.5vw,58px); margin: 5px 0; }
+  #kn-jongno .cover-display { grid-area: cover; padding: 10px; }
+  #kn-jongno .cover-display img { height: auto; width: 100%; }
+  #kn-jongno .issue-feature .edit-link { grid-area: link; font-size: 12px; align-self: start; margin: 0; }
+  #kn-jongno .issue-feature .lead-deck { grid-area: deck; margin-top: 12px; max-width: none; font-size: 16px; }
+  #kn-jongno .recipes-heading { align-items: center; }
+}
+@media (max-width: 359px) {
+  #kn-jongno .recipe-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 639px) and (scripting: enabled) {
+  #kn-jongno #kn-magazine:not([data-layout]) .edition-book ~ .edition-book { display: none; }
+}
+@media (min-width: 640px) and (max-height: 650px) {
+  #kn-jongno .magazine-spread .edit-letter-head { padding: 0; }
+  #kn-jongno .magazine-spread #edit-letter-title { font-size: clamp(30px,3.5vw,46px); }
+}
+@media (max-height: 650px) {
+  #kn-jongno .issue-feature:not([hidden]) { align-items: start; }
+  #kn-jongno .issue-feature .issue-feature-copy { align-self: start; }
+  #kn-jongno .issue-feature h3 { margin-block: 6px; }
+}
+@media (min-width: 640px) and (max-height: 480px) {
+  #kn-jongno .issue-feature h3 { font-size: clamp(36px,5.6vw,48px); }
+}
+
+#kn-magazine #editors-letter.letter-anchor { display:block; width:0; height:0; margin:0; padding:0; }
