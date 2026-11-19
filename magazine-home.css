@@ -253,6 +253,7 @@
 #kn-jongno .culture-episodes {margin:14px 0 0; padding:0; max-width:46ch; list-style:none;}
 #kn-jongno .culture-episodes a {display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:44px; padding:5px 0; border-top:1px solid #bec9ce; color:#254d70; font-size:15px; line-height:1.4; word-break:keep-all;}
 #kn-jongno .culture-episodes a::after {content:'→' / '';}
+#kn-jongno .culture-episodes small {display:block; margin-top:2px; color:#485956; font-size:14px; line-height:1.45; text-wrap:pretty;}
 #kn-jongno .culture-episodes a:hover {text-decoration:underline;}
 #kn-jongno .artist-entry h3 {margin:4px 0; font:400 clamp(28px,3.2vw,44px)/1.12 var(--serif,Georgia,serif); word-break:keep-all;}
 #kn-jongno .artist-entry .edit-translation {margin-bottom:12px; font:400 17px/1.35 var(--serif,Georgia,serif); color:#254d70;}

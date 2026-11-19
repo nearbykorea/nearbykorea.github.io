@@ -111,7 +111,10 @@
   };
   const order = {supper: ['pork','ssam','ricecakes'], first: ['bap','paste','tofu']};
   const cultureEpisodes = [
-    {page:'onggi', title:pair('옹기','Onggi')},
+    {page:'onggi', title:pair('옹기','Onggi'), description:pair(
+      '장과 김치를 익히고 보관하는 전통 흙항아리',
+      'Korean earthenware jars for fermenting and storing food'
+    )},
     {page:'chang-eungbok', title:pair('한국 섬유, 장응복','Korean textiles with Chang Eungbok')},
     {page:'do-ho-suh', title:pair('서도호','Do Ho Suh')}
   ];
@@ -331,15 +334,30 @@
     const contents=el('ol','nk-culture-list');
     cultureEpisodes.forEach((episode,index)=>{
       const item=el('li');
-      item.append(readButton(episodeNumber(index)+' · '+t(episode.title),'page',episode.page));
+      const link=readButton(episodeNumber(index)+' · '+t(episode.title),'page',episode.page);
+      item.append(link);
+      if (episode.description) {
+        const description=el('span','nk-episode-description',t(episode.description));
+        description.id=episode.page+'-description';
+        link.setAttribute('aria-describedby',description.id);
+        item.append(description);
+      }
       contents.append(item);
     });
     body.replaceChildren(top,contents);
   }
   function onggiChapter() {
     const story=el('section','nk-onggi');
-    story.append(el('p','nk-deck',t(pair('장이 익을 그릇은 어떻게 빚을까요? 전남 강진에서 옹기를 빚는 정윤석 장인의 손을 따라가 봅니다.',
-      'How do you shape a jar for a family’s fermented sauces and pastes? Watch Jeong Yoon-seok at his wheel in Gangjin, South Korea.'))));
+    story.append(
+      el('p','nk-deck',t(pair(
+        '제가 어릴 때 강진은 시골이었어요. 마을에서 옹기를 빚었고, 제가 먹고 자란 쌀이며 배추, 감, 고춧가루도 모두 그곳에서 났어요.',
+        'The Gangjin I remember from childhood was a rural place. People made earthenware jars in the village. The rice, cabbages, persimmons and gochugaru (Korean chilli flakes) I grew up eating came from there too.'
+      ))),
+      el('p','nk-deck',t(pair(
+        '할머니는 그 옹기에 장을 담가 익히셨어요. 지금도 옹기를 보면 할머니가 독에서 국간장을 떠다 쓰시던 모습이 떠올라요.',
+        'My grandmother would leave her jang, her homemade sauces and pastes, to mature in those jars. I still remember her ladling gukganjang, Korean soup soy sauce, straight from the jar.'
+      )))
+    );
     const film=el('figure','nk-onggi-film');
     const player=el('iframe');
     player.title=t(pair('국가유산청 · 정윤석 옹기장의 작업 과정','Korea Heritage Service · Jeong Yoon-seok making onggi in Gangjin'));
@@ -348,7 +366,7 @@
     player.allowFullscreen=true;
     player.src='https://www.youtube-nocookie.com/embed/q2k-MIPPTGA?playsinline=1';
     const credit=el('figcaption');
-    credit.append(external(t(pair('국가유산청 · YouTube에서 원본 보기','Korea Heritage Service · Watch the original on YouTube')),'https://www.youtube.com/watch?v=q2k-MIPPTGA'));
+    credit.append(el('span','',t(pair('전남 강진의 정윤석 옹기장', 'Jeong Yoon-seok, an onggi potter in Gangjin, South Korea'))), ' · ', external(t(pair('국가유산청 영상', 'Film by the Korea Heritage Service')),'https://www.youtube.com/watch?v=q2k-MIPPTGA'));
     film.append(player,credit);
     story.append(film,el('p','',t(pair('빚어 놓은 독을 가마 안에 차곡차곡 들이는 장면이 나와요. 이 일을 옹기장들은 ‘재임’이라고 불러요.','Watch how the finished jars are stacked inside the kiln before firing. The potters call this part of the work jaeim.'))),
       el('h2','',t(pair('장을 담는 독, 독을 놓는 자리','The jar and its place in the household'))),
@@ -431,7 +449,15 @@
   function cultureChapter(index) {
     const chapter=cultureEpisodes[index];
     const head=el('header','nk-article-top nk-art-heading');
-    head.append(el('p','nk-label',t(front.artists)+' · '+episodeNumber(index)),el('h1','',t(chapter.title)));
+    head.append(el('p','nk-label',t(front.artists)+' · '+episodeNumber(index)));
+    const title=el('h1','',t(chapter.title));
+    if (chapter.description) {
+      const heading=el('div','nk-title-with-description');
+      heading.append(title,el('p','nk-title-description',t(chapter.description)));
+      head.append(heading);
+    } else {
+      head.append(title);
+    }
     const stories={onggi:onggiChapter,'chang-eungbok':changChapter,'do-ho-suh':suhChapter};
     const next=cultureEpisodes[index+1];
     const end=next ? readButton(episodeNumber(index+1)+' · '+t(next.title),'page',next.page)

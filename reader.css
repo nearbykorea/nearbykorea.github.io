@@ -173,6 +173,13 @@
 #nk-supper .nk-art-heading .nk-subtitle:lang(ko) {font-family:var(--nk-korean); font-style:normal;}
 #nk-supper .nk-culture-list {list-style:none; max-width:48em; padding:0; margin:20px 0;}
 #nk-supper .nk-culture-list li {border-top:1px solid var(--nk-rule);}
+#nk-supper .nk-title-with-description {display:flex; flex-wrap:wrap; align-items:baseline; gap:5px 22px;}
+#nk-supper .nk-title-description {max-width:100%; margin:0; color:#254d70; font:400 clamp(16px,1.65vw,20px)/1.5 var(--nk-sans); text-wrap:pretty; word-break:keep-all;}
+#nk-supper .nk-episode-description {display:block; margin:0 0 10px; color:var(--nk-soft); font:400 14px/1.45 var(--nk-sans); word-break:keep-all;}
+@media (max-width:610px) {
+  #nk-supper .nk-title-with-description {flex-direction:column; align-items:flex-start;}
+}
+
 #nk-supper .nk-onggi {max-width:760px; margin:0 auto 28px;}
 #nk-supper .nk-onggi h2, #nk-supper .nk-artist-title h2 {font-size:clamp(25px,3.3vw,41px); line-height:1.16; letter-spacing:-.04em; margin-bottom:12px;}
 #nk-supper .nk-onggi p {max-width:54ch; font-size:clamp(16px,1.65vw,19px); line-height:1.65;}
