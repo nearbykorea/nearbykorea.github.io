@@ -9,7 +9,7 @@
   const pair = (ko, en) => ({ ko, en });
   const assets = {
     pork: 'assets/magazine/jeyuk.webp', pan: 'assets/magazine/in-the-pan.webp', ssam: 'assets/magazine/ssam.webp',
-    ricecakes: 'assets/magazine/tteokbokki.webp', paste: 'assets/gochujang/paste.webp', cover: 'assets/gochujang/cover.webp',
+    ricecakes: 'assets/magazine/tteokbokki.webp', cover: 'assets/gochujang/cover.webp',
     family: 'assets/gochujang/editor-family.webp', yuja: 'assets/gochujang/yuja-preserve.webp', grandmother: 'assets/magazine/grandmother.webp',
     hanbok: 'assets/magazine/chang-eungbok-hanbok.webp', bibimbap: 'assets/magazine/bibimbap.webp'
   };
@@ -18,11 +18,13 @@
     levelsLabel: pair('요리 단계', 'Cookery level'), recipes: pair('고추장 활용편', 'Cooking with gochujang'),
     supperTitle: pair(['오늘 저녁은', '고추장으로'], ['Gochujang', 'for supper']),
     supperDeck: pair('영국 마트에서 산 돼지 어깨살로 제육 한 팬을 볶아요. 밥 위에 소복하게 올릴까요, 상추에 한입씩 싸 먹을까요?', 'Pick up a pack of pork shoulder and make one pan of jeyuk. Spoon it over rice or fold it into little lettuce wraps.'),
+    comingSoon: pair('Coming soon · 공개 예정', 'Coming soon'),
+    supperSoonDeck: pair('제육볶음 레시피를 준비하고 있어요. 지금은 제육 상추쌈과 떡볶이를 펼쳐 보세요.', 'Our jeyuk bokkeum recipe is coming soon. You can read the pork lettuce wrap and tteokbokki recipes now.'),
     firstTitle: pair(['처음 맛보는', '고추장 한 숟갈'], ['Your first spoonful', 'of gochujang']),
-    firstDeck: pair('따뜻한 밥 한 그릇이나 냉장고 속 두부로 시작해 보세요.', 'Start with a bowl of warm rice or a block of tofu from the fridge.'),
+    firstDeck: pair('따뜻한 밥 한 그릇에 고추장을 조금 넣고 비벼 보세요.', 'Start with a bowl of warm rice and a spoonful of gochujang.'),
     read: pair('제육볶음 펼치기', 'Make jeyuk bokkeum'),
     photo: pair('완성 요리 이미지는 AI로 제작했습니다.', 'AI-generated cooking illustrations.'),
-    pasteCaption: pair('고추장 호 표지에서 가져온 장의 질감.', 'The texture from our gochujang cover.'),
+    firstPhotoCredit: pair('비빔밥은 편집자의 집밥 사진이에요. 소고기 볶음고추장은 직접 만들어 촬영할 예정이에요.', 'The bibimbap is from our editor’s kitchen. Her photo of the beef gochujang will follow.'),
     pantry: pair('준비할 재료', 'What to have ready'), steps: pair('이렇게 해봐요', 'At the stove'),
     firstSteps: pair('이렇게 먹어봐요', 'How to try it'),
     tips: pair('우리 집 팁', 'Tips from my kitchen'),
@@ -31,10 +33,12 @@
     question: pair('엄마들에게 묻고 싶은 한 가지', 'A question for our mums'),
     margin: pair('조리 메모', 'Cook’s note'),
     imgUnavailable: pair('이 사진을 표시할 수 없어요. 아래에서 요리를 계속 읽을 수 있어요.', 'The photograph is unavailable. You can still read the dish below.'),
-    pasteAlt: pair('붉은 고추장 표면에 남은 부드러운 결', 'Soft ripples across the surface of red gochujang')
+    photoPending: pair('편집자가 직접 촬영할 사진 자리', 'Space for the editor’s own photograph'),
+    thumbnailMissing: pair('사진을 불러오지 못했어요.', 'Photo unavailable.')
   };
   const dishes = {
     pork: {
+      comingSoon: true,
       title: pair('제육볶음', 'Spicy pork stir-fry'), name: pair('Jeyuk bokkeum', '제육볶음 · Jeyuk bokkeum'),
       technique: pair('팬에 볶기', 'Stir-fry'), summary: pair('얇게 썬 돼지 어깨살과 양파를 볶아요. 양념이 고기에 착 붙으면 따뜻한 밥 위에 올려요.', 'Thin slices of pork shoulder and soft onion catch the red seasoning in the pan. Spoon them over warm rice.'),
       cover: 'pork', image: 'pan', alt: pair('양파와 함께 볶아 흰 접시에 담은 붉은 제육볶음', 'Thin slices of red-seasoned pork and onion on an off-white plate'),
@@ -50,7 +54,7 @@
       technique: pair('같은 제육, 한입 쌈', 'From the same pan'), summary: pair('제육볶음 한 팬을 식탁 가운데 놓아요. 상추 한 장에 밥과 고기를 조금씩 올려 각자 한입을 싸요.', 'Put the pan of jeyuk in the middle of the table. Everyone can tuck a little rice and pork into their own lettuce leaf.'),
       cover: 'ssam', image: 'ssam', alt: pair('펼친 상추 한 장에 흰밥 조금과 붉게 볶은 돼지고기를 올린 한입 쌈', 'An open lettuce leaf with a spoonful of rice and two slices of gochujang pork'),
       caption: pair('잎 가장자리는 접을 수 있게 비워둬요. 한입 크기를 보여주는 AI 예시.', 'Leave the edges free so the leaf folds over the filling. AI-generated serving study.'),
-      ingredients: pair(['앞에서 볶은 제육', '부드러운 상추 잎', '따뜻한 밥'], ['The cooked pork stir-fry', 'Soft lettuce leaves', 'Warm rice']),
+      ingredients: pair(['미리 볶아 둔 제육', '부드러운 상추 잎', '따뜻한 밥'], ['Cooked spicy pork', 'Soft lettuce leaves', 'Warm rice']),
       method: pair(['상추를 씻어 물기를 털고 한 장씩 떼어 놓아요.', '잎 한가운데 밥을 조금 놓고, 제육 한두 점과 함께 볶은 양파를 얹어요.', '잎 가장자리를 안으로 모아 한입에 먹어요. 두 번째 쌈은 내 입맛에 맞게 밥과 고기의 양을 바꿔 보세요.'], ['Wash and dry the lettuce, then separate the leaves.', 'Set a little rice in the middle of a leaf. Add a slice or two of cooked pork and some onion from the pan.', 'Fold the edges in and eat the parcel in one bite. Adjust the balance of rice and pork on the next leaf.']),
       note: pair('처음엔 속을 조금만 담아보세요. 밥과 고기를 더 넣는 건 다음 쌈에도 할 수 있어요.', 'Start with a small filling so the leaf closes easily. There is always the next wrap.'),
       references: [['Korean Bapsang', 'https://www.koreanbapsang.com/dweji-bulgogi-korean-spicy-pork-bbq/']]
@@ -62,14 +66,17 @@
       caption: pair('떡 사이로 소스가 조금 흐를 정도로 졸여요. 완성 요리 AI 예시.', 'Leave enough sauce to pool between the rice cakes. AI-generated serving study.'),
       ingredients: pair(['떡볶이용 떡', '멸치·다시마 육수', '고추장과 설탕', '대파, 취향에 따라 고춧가루'], ['Cylindrical rice cakes', 'Anchovy and kelp stock', 'Gochujang and sugar', 'Spring onion and optional Korean chilli flakes']),
       method: pair(['떡이 서로 붙었다면 낱개로 떼어요. 냉동 떡은 포장에 적힌 준비 방법을 따라요.', '육수에 고추장과 설탕을 풀고 떡을 넣어 끓여요. 더 맵게 먹고 싶다면 고춧가루를 조금 더해요.', '바닥에 붙지 않게 저어요. 떡이 부드럽고 양념이 윤기 있게 감기면 대파를 더해 따뜻할 때 먹어요.'], ['Separate any rice cakes that are stuck together. Follow the pack instructions if yours are frozen.', 'Dissolve gochujang and sugar in the stock. Bring the rice cakes to a simmer, adding chilli flakes if you like more heat.', 'Stir to keep the rice cakes from sticking. Finish with spring onion once they are tender and the sauce coats them.']),
-      note: pair('조청이 없어도 괜찮아요. 망치의 떡볶이는 설탕으로 단맛을 내요.', 'A spoonful of sugar gives Maangchi’s version its sweetness. You can leave rice syrup on the shelf.'),
+      note: pair(
+        '조청이 없어도 괜찮아요. 망치의 떡볶이는 설탕으로 단맛을 내요. 비건 떡볶이에는 다시마와 말린 표고버섯으로 우린 육수를 써요. 떡과 고추장도 비건용으로 골라요.',
+        'A spoonful of sugar gives Maangchi’s version its sweetness. You can leave rice syrup on the shelf. For vegan tteokbokki, make the stock with just kelp and dried shiitake mushrooms, and choose vegan rice cakes and gochujang.'
+      ),
       references: [['Maangchi', 'https://www.maangchi.com/recipe/tteokbokki']]
     },
     bap: {
       title: pair('다진 소고기와 남은 채소, 반숙 달걀프라이로 만드는 비빔밥', 'Bibimbap with beef mince, leftover veg and a runny fried egg'),
-      name: pair('Bibimbap', '비빔밥'), technique: pair('비빔밥 소스 · 엄마의 반찬', 'Bibimbap sauce · Mum’s banchan'),
-      summary: pair('고추장과 다진 소고기만 있으면 집에서 언제든 해 먹을 수 있는 든든한 탄단지 한 그릇밥이에요.',
-        'When I’ve got gochujang and beef mince, I can always make this at home. Rice, beef, egg and a little sesame oil give me carbs, protein and fat in one filling bowl.'),
+      name: pair('Bibimbap', '비빔밥'), technique: pair('비빔밥 소스 · 엄마의 반찬', 'Bibimbap sauce · Mum’s Banchan'),
+      summary: pair('고추장과 다진 소고기만 있으면 집에서 언제든 해 먹을 수 있는 든든한 탄단지 한 그릇밥이에요. 김치처럼 밥에 곁들이는 반찬(side dishes)이 있으면 같이 비벼 보세요.',
+        'When I’ve got gochujang and beef mince, I can always make this at home. Rice, beef, egg and a little sesame oil give me carbs, protein and fat in one filling bowl. Kimchi is one of the banchan (Korean side dishes) you can mix in.'),
       image: 'bibimbap', portrait: true,
       alt: pair('파란 꽃무늬 그릇에 다진 소고기와 채소, 김치를 담고 달걀프라이와 고추장을 올린 비빔밥', 'A blue floral bowl of bibimbap with beef mince, vegetables and kimchi, topped with a fried egg and a spoonful of gochujang'),
       caption: pair('고추장을 막 올린, 비비기 전의 한 그릇. 사진은 편집자의 집밥이에요.', 'Just before mixing, with the gochujang spooned over the egg. From the editor’s kitchen.'),
@@ -96,20 +103,42 @@
       note: pair('우리 집 다진 소고기 만드는 법', 'How I prepare the beef mince')
     },
     paste: {
-      title: pair('고추장 페이스트', 'Gochujang paste'), name: pair('A taste straight from the tub', '고추장 페이스트'),
-      technique: pair('조금 찍어 맛보기', 'Taste a little'), summary: pair('오이 한 조각이나 밥 한 술에 콕 찍어서, 방금 연 고추장의 단맛과 매운맛을 맛봐요.', 'Try a dab on a slice of cucumber or a spoonful of rice to get to know the sweetness and heat in your tub.'),
-      ingredients: pair(['고추장', '오이 또는 따뜻한 밥', '취향에 따라 참기름'], ['Gochujang', 'Cucumber or warm rice', 'Sesame oil, if you like']),
-      method: pair(['작은 접시에 고추장을 조금 덜어요.', '오이 끝에 살짝 찍어 먹거나 밥 한 술에 얹어 먹어요.', '남은 고추장에 참기름을 한두 방울 섞어 향이 어떻게 달라지는지도 맛봐요.'], ['Spoon a small amount of gochujang onto a dish.', 'Dip the tip of a cucumber slice into it or try a little on warm rice.', 'Stir a drop or two of sesame oil into the remaining paste and taste it again.'])
-    },
-    tofu: {
-      title: pair('제이미 올리버의 고추장 두부', 'Jamie Oliver’s gochujang tofu'), name: pair('Gochujang air-fryer tofu', '제이미 올리버의 고추장 두부'),
-      technique: pair('에어프라이어로 굽기', 'Air-fry'), summary: pair('바삭하게 굽기 시작한 두부에 고추장과 올리브유를 입혀 한 번 더 구워요.', 'Give the tofu a head start in the air fryer, then coat it with gochujang and olive oil for its final few minutes.'),
-      ingredients: pair(['단단한 두부', '옥수수전분', '고추장과 올리브유'], ['Firm tofu', 'Cornflour', 'Gochujang and olive oil']),
-      method: pair(['두부의 물기를 닦고 한입 크기로 잘라 옥수수전분을 고루 묻혀요.', '에어프라이어에 펼쳐 먼저 구워요.', '고추장과 올리브유에 버무려 다시 구워요. 정확한 분량과 시간은 아래 제이미 올리버 원문에서 볼 수 있어요.'], ['Pat the tofu dry, cut it into bite-sized pieces and dust it with cornflour.', 'Spread the pieces out in the air fryer for their first cook.', 'Toss with gochujang and olive oil and return them to the basket. The original recipe below gives the quantities and timings.']),
-      references: [['Jamie Oliver · Air-fryer tofu', 'https://www.jamieoliver.com/recipes/tofu/air-fryer-tofu-7-ways/']]
+      title: pair('소고기 볶음고추장', 'Stir-fried gochujang with beef mince'),
+      name: pair('소고기 약고추장', '소고기 약고추장 · Yakgochujang'),
+      technique: pair('팬에 볶기 · 영상 레시피', 'In the frying pan · Video recipe'),
+      summary: pair(
+        '다진 소고기를 먼저 데친 다음 파와 마늘, 고추장에 볶아요. 따뜻한 밥에 한 숟갈 얹어 비벼 보세요.',
+        'Blanch the beef mince first, then fry it with spring onion, garlic and gochujang. Stir a spoonful through a bowl of warm rice.'
+      ),
+      portrait: true,
+      short: {id: 'uzvfR7Yt4cc', creator: '쿡경희'},
+      ingredients: pair([
+        '다진 소고기 300g', '고추장 400g', '양파 100g, 대파 50g, 다진 마늘 2큰술',
+        '양조간장 1큰술, 맛술(미림) 2큰술, 매실청 2큰술', '식용유 1큰술, 참기름 1큰술, 후추 ½작은술',
+        '선택 · 생강가루 ½작은술', '선택 · 참깨 2큰술'
+      ], [
+        '300 g beef mince', '400 g gochujang', '100 g onion, 50 g spring onion and 2 tbsp finely chopped garlic',
+        '1 tbsp brewed soy sauce, 2 tbsp mirin and 2 tbsp Korean plum syrup (maesil-cheong)',
+        '1 tbsp vegetable oil, 1 tbsp sesame oil and ½ tsp ground black pepper',
+        'Optional · ½ tsp ground ginger', 'Optional · 2 tbsp sesame seeds'
+      ]),
+      method: pair([
+        '끓는 물에 다진 소고기를 풀어 넣고 2분 데쳐요. 체에 밭쳐 찬물로 헹군 뒤 물기를 빼요.',
+        '양파와 대파를 잘게 썰어요. 팬에 식용유를 두르고 양파, 대파, 마늘을 1분쯤 볶아요. 데친 소고기를 넣고 간장, 맛술, 매실청, 후추를 더해 1분 더 볶아요. 생강 향을 좋아하면 이때 생강가루를 넣으세요.',
+        '고추장을 넣고 바닥에 눋지 않게 저으며 3분 정도 볶아요. 참기름을 섞고 2분쯤 더 볶아 고기를 속까지 익혀요.',
+        '불을 끄면 완성이에요. 참깨를 좋아하면 이때 뿌려요. 밥에 조금씩 비비거나 상추쌈에 얹어 보세요.'
+      ], [
+        'Break up the mince in a pan of boiling water. After 2 minutes, tip it into a sieve, rinse under cold water and leave to drain.',
+        'Finely chop both onions. Soften them with the garlic in the vegetable oil for about a minute. Add the mince, soy sauce, mirin, plum syrup and pepper. If you like ginger, add it now. Stir for another minute.',
+        'Stir in the gochujang and cook for about 3 minutes, stirring to keep it from catching. Stir in the sesame oil and cook for about 2 minutes more, until the beef is cooked through.',
+        'Take the pan off the heat. Scatter over the sesame seeds if you like, then serve a little with rice or tuck it into a lettuce wrap.'
+      ]),
+      noteLabel: pair('매거진에서 조정한 재료', 'Our version'),
+      note: pair('쿡경희의 원본에서 올리고당을 생략하고 매실청으로 단맛을 냈어요. 생강가루와 참깨는 취향껏 넣으세요.',
+        'We keep the plum syrup from the original recipe and leave out the oligosaccharide syrup. The ground ginger and sesame seeds are up to you.')
     }
   };
-  const order = {supper: ['pork','ssam','ricecakes'], first: ['bap','paste','tofu']};
+  const order = {supper: ['pork','ssam','ricecakes'], first: ['bap','paste']};
   const cultureEpisodes = [
     {page:'onggi', title:pair('옹기','Onggi'), description:pair(
       '장과 김치를 익히고 보관하는 전통 흙항아리',
@@ -129,7 +158,13 @@
   };
   function fromHash() {
     const [language, where, dish] = location.hash.slice(1).split('/');
-    if (Object.hasOwn(order,where)) return valid({language,page:'recipes',level:where,dish});
+    if (Object.hasOwn(order,where)) {
+      const recipe = valid({language,page:'recipes',level:where,dish});
+      if (dish && !recipe.dish) {
+        history.replaceState(history.state,'','#' + [recipe.language, recipe.level].join('/'));
+      }
+      return recipe;
+    }
     return valid({language,page:where});
   }
   let state = fromHash();
@@ -152,13 +187,13 @@
     n.setAttribute('aria-hidden','true');
     return n;
   }
-  function img(key, alt) {
+  function img(key, alt, unavailable = t(text.imgUnavailable)) {
     const photo = el('img');
     photo.alt = alt;
     photo.src = assets[key];
     photo.decoding = 'async';
     photo.addEventListener('error', () => {
-      const msg = el('p','nk-photo-missing',t(text.imgUnavailable));
+      const msg = el('span','nk-photo-missing',unavailable);
       photo.replaceWith(msg);
     }, {once:true});
     return photo;
@@ -175,6 +210,15 @@
     const head = el('header','nk-heading');
     head.append(caseTitle(t(title)),el('p','nk-deck',t(deck)));
     return head;
+  }
+  function youtubePlayer(id, title) {
+    const player = el('iframe');
+    player.title = title;
+    player.referrerPolicy = 'strict-origin-when-cross-origin';
+    player.allow = 'encrypted-media; fullscreen; picture-in-picture';
+    player.allowFullscreen = true;
+    player.src = 'https://www.youtube-nocookie.com/embed/' + id + '?playsinline=1';
+    return player;
   }
   function photoBlock(className, photo, caption) {
     const f = el('figure',className);
@@ -236,7 +280,7 @@
       'Some of the flavours I remember from childhood feel like mine alone. If you grew up wandering in and out of the family kitchen in Korea, I wonder which dish comes to mind for you. Those are the flavours I’d love to share.'
     ),
     artists: pair('한국 사람들의 솜씨', 'By Korean Hands'),
-    ingredient: pair('식재료 노트', 'Ingredient notes'), kitchen: pair('집집의 레시피', 'Family kitchens'),
+    ingredient: pair('식재료 노트 1호', 'Ingredient notes · Issue 01'), kitchen: pair('집집의 레시피', 'Family kitchens'),
     shop: pair('영국 장보기', 'At the British supermarket'),
     shopTitle: pair('제육볶음용 돼지 어깨살', 'Pork shoulder for a stir-fry'),
     shopSummary: pair('영국 마트에서는 pork shoulder steaks라고 적힌 팩을 찾아보세요. 집에서 결 반대로 얇게 썰면 제육볶음에 쓰기 좋아요.', 'Look for a pack labelled pork shoulder steaks. Slice the steaks thinly across the grain at home, ready for jeyuk or another stir-fry.')
@@ -281,16 +325,20 @@
     const ingredientCopy=el('span');
     ingredientCopy.append(el('span','nk-label',t(front.ingredient)),el('strong','',t(pair('고추장','Gochujang'))),el('span','nk-entry-summary',t(pair('고르는 법과 집에서 먹는 법','How to choose it and cook with it'))),arrow());
     ingredient.append(img('cover',''),ingredientCopy);
+    const issues=el('div','nk-ingredient-notes');
+    const nextIssue=el('div','nk-directory-item');
+    nextIssue.append(el('span','nk-label',t(pair('식재료 노트 2호 · 준비 중','Ingredient notes · Issue 02 · Coming soon'))),el('strong','',t(pair('참기름','Sesame oil'))));
+    issues.append(ingredient,nextIssue);
     const other=el('div','nk-other-stories');
     const family=el('details','nk-households');
     const summary=el('summary','');
-    summary.append(el('span','nk-label',t(front.kitchen)),el('strong','',t(pair('엄마의 반찬 · 아빠의 특별편','Mums’ banchan & Dad’s special'))));
-    const line=el('p','nk-entry-summary',t(pair('준비 중인 엄마의 반찬은 계란장, 미역국, 간장돼지고기볶음이에요. 아빠의 특별편에서는 양념치킨을 소개할 예정이에요.', 'In preparation: Mum’s soy-marinated eggs, seaweed soup and soy pork stir-fry, and Dad’s special on yangnyeom chicken.')));
+    summary.append(el('span','nk-label',t(front.kitchen)),el('strong','',t(pair('엄마의 반찬 · 아빠의 특별편','Mum’s Banchan & Dad’s special'))));
+    const line=el('p','nk-entry-summary',t(pair('밥에 곁들이는 반찬(side dishes) 중에서 엄마의 계란장을 소개할게요. 미역국과 간장돼지고기볶음도 준비하고 있어요. 아빠의 특별편에서는 양념치킨을 소개할 예정이에요.', 'Mum’s soy-marinated eggs are one of the banchan (Korean side dishes) we eat with rice. That recipe is coming soon, along with seaweed soup, soy pork stir-fry and Dad’s yangnyeom chicken.')));
     family.append(summary,readButton(t(dishes.bap.title),'dish','bap'),el('p','nk-entry-summary',t(front.familyKitchen)),el('p','nk-entry-summary',t(front.familyTraditions)),line);
     const shop=button('nk-directory-item',null,'page','shop');
     shop.append(el('span','nk-label',t(front.shop)),el('strong','',t(front.shopTitle)),arrow());
     other.append(family,shop);
-    cols.append(ingredient,other);
+    cols.append(issues,other);
     contents.append(cols,external(t(pair('영국의 가게와 사람들 · 지난 기사','Shops and people in Britain · Earlier stories')),'magazine.html#stories-title'));
     body.replaceChildren(opening,contents);
   }
@@ -359,12 +407,7 @@
       )))
     );
     const film=el('figure','nk-onggi-film');
-    const player=el('iframe');
-    player.title=t(pair('국가유산청 · 정윤석 옹기장의 작업 과정','Korea Heritage Service · Jeong Yoon-seok making onggi in Gangjin'));
-    player.referrerPolicy='strict-origin-when-cross-origin';
-    player.allow='encrypted-media; fullscreen; picture-in-picture';
-    player.allowFullscreen=true;
-    player.src='https://www.youtube-nocookie.com/embed/q2k-MIPPTGA?playsinline=1';
+    const player=youtubePlayer('q2k-MIPPTGA',t(pair('국가유산청 · 정윤석 옹기장의 작업 과정','Korea Heritage Service · Jeong Yoon-seok making onggi in Gangjin')));
     const credit=el('figcaption');
     credit.append(el('span','',t(pair('전남 강진의 정윤석 옹기장', 'Jeong Yoon-seok, an onggi potter in Gangjin, South Korea'))), ' · ', external(t(pair('국가유산청 영상', 'Film by the Korea Heritage Service')),'https://www.youtube.com/watch?v=q2k-MIPPTGA'));
     film.append(player,credit);
@@ -492,19 +535,27 @@
       row.append(identify,price); items.append(row);
     }
     const checked=el('p','nk-shopping-fine',t(pair('2026년 11월 18일 온라인 단품 표시가. M&S는 Ocado 판매가예요. 고기 150g을 쓰면 약 £1.30–£1.46이고 밥과 양념은 별도예요.', 'Single-pack prices shown online on 18 November 2026. The M&S price is from Ocado. A 150g helping of pork works out at about £1.30–£1.46 before rice or seasoning.')));
-    body.replaceChildren(top,items,checked,readButton(t(pair('이 부위로 제육볶음 만들기','Use this cut for jeyuk bokkeum')),'dish','pork'));
+    body.replaceChildren(top,items,checked);
+    if (dishes.pork.comingSoon) {
+      body.append(el('p','nk-release-note',t(dishes.pork.title) + ' · ' + t(text.comingSoon)),readButton(t(text.supperBack),'level','supper'));
+    } else {
+      body.append(readButton(t(pair('이 부위로 제육볶음 만들기','Use this cut for jeyuk bokkeum')),'dish','pork'));
+    }
   }
   function supper() {
     const spread = el('section','nk-spread');
     const dish = dishes.pork;
-    const photoButton = button('',null,'dish','pork');
-    photoButton.setAttribute('aria-label',t(text.read));
-    photoButton.append(img(dish.cover,t(dish.alt)));
+    let cover = img(dish.cover,t(dish.alt));
     const lead = el('section','nk-feature');
-    const sub = el('p','nk-subtitle',t(dish.name));
-    const read = button('nk-read',null,'dish','pork');
-    read.append(el('span','nk-read-label',t(text.read)),arrow());
-    lead.append(el('p','nk-label',t(dish.technique)),el('h2','',t(dish.title)),sub,el('p','nk-copy',t(dish.summary)),read);
+    const label = dish.comingSoon ? text.comingSoon : dish.technique;
+    lead.append(el('p','nk-label',t(label)),el('h2','',t(dish.title)),el('p','nk-subtitle',t(dish.name)),el('p','nk-copy',t(dish.summary)));
+    if (!dish.comingSoon) {
+      const photoButton = button('',null,'dish','pork');
+      photoButton.setAttribute('aria-label',t(text.read));
+      photoButton.append(cover);
+      cover = photoButton;
+      lead.append(readButton(t(text.read),'dish','pork'));
+    }
     const list = el('div','nk-list');
     for (const key of order.supper.slice(1)) {
       const d = dishes[key];
@@ -514,22 +565,36 @@
       control.append(img(d.cover,''),label,arrow());
       list.append(control);
     }
-    spread.append(photoBlock('nk-hero',photoButton,t(text.photo)),lead,list);
-    body.replaceChildren(heading(text.supperTitle,text.supperDeck),spread);
+    spread.append(photoBlock('nk-hero',cover,t(text.photo)),lead,list);
+    body.replaceChildren(heading(text.supperTitle,dish.comingSoon ? text.supperSoonDeck : text.supperDeck),spread);
   }
   function first() {
-    const spread = el('section','nk-first-spread');
-    const list = el('div','nk-first-list');
+    const gallery = el('figure','nk-first-gallery');
+    const list = el('ul','nk-first-list');
     for (const key of order.first) {
-      const d = dishes[key];
-      const control = button('nk-text-row',null,'dish',key);
-      const copy = el('span');
-      copy.append(el('span','nk-label',t(d.technique)),el('strong','',t(d.title)),el('small','',t(d.summary)));
-      control.append(copy,arrow());
-      list.append(control);
+      const dish = dishes[key];
+      const item = el('li');
+      const control = button('nk-first-card',null,'dish',key);
+      const photo = el('span','nk-first-photo');
+      const photoKey = dish.cover || dish.image;
+      if (photoKey) {
+        photo.append(img(photoKey,t(dish.alt),t(text.thumbnailMissing)));
+      } else {
+        photo.classList.add('nk-photo-reserved');
+        photo.setAttribute('role','img');
+        photo.setAttribute('aria-label',t(text.photoPending));
+      }
+      const copy = el('span','nk-first-copy');
+      const title = el('strong','nk-first-title',t(dish.title));
+      title.id = 'first-title-' + key;
+      control.setAttribute('aria-labelledby',title.id);
+      copy.append(el('span','nk-label',t(dish.technique)),title,arrow(),el('span','nk-first-summary',t(dish.summary)));
+      control.append(photo,copy);
+      item.append(control);
+      list.append(item);
     }
-    spread.append(photoBlock('',img('paste',t(text.pasteAlt)),t(text.pasteCaption)),list);
-    body.replaceChildren(heading(text.firstTitle,text.firstDeck),spread);
+    gallery.append(list,el('figcaption','',t(text.firstPhotoCredit)));
+    body.replaceChildren(heading(text.firstTitle,text.firstDeck),gallery);
   }
   function listSection(title, items, kind) {
     const section = el('section','nk-chapter');
@@ -544,12 +609,28 @@
   function article() {
     const d = dishes[state.dish];
     const top = el('header','nk-article-top');
-    top.append(el('p','nk-label',t(d.technique)),el('h1','',t(d.title)),el('p','nk-subtitle',t(d.name)),el('p','nk-deck',t(d.summary)));
+    top.dataset.recipe = state.dish;
+    const label = d.comingSoon ? text.comingSoon : d.technique;
+    top.append(el('p','nk-label',t(label)),el('h1','',t(d.title)),el('p','nk-subtitle',t(d.name)));
     const inner = el('article');
     inner.append(back());
+    if (d.comingSoon) {
+      inner.append(top);
+      body.replaceChildren(inner);
+      return;
+    }
+    top.append(el('p','nk-deck',t(d.summary)));
     const opening = el('div',d.portrait?'nk-portrait-lead':'');
     opening.append(top);
     if (d.image) opening.append(photoBlock(d.portrait?'nk-portrait':'nk-wide',img(d.image,t(d.articleAlt || d.alt)),t(d.caption)));
+    if (d.short) {
+      const film = el('figure','nk-short-film');
+      const credit = el('figcaption');
+      const original = external(t(pair('유튜브에서 원본 보기', 'Watch the original on YouTube')), 'https://www.youtube.com/shorts/' + d.short.id);
+      credit.append(d.short.creator + ' · ', original);
+      film.append(youtubePlayer(d.short.id, d.short.creator + ' · ' + t(d.title)), credit);
+      opening.append(film);
+    }
     inner.append(opening);
     const grid = el('div','nk-article-grid');
     grid.append(listSection(text.pantry,t(d.ingredients),'ingredients'),listSection(state.level==='first'?text.firstSteps:text.steps,t(d.method),'steps'));
@@ -602,11 +683,10 @@
   function render() {
     root.lang = state.language === 'ko' ? 'ko' : 'en-GB';
     const isRecipes = state.page==='recipes';
-    const isIssue = isRecipes || state.page==='issue';
     const chapterIndex = cultureEpisodes.findIndex(episode=>episode.page===state.page);
     const isCulture = state.page==='artists' || chapterIndex!==-1;
     root.dataset.section = isCulture ? 'culture' : 'magazine';
-    root.querySelector('.nk-issue').textContent = isIssue ? 'The Gochujang Issue' : 'The Nearby Edit';
+    root.querySelector('.nk-issue').textContent = isRecipes ? t(pair('식재료 노트 1호 · 고추장', 'Ingredient notes · Issue 01 · Gochujang')) : 'The Nearby Edit';
     const trail=root.querySelector('.nk-trail');
     trail.replaceChildren();
     if (state.page==='magazine' || isCulture) {

@@ -85,12 +85,12 @@
     figcaption, .chapter { color: var(--muted); font-size: .81rem; margin-top: .42rem; }
     .video-note { padding-left: 20px; border-left: 1px solid var(--rule); }
     .video-note > p:not(.korean) { margin-top: .56rem; }
-    .buying { border-top: 1px solid var(--ink); padding-top: 20px; margin-top: 22px; display: grid; grid-template-columns: minmax(0, .83fr) minmax(0, 1.17fr); gap: 29px; align-items: start; }
+    .buying { border-top: 1px solid var(--ink); padding-top: 20px; margin-top: 22px; display: grid; grid-template-columns: minmax(0, 1.17fr) minmax(0, .83fr); gap: 29px; align-items: start; }
     .label-guide > p { margin: .55rem 0 .8rem; color: var(--muted); font-size: .91rem; }
     .label-guide dl > div { padding: .68rem 0; border-top: 1px solid var(--rule); font-size: .97rem; }
     .label-guide dt { font-weight: 670; }
     .label-guide dd { margin-top: .18rem; color: var(--muted); }
-    .picks { border-left: 1px solid var(--rule); padding-left: 25px; }
+    .label-guide { border-left: 1px solid var(--rule); padding-left: 25px; }
     .picks h2 { color: var(--red); margin-bottom: .8rem; }
     .product {
       display: grid;
@@ -146,7 +146,7 @@
       .shelf-frame img { width: 140%; left: -8%; }
       .feature, .buying { grid-template-columns: 1fr; gap: 18px; }
       .video { aspect-ratio: 16 / 9; }
-      .video-note, .picks { border-left: 0; border-top: 1px solid var(--rule); padding-left: 0; padding-top: .82rem; }
+      .video-note, .label-guide { border-left: 0; border-top: 1px solid var(--rule); padding-left: 0; padding-top: .82rem; }
       .product { gap: 11px; }
       .product-photo { height: 102px; }
       .shops { column-gap: 12px; }
@@ -163,7 +163,7 @@
       <p class="masthead">Korea, Nearby</p>
       <div class="issue">
         <a href="gochujang.html">← <span data-copy="en">Magazine</span><span data-copy="ko" lang="ko">매거진 표지</span></a>
-        <span>Gochujang 02</span>
+        <span data-copy="en">Ingredient notes · Issue 01 · Gochujang, part 2</span><span data-copy="ko" lang="ko">식재료 노트 1호 · 고추장 2편</span>
         <nav class="edition-nav" aria-label="Article language · 본문 언어">
           <a href="gochujang-guide.html?lang=en" lang="en-GB" hreflang="en-GB" data-edition-link="en">English</a>
           <a href="gochujang-guide.html?lang=ko" lang="ko" hreflang="ko" data-edition-link="ko">한국어</a>
@@ -196,19 +196,6 @@
       </div>
     </header>
     <div class="buying" id="choosing">
-      <section class="label-guide">
-        <h2><span data-copy="en">Turn the jar round</span><span data-copy="ko" lang="ko">고추장 통을 뒤집어 보면</span></h2>
-        <dl data-copy="en" lang="en-GB">
-          <div><dt>Barley malt and sweetness</dt><dd>Yeotgireum (엿기름) is barley that has been sprouted and dried. Its enzymes turn some of the starch in cooked rice into sugars. That’s one way a rice gochujang develops sweetness. To compare how much sugar two pastes contain, look for ‘of which sugars’ per 100&nbsp;g on both packs. <a href="https://encykorea.aks.ac.kr/Article/E0052700">How malt works</a></dd></div>
-          <div><dt>What exactly was fermented?</dt><dd>On the Sempio tub, ‘fermented’ describes the rice paste and the rice syrup. Sempio gives no ageing time for the finished gochujang on this label. On the Sunchang jar, the seller does give a time. <a href="https://en.sempio.com/product/jangpaste/view/1016">Sempio’s ingredients</a></dd></div>
-          <div><dt>How much chilli went in?</dt><dd>On the Sunchang jar, 23% refers to the gochugaru (고춧가루), or ground red chilli. That’s 23&nbsp;g of chilli per 100&nbsp;g of paste. The figure tells you the amount. For heat, look for a mild, medium or hot marking if the pack gives one. <a href="https://jungdam.co.uk/products/moonokrye-traditional-gochujang">Sunchang jar details</a></dd></div>
-        </dl>
-        <dl data-copy="ko" lang="ko">
-          <div><dt>엿기름은 어떤 단맛을 낼까요?</dt><dd>엿기름은 싹을 틔워 말린 보리예요. 그 안의 효소가 익힌 쌀의 전분 일부를 당으로 바꿔요. 찹쌀고추장에서 단맛이 나는 한 가지 이유예요. 두 통에 당이 얼마나 들었는지 비교하고 싶다면 영국 영양표에서 같은 100g 기준의 ‘of which sugars’를 보세요. <a href="https://encykorea.aks.ac.kr/Article/E0052700">엿기름과 당화</a></dd></div>
-          <div><dt>무엇을 발효했을까요?</dt><dd>샘표 통의 ‘발효’는 재료인 쌀 반죽과 쌀시럽에 붙은 말이에요. 이 표기에는 완성된 고추장이 얼마나 익었는지 나오지 않아요. 순창문옥례 고추장은 판매처에서 장독에 두는 기간까지 알려줘요. <a href="https://en.sempio.com/product/jangpaste/view/1016">샘표 원재료표</a></dd></div>
-          <div><dt>고춧가루는 얼마나 넣었을까요?</dt><dd>순창문옥례 제품의 23%는 고춧가루 함량이에요. 고추장 100g을 만들 때 고춧가루가 23g 들어갔다는 뜻이에요. 매운맛이 궁금하다면 포장에 순한맛·중간맛·매운맛 같은 별도 표시가 있는지도 보세요. <a href="https://jungdam.co.uk/products/moonokrye-traditional-gochujang">순창문옥례 제품 설명</a></dd></div>
-        </dl>
-      </section>
       <aside class="picks" aria-labelledby="which-gochujang">
         <h2 id="which-gochujang"><span data-copy="en">Which gochujang is right for me?</span><span data-copy="ko" lang="ko">나에게 맞는 고추장은?</span></h2>
         <article class="product">
@@ -246,6 +233,19 @@
         </article>
         <p class="chapter"><a href="stories-grocers.html"><span data-copy="en">Shopping in person? Our guide to Korean grocers in Britain</span><span data-copy="ko" lang="ko">매장에서 라벨을 보고 싶다면 · 영국 한인 식료품점 안내</span></a></p>
       </aside>
+      <section class="label-guide">
+        <h2><span data-copy="en">Turn the jar round</span><span data-copy="ko" lang="ko">고추장 통을 뒤집어 보면</span></h2>
+        <dl data-copy="en" lang="en-GB">
+          <div><dt>Barley malt and sweetness</dt><dd>Yeotgireum (엿기름) is barley that has been sprouted and dried. Its enzymes turn some of the starch in cooked rice into sugars. That’s one way a rice gochujang develops sweetness. To compare how much sugar two pastes contain, look for ‘of which sugars’ per 100&nbsp;g on both packs. <a href="https://encykorea.aks.ac.kr/Article/E0052700">How malt works</a></dd></div>
+          <div><dt>What exactly was fermented?</dt><dd>On the Sempio tub, ‘fermented’ describes the rice paste and the rice syrup. Sempio gives no ageing time for the finished gochujang on this label. On the Sunchang jar, the seller does give a time. <a href="https://en.sempio.com/product/jangpaste/view/1016">Sempio’s ingredients</a></dd></div>
+          <div><dt>How much chilli went in?</dt><dd>On the Sunchang jar, 23% refers to the gochugaru (고춧가루), or ground red chilli. That’s 23&nbsp;g of chilli per 100&nbsp;g of paste. The figure tells you the amount. For heat, look for a mild, medium or hot marking if the pack gives one. <a href="https://jungdam.co.uk/products/moonokrye-traditional-gochujang">Sunchang jar details</a></dd></div>
+        </dl>
+        <dl data-copy="ko" lang="ko">
+          <div><dt>엿기름은 어떤 단맛을 낼까요?</dt><dd>엿기름은 싹을 틔워 말린 보리예요. 그 안의 효소가 익힌 쌀의 전분 일부를 당으로 바꿔요. 찹쌀고추장에서 단맛이 나는 한 가지 이유예요. 두 통에 당이 얼마나 들었는지 비교하고 싶다면 영국 영양표에서 같은 100g 기준의 ‘of which sugars’를 보세요. <a href="https://encykorea.aks.ac.kr/Article/E0052700">엿기름과 당화</a></dd></div>
+          <div><dt>무엇을 발효했을까요?</dt><dd>샘표 통의 ‘발효’는 재료인 쌀 반죽과 쌀시럽에 붙은 말이에요. 이 표기에는 완성된 고추장이 얼마나 익었는지 나오지 않아요. 순창문옥례 고추장은 판매처에서 장독에 두는 기간까지 알려줘요. <a href="https://en.sempio.com/product/jangpaste/view/1016">샘표 원재료표</a></dd></div>
+          <div><dt>고춧가루는 얼마나 넣었을까요?</dt><dd>순창문옥례 제품의 23%는 고춧가루 함량이에요. 고추장 100g을 만들 때 고춧가루가 23g 들어갔다는 뜻이에요. 매운맛이 궁금하다면 포장에 순한맛·중간맛·매운맛 같은 별도 표시가 있는지도 보세요. <a href="https://jungdam.co.uk/products/moonokrye-traditional-gochujang">순창문옥례 제품 설명</a></dd></div>
+        </dl>
+      </section>
     </div>
     <div class="feature">
       <figure>
@@ -257,8 +257,8 @@
       </figure>
       <section class="video-note">
         <h2><span data-copy="en">Gochujang, side by side</span><span data-copy="ko" lang="ko">고추장을 한 술씩 맛보면</span></h2>
-        <p data-copy="en" lang="en-GB">Sarah Ahn and Lisa McManus taste gochujang from small makers and supermarket brands. Start at the first tasting and listen for the words they use for sweetness and heat.</p>
-        <p data-copy="ko" lang="ko">세라 안과 리사 맥매너스가 여러 고추장을 한 술씩 맛봐요. 첫 시식부터 두 사람이 단맛과 매운맛을 어떻게 표현하는지 들어보세요.</p>
+        <p data-copy="en" lang="en-GB">What does gochujang taste like? If you’d like to hear two tasters describe it in their own words, I recommend this video.</p>
+        <p data-copy="ko" lang="ko">고추장은 어떤 맛일까요? 직접 맛본 두 사람의 이야기가 궁금하다면 이 영상을 추천할게요.</p>
         <p class="chapter"><a href="https://www.youtube.com/watch?v=q51wLoJo9D0&amp;t=113s"><span data-copy="en">First tasting · 1:53</span><span data-copy="ko" lang="ko">첫 시식 · 1:53</span></a> · <a href="https://www.youtube.com/watch?v=q51wLoJo9D0&amp;t=720s"><span data-copy="en">Sempio tasting · 12:00</span><span data-copy="ko" lang="ko">샘표 시식 · 12:00</span></a></p>
         <p data-copy="en" lang="en-GB">Curious how glutinous rice gochujang is made at home? In a separate film, the cook at 한식집 shows the stage when the paste goes into the earthenware jar. <a href="https://www.youtube.com/watch?v=qddu2s3k3zc&amp;t=487s">Watch the jangdok scene · 8:07</a></p>
         <p data-copy="ko" lang="ko">집에서 찹쌀고추장을 담그는 모습이 궁금하다면, 한식집의 영상도 보세요. 8분 7초부터 고추장을 장독에 담아 숙성하는 대목이 나와요. <a href="https://www.youtube.com/watch?v=qddu2s3k3zc&amp;t=487s">장독 장면 보기 · 8:07</a></p>
@@ -268,7 +268,7 @@
       <div>
         <h2 id="how-to-use-gochujang"><span data-copy="en">How to use gochujang at home</span><span data-copy="ko" lang="ko">우리 집에서 고추장을 사서 어떻게 먹어볼까?</span></h2>
       </div>
-      <p class="usage-teaser"><span data-copy="en">Start with a bowl of bibimbap, a little gochujang straight from the tub, or Jamie Oliver’s tofu.</span><span data-copy="ko" lang="ko">비빔밥 한 그릇, 오이에 찍어 먹는 고추장, 제이미 올리버의 두부로 시작해요.</span></p>
+      <p class="usage-teaser"><span data-copy="en">Try bibimbap with a fried egg, or stir a spoonful of beef gochujang through warm rice.</span><span data-copy="ko" lang="ko">반숙 달걀을 올린 비빔밥과 따뜻한 밥에 비벼 먹는 소고기 볶음고추장을 소개해요.</span></p>
       <figure class="upcoming-cover">
         <img src="assets/gochujang/uses-cover.webp" width="360" height="450" loading="lazy" alt="Red gochujang magazine cover" data-alt-ko="고추장 활용편의 붉은 표지">
         <figcaption><a data-copy="en" href="reader.html#en/first">Read the recipes →</a><a data-copy="ko" lang="ko" href="reader.html#ko/first">레시피 읽기 →</a></figcaption>
@@ -276,8 +276,8 @@
     </section>
     <section class="sweet-note" aria-labelledby="sweetness">
       <h2 id="sweetness"><span data-copy="en">A taste of jocheong</span><span data-copy="ko" lang="ko">〈한국의 단맛〉 맛보기</span></h2>
-      <p data-copy="en" lang="en-GB">Try dipping the end of a warm, grilled garaetteok (가래떡), a chewy rice cake, into jocheong (조청), a thick grain syrup. We’ll come back to that spoonful in part two of <i>Sweet flavours in Korean cooking</i>. <a href="https://encykorea.aks.ac.kr/Article/E0052700">More about jocheong</a></p>
-      <p data-copy="ko" lang="ko">따뜻하게 구운 가래떡 끝에 조청을 살짝 찍어 드셔 보세요. 쫄깃한 떡에 묻어나는 그 곡물 단맛은 어떻게 생길까요? 〈한국의 단맛〉 2편에서 계속할게요. <a href="https://encykorea.aks.ac.kr/Article/E0052700">조청 이야기</a></p>
+      <p data-copy="en" lang="en-GB">Try dipping the end of a warm, grilled garaetteok (가래떡), a chewy rice cake, into jocheong (조청), a thick grain syrup. We’ll come back to that spoonful in part three of <i>Sweet flavours in Korean cooking</i>. <a href="https://encykorea.aks.ac.kr/Article/E0052700">More about jocheong</a></p>
+      <p data-copy="ko" lang="ko">따뜻하게 구운 가래떡 끝에 조청을 살짝 찍어 드셔 보세요. 쫄깃한 떡에 묻어나는 그 곡물 단맛은 어떻게 생길까요? 〈한국의 단맛〉 3편에서 계속할게요. <a href="https://encykorea.aks.ac.kr/Article/E0052700">조청 이야기</a></p>
     </section>
     <footer class="related">
       <a href="gochujang.html"><span data-copy="en">Back to the gochujang cover</span><span data-copy="ko" lang="ko">고추장 표지로 돌아가기</span></a>
