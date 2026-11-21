@@ -7,7 +7,9 @@
 <link rel="icon" type="image/svg+xml" href="assets/editorial/favicon.svg">
 <link rel="stylesheet" href="homepage.css?v=20261119">
 <script defer src="directory.js?v=20261116"></script><script defer src="assets/d3/d3.min.js"></script><script type="module" src="homepage.js?v=20261116"></script>
-<link rel="stylesheet" href="magazine-home.css?v=20261119c">
+<link rel="stylesheet" href="magazine-home.css?v=20261121b">
+<link rel="stylesheet" href="editor-greeting.css">
+<script defer src="editor-greeting.js"></script>
 <script type="module" src="magazine-home.js?v=20261119"></script>
 <link rel="stylesheet" href="/analytics.css"><script defer src="/analytics.js" data-base-path="/" data-api-origin="https://nearbykorea.sound88sound.chatgpt.site"></script></head><body><a class="skip-link" href="#main-content">Skip to content</a>
 <div id="kn-jongno" aria-label="Korea, Nearby homepage with Jongno photographs">
@@ -135,6 +137,7 @@
       <p class="edit-intro" data-copy="ko" lang="ko" hidden>어릴 때 우리 집에선 쌀도, 고춧가루도, 참기름도, 김치도 사 먹은 적이 없었다면 믿으시겠어요?</p>
       <a class="edit-link" href="reader.html#en/letter" data-reading="letter"><span data-copy="en">Read the letter</span><span data-copy="ko" lang="ko" hidden>편지 이어 읽기</span><span aria-hidden="true">→</span></a>
     </div>
+    <editor-greeting></editor-greeting>
   </article>
 
   <aside class="edition-rail" aria-labelledby="shelf-title">
@@ -146,10 +149,22 @@
     <div class="book edition-book" id="ingredient-notes">
       <a class="edition-art cover-print" href="reader.html?from=shelf#en/issue" data-reading="issue" aria-hidden="true" tabindex="-1"><img src="assets/gochujang/cover.webp" alt="고추장 · Gochujang" width="1080" height="1350" loading="lazy"></a>
       <div class="edition-caption">
-        <p class="edit-eyebrow"><span data-copy="en">Ingredient notes</span><span data-copy="ko" hidden>식재료 노트</span></p>
-        <h4><a href="reader.html?from=shelf#en/issue" data-reading="issue"><span data-copy="en">Issue 01 · Gochujang</span><span data-copy="ko" hidden>1호 · 고추장</span></a></h4>
-        <p class="shelf-coming"><span data-copy="en">Issue 02 · Sesame oil · Coming soon</span><span data-copy="ko" hidden>2호 · 참기름 · 준비 중</span></p>
+        <p class="edit-eyebrow"><span data-copy="en">Ingredient notes · Issue 01</span><span data-copy="ko" hidden>식재료 노트 · 1호</span></p>
+        <a class="issue-entry-link" href="reader.html?from=shelf#en/issue" data-reading="issue">
+          <h4><span data-copy="en">Gochujang</span><span data-copy="ko" hidden>고추장</span></h4>
+          <p class="shelf-action"><span data-copy="en">Read the issue</span><span data-copy="ko" hidden>이번 호 읽기</span> <span aria-hidden="true">→</span></p>
+        </a>
       </div>
+      <section class="upcoming-issue" aria-labelledby="sesame-issue-title">
+        <p class="edit-eyebrow"><span data-copy="en">Ingredient notes · Issue 02</span><span data-copy="ko" hidden>식재료 노트 · 2호</span></p>
+        <h4 id="sesame-issue-title"><span data-copy="en">Sesame oil</span><span data-copy="ko" hidden>참기름</span></h4>
+        <p class="issue-status" lang="en-GB">Coming soon</p>
+      </section>
+      <section class="upcoming-issue" aria-labelledby="ssamjang-issue-title">
+        <p class="edit-eyebrow"><span data-copy="en">Ingredient notes · Issue 03</span><span data-copy="ko" hidden>식재료 노트 · 3호</span></p>
+        <h4 id="ssamjang-issue-title"><span data-copy="en">Ssamjang</span><span data-copy="ko" hidden>쌈장</span></h4>
+        <p class="issue-status" lang="en-GB">Coming soon</p>
+      </section>
     </div>
     <a class="book edition-book" id="family-kitchens" href="#family-recipes">
       <div class="edition-art egg-print"><img src="assets/magazine/gyeranjang.webp" alt="The editor’s soy-marinated eggs with chopped spring onions" data-alt-ko="양념장에 담가 파를 올린 편집자의 계란장" width="640" height="800" loading="lazy"></div>

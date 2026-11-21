@@ -326,9 +326,18 @@
     ingredientCopy.append(el('span','nk-label',t(front.ingredient)),el('strong','',t(pair('고추장','Gochujang'))),el('span','nk-entry-summary',t(pair('고르는 법과 집에서 먹는 법','How to choose it and cook with it'))),arrow());
     ingredient.append(img('cover',''),ingredientCopy);
     const issues=el('div','nk-ingredient-notes');
-    const nextIssue=el('div','nk-directory-item');
-    nextIssue.append(el('span','nk-label',t(pair('식재료 노트 2호 · 준비 중','Ingredient notes · Issue 02 · Coming soon'))),el('strong','',t(pair('참기름','Sesame oil'))));
-    issues.append(ingredient,nextIssue);
+    issues.append(ingredient);
+    const upcomingIssues = [
+      { label: pair('식재료 노트 2호', 'Ingredient notes · Issue 02'), title: pair('참기름', 'Sesame oil') },
+      { label: pair('식재료 노트 3호', 'Ingredient notes · Issue 03'), title: pair('쌈장', 'Ssamjang') }
+    ];
+    for (const issue of upcomingIssues) {
+      const entry = el('div', 'nk-directory-item');
+      const status = el('span', 'nk-entry-summary', 'Coming soon');
+      status.lang = 'en-GB';
+      entry.append(el('span', 'nk-label', t(issue.label)), el('strong', '', t(issue.title)), status);
+      issues.append(entry);
+    }
     const other=el('div','nk-other-stories');
     const family=el('details','nk-households');
     const summary=el('summary','');
@@ -367,6 +376,7 @@
     copy.append(el('p','nk-letter-lede',t(front.familyTraditions)));
     copy.append(el('p','nk-letter-lede',t(front.letterClosing)));
     copy.append(photoBlock('nk-letter-family-album',img('family',t(front.familyAlt)),t(front.familyCaption)));
+    copy.append(document.createElement('editor-greeting'));
     story.append(opening,portrait,copy);
     body.replaceChildren(top,story,readButton(t(front.contents),'page','magazine'));
   }

@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Kim Jeong-sun Greeting";
+  src: url("assets/magazine/kim-jeong-sun-greeting-ko.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kim Jeong-sun Latin";
+  src: url("assets/magazine/kim-jeong-sun-greeting-latin.woff2") format("woff2");
+  font-display: swap;
+}
+
+editor-greeting {
+  display: block;
+  min-width: 0;
+  color: #29382f;
+  font-synthesis: none;
+}
+#kn-jongno editor-greeting {
+  grid-area: greeting;
+  margin-top: clamp(16px, 1.8vw, 26px);
+  padding-top: 14px;
+  border-top: 1px solid #b9c5c5;
+}
+#nk-supper editor-greeting { max-width: 490px; margin-block: 26px 16px; }
+:is(#kn-jongno, #nk-supper) editor-greeting p { margin: 0; letter-spacing: 0; }
+editor-greeting .greeting-verse,
+editor-greeting .greeting-meal:lang(ko) {
+  font: 400 clamp(20px, 1.9vw, 26px)/1.45 "Kim Jeong-sun Greeting", "AppleMyungjo", serif;
+  word-break: keep-all;
+}
+editor-greeting .verse-end { white-space: nowrap; }
+editor-greeting sup { margin-left: 2px; font: 12px/1 Arial, sans-serif; vertical-align: super; }
+:is(#kn-jongno, #nk-supper) editor-greeting sup a { padding: 3px; color: #255077; text-decoration: none; }
+editor-greeting .greeting-translation,
+editor-greeting .greeting-meal:lang(en) {
+  font: 400 clamp(20px, 1.6vw, 24px)/1.32 "Kim Jeong-sun Latin", Georgia, serif;
+  text-wrap: pretty;
+}
+:is(#kn-jongno, #nk-supper) editor-greeting .greeting-translation { margin-top: 5px; }
+:is(#kn-jongno, #nk-supper) editor-greeting .greeting-meal {
+  margin-top: 6px; color: #254d70; font-size: clamp(24px, 2vw, 30px);
+}
+#nk-supper editor-greeting .greeting-credit { margin-top: 10px; color: #365875; font: 13px/1.5 Arial, sans-serif; }
+#kn-jongno .greeting-credit,
+editor-greeting:lang(en) :is(.greeting-meal, .greeting-credit span):lang(ko),
+editor-greeting:lang(ko) :is(.greeting-translation, .greeting-meal, .greeting-credit span):lang(en) { display: none; }
+editor-greeting [role="doc-footnote"] {
+  display: grid; grid-template-columns: auto 1fr; gap: 5px;
+  margin-top: 12px; color: #535e59; font: 14px/1.4 Georgia, serif;
+}
+editor-greeting [role="doc-footnote"] > span { font: 11px/1.6 Arial, sans-serif; }
+:is(#kn-jongno, #nk-supper) editor-greeting cite a { color: #315771; text-decoration: underline; text-underline-offset: .16em; }
+editor-greeting :focus-visible { outline: 2px solid #315771; outline-offset: 3px; }

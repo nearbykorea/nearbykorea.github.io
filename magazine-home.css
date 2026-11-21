@@ -56,7 +56,7 @@
 #kn-jongno .edition-language button[aria-pressed="true"] { text-decoration: underline; text-underline-offset: 6px; color: var(--ink); }
 #kn-jongno .edit-letter {
   display: grid; grid-template-columns: minmax(0, .83fr) minmax(0, 1.17fr);
-  grid-template-areas: "photo title" "photo copy"; column-gap: clamp(30px, 4.5vw, 68px);
+  grid-template-areas: "photo title" "photo copy" "greeting greeting"; column-gap: clamp(30px, 4.5vw, 68px);
   padding: 0 clamp(12px, 3vw, 42px) 2px; align-items: start;
 }
 #kn-jongno .edit-letter-head { grid-area: title; align-self: end; padding: 10px 0 0; }
@@ -114,6 +114,16 @@
 #kn-jongno .shelf-action { color: var(--green); }
 #kn-jongno .shelf-coming { color: var(--muted); }
 #kn-jongno .shelf-action span[aria-hidden] { margin-left: 6px; }
+#kn-jongno .upcoming-issue {
+  grid-column: 1 / -1; display: grid; grid-template-columns: 1fr auto;
+  align-items: baseline; gap: 3px 10px; margin-top: 12px; padding: 12px 0 0;
+  border-top: 1px solid var(--rule);
+}
+#kn-jongno .upcoming-issue .edit-eyebrow { grid-column: 1 / -1; }
+#kn-jongno .upcoming-issue h4 {
+  margin: 0; font: 400 21px/1.25 Georgia, "AppleMyungjo", serif; letter-spacing: -.035em;
+}
+#kn-jongno .upcoming-issue .issue-status { color: #35556c; font: italic 15px/1.4 Georgia, serif; }
 @media (max-width: 800px) and (min-width: 640px) {
   #kn-jongno .edit-letter { padding: 0; column-gap: 31px; }
   #kn-jongno #edit-letter-title { font-size: 43px; }
@@ -169,7 +179,7 @@
   #kn-jongno.compact .edition-top h2 { font-size: 28px; }
   #kn-jongno .edition-tools { display: block; }
   #kn-jongno .edition-top .edition-tools p { display: none; }
-  #kn-jongno .edit-letter { grid-template-columns: minmax(0,.88fr) minmax(0,1.12fr); grid-template-areas: "photo title" "photo action" "summary summary"; padding: 0; column-gap: clamp(12px,3.5vw,20px); }
+  #kn-jongno .edit-letter { grid-template-columns: minmax(0,.88fr) minmax(0,1.12fr); grid-template-areas: "photo title" "photo action" "summary summary" "greeting greeting"; padding: 0; column-gap: clamp(12px,3.5vw,20px); }
   #kn-jongno .edit-letter-head { align-self: end; padding: 0; }
   #kn-jongno .edit-letter-head .edit-dot, #kn-jongno .edit-letter-head .edit-dot + span { display: none; }
   #kn-jongno .edit-letter-head:lang(ko) .edit-eyebrow > span:first-child { display: none; }
@@ -349,16 +359,16 @@ html:has(#section-menu[open]) { overflow: hidden; }
 }
 @media (min-width: 940px) {
   #kn-jongno .magazine-spread {
-    display: grid; grid-template-columns: minmax(0, 3.35fr) minmax(218px,1fr);
-    align-items: start; column-gap: clamp(22px,2.6vw,41px);
+    display: grid; grid-template-columns: minmax(0, 1.83fr) minmax(275px,1fr);
+    align-items: start; column-gap: clamp(22px,2.2vw,34px);
   }
   #kn-jongno .magazine-spread .edit-letter {
     grid-template-columns: minmax(0,.97fr) minmax(0,1fr);
-    grid-template-areas: "title photo" "copy photo";
-    grid-template-rows: max-content 1fr; gap: 0 clamp(18px,2.7vw,42px); padding: 0;
+    grid-template-areas: "title photo" "copy photo" "greeting greeting";
+    grid-template-rows: max-content 1fr auto; gap: 0 clamp(16px,1.9vw,28px); padding: 0;
   }
   #kn-jongno .magazine-spread .edit-letter-head { padding-top: 10px; align-self: start; }
-  #kn-jongno .magazine-spread #edit-letter-title { font-size: clamp(42px,4.25vw,67px); }
+  #kn-jongno .magazine-spread #edit-letter-title { font-size: clamp(36px,3.7vw,54px); }
   #kn-jongno .magazine-spread .edit-family { max-width: none; align-self: start; }
   #kn-jongno .magazine-spread .edit-letter-copy { padding: 12px 0 0; }
   #kn-jongno .magazine-spread .edit-intro { font-size: 17px; line-height: 1.48; }
@@ -369,7 +379,7 @@ html:has(#section-menu[open]) { overflow: hidden; }
   #kn-jongno .edition-rail .shelf-line a { font-size: 11px; gap: 2px; min-height: 34px; white-space: nowrap; }
   #kn-jongno .edition-rail .books { display: grid; grid-template-columns: 1fr; gap: 0; padding: 0; }
   #kn-jongno .edition-rail .edition-book {
-    display: grid; grid-template-columns: minmax(48px,.57fr) minmax(0,1fr);
+    display: grid; grid-template-columns: clamp(54px,4.7vw,68px) minmax(0,1fr);
     align-items: center; gap: 10px; padding: 12px 0; border-top: 1px solid #cdd3d1;
   }
   #kn-jongno .edition-rail .edition-caption { padding: 0; }
@@ -377,6 +387,14 @@ html:has(#section-menu[open]) { overflow: hidden; }
   #kn-jongno .edition-rail .edition-art { width: 100%; max-height: 113px; }
   #kn-jongno .edition-rail .edit-eyebrow { font-size: 10px; letter-spacing: .045em; }
   #kn-jongno .edition-rail .shelf-action, #kn-jongno .edition-rail .shelf-coming { font-size: 11px; margin-top: 5px; line-height: 1.35; }
+  #kn-jongno .edition-rail #ingredient-notes {
+    grid-template-columns: minmax(0,1.65fr) minmax(104px,1fr);
+    gap: clamp(12px,1.2vw,18px); padding: 14px 0 18px;
+  }
+  #kn-jongno .edition-rail .cover-print { max-height: none; }
+  #kn-jongno .edition-rail .issue-entry-link h4 { font-size: clamp(22px,2.1vw,30px); line-height: 1.15; }
+  #kn-jongno .edition-rail .issue-entry-link h4:lang(en) { font-size: clamp(22px,2.1vw,28px); }
+  #kn-jongno .edition-rail .upcoming-issue { margin-top: 0; }
   #kn-jongno .edition-rail .shopping-print { justify-content: center; background: #e5ecec; color: var(--dye-ink); border-color: #c7d5d8; }
   #kn-jongno .edition-rail .shop-micro, #kn-jongno .edition-rail .shop-foot { display: none; }
   #kn-jongno .edition-rail .shop-type { font-size: clamp(15px,1.1vw,17px); letter-spacing: -.065em; }
