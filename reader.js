@@ -19,7 +19,7 @@
     supperTitle: pair(['오늘 저녁은', '고추장으로'], ['Gochujang', 'for supper']),
     supperDeck: pair('영국 마트에서 산 돼지 어깨살로 제육 한 팬을 볶아요. 밥 위에 소복하게 올릴까요, 상추에 한입씩 싸 먹을까요?', 'Pick up a pack of pork shoulder and make one pan of jeyuk. Spoon it over rice or fold it into little lettuce wraps.'),
     comingSoon: pair('Coming soon · 공개 예정', 'Coming soon'),
-    supperSoonDeck: pair('제육볶음 레시피를 준비하고 있어요. 지금은 제육 상추쌈과 떡볶이를 펼쳐 보세요.', 'Our jeyuk bokkeum recipe is coming soon. You can read the pork lettuce wrap and tteokbokki recipes now.'),
+    supperSoonDeck: pair('오늘 저녁은 제육 상추쌈이에요. 상추 한 장에 따뜻한 밥과 제육을 올려 한입에 싸 보세요.', 'Try pork lettuce wraps for supper. Spoon a little warm rice and gochujang pork into a lettuce leaf and fold it into a bite.'),
     firstTitle: pair(['처음 맛보는', '고추장 한 숟갈'], ['Your first spoonful', 'of gochujang']),
     firstDeck: pair('따뜻한 밥 한 그릇에 고추장을 조금 넣고 비벼 보세요.', 'Start with a bowl of warm rice and a spoonful of gochujang.'),
     read: pair('제육볶음 펼치기', 'Make jeyuk bokkeum'),
@@ -60,7 +60,8 @@
       references: [['Korean Bapsang', 'https://www.koreanbapsang.com/dweji-bulgogi-korean-spicy-pork-bbq/']]
     },
     ricecakes: {
-      title: pair('떡볶이', 'Saucy rice cakes'), name: pair('Tteokbokki', '떡볶이 · Tteokbokki'),
+      comingSoon: true,
+      title: pair('떡볶이', 'Tteokbokki'), name: pair('Tteokbokki', '떡볶이 · Spicy rice cakes'),
       technique: pair('양념 졸이기', 'Reduce the sauce'), summary: pair('처음엔 국물처럼 묽어요. 떡을 저어가며 끓이면 붉은 소스가 표면에 윤기 있게 감겨요.', 'The sauce starts thin. As the rice cakes soften and you stir, it thickens into a glossy red coating.'),
       cover: 'ricecakes', image: 'ricecakes', alt: pair('흰 접시 위에 짧고 둥근 쌀떡이 붉은 양념에 고루 싸여 있다', 'Short cylindrical rice cakes coated in glossy red sauce on an off-white dish'),
       caption: pair('떡 사이로 소스가 조금 흐를 정도로 졸여요. 완성 요리 AI 예시.', 'Leave enough sauce to pool between the rice cakes. AI-generated serving study.'),
@@ -569,10 +570,11 @@
     const list = el('div','nk-list');
     for (const key of order.supper.slice(1)) {
       const d = dishes[key];
-      const control = button('nk-pick',null,'dish',key);
+      const control = d.comingSoon ? el('div','nk-pick') : button('nk-pick',null,'dish',key);
       const label = el('span');
-      label.append(el('span','nk-label',t(d.technique)),el('span','nk-pick-name',t(d.title)));
-      control.append(img(d.cover,''),label,arrow());
+      label.append(el('span','nk-label',t(d.comingSoon ? text.comingSoon : d.technique)),el('span','nk-pick-name',t(d.title)));
+      control.append(img(d.cover,''),label);
+      if (!d.comingSoon) control.append(arrow());
       list.append(control);
     }
     spread.append(photoBlock('nk-hero',cover,t(text.photo)),lead,list);
@@ -670,7 +672,7 @@
     const nav = el('nav','nk-footnav');
     nav.setAttribute('aria-label',t(pair('이어서 읽기','Continue reading')));
     nav.append(back());
-    const list = order[state.level];
+    const list = order[state.level].filter(key => !dishes[key].comingSoon);
     const next = list[list.indexOf(state.dish)+1];
     if (next) nav.append(button('nk-next',t(text.next)+' · '+t(dishes[next].title)+' →','dish',next));
     inner.append(nav);

@@ -68,7 +68,7 @@
 #nk-supper .nk-copy {margin: 13px 0 0; font-size: 16px; color: var(--nk-ink); max-width: 50ch;}
 #nk-supper .nk-read {display: inline-flex; align-items: center; gap: 14px; min-height: 44px; margin-top: 4px; font-size: 14px; font-weight: 600; color: var(--nk-red);}
 #nk-supper .nk-read-label {text-decoration: underline; text-underline-offset: 4px;}
-#nk-supper .nk-pick:hover .nk-pick-name, #nk-supper .nk-first-card:hover .nk-first-title {text-decoration: underline; text-underline-offset: .18em;}
+#nk-supper button.nk-pick:hover .nk-pick-name, #nk-supper .nk-first-card:hover .nk-first-title {text-decoration: underline; text-underline-offset: .18em;}
 #nk-supper .nk-list {grid-area: list; align-self: end;}
 #nk-supper .nk-pick {display: grid; width: 100%; grid-template-columns: clamp(63px, 8vw, 87px) 1fr auto; align-items: center; gap: 13px; padding: 11px 0; border-top: 1px solid var(--nk-rule);}
 #nk-supper .nk-pick:last-child {border-bottom: 1px solid var(--nk-rule);}
