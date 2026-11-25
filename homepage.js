@@ -3,13 +3,11 @@ import {filterDiscoveries} from './homepage-search.mjs';
 
     (()=>{
       const root=document.getElementById('kn-jongno');
-      const books=Array.from(root.querySelectorAll('.book'));
-      const count=root.querySelector('#kn-book-count');
       const intro=root.querySelector('#kn-intro');
       const discoveryTabs=[root.querySelector('#kn-korea-tab'),root.querySelector('#kn-uk-tab')];
       const discoveryPanels=[root.querySelector('#kn-korea-panel'),root.querySelector('#kn-uk-panel')];
       const design={view:'Automatic',spacing:100};
-      let current=0,discovery=0,compact=false;
+      let discovery=0;
       const places=JSON.parse(root.querySelector('#kn-uk-data').textContent);
       const england=JSON.parse(root.querySelector('#kn-uk-geometry').textContent);
       const uk={category:'all',city:'all',query:'',page:0,version:2};
@@ -106,16 +104,11 @@ import {filterDiscoveries} from './homepage-search.mjs';
       function render(){
         root.style.maxWidth=design.view==='Phone'?'390px':'none';
         root.style.setProperty('--section-space',design.spacing+'px');
-        compact=root.getBoundingClientRect().width<640;
-        root.classList.toggle('compact',compact);
-        books.forEach((b,i)=>b.hidden=compact&&i!==current);
-        count.textContent=(current+1)+' / 3';
+        root.classList.toggle('compact',root.getBoundingClientRect().width<640);
         discoveryTabs.forEach((tab,i)=>{tab.setAttribute('aria-selected',String(i===discovery));tab.tabIndex=i===discovery?0:-1;});
         discoveryPanels.forEach((panel,i)=>panel.hidden=i!==discovery);
         renderUK();
       }
-      root.querySelector('#kn-book-prev').addEventListener('click',()=>{current=(current+2)%3;render();});
-      root.querySelector('#kn-book-next').addEventListener('click',()=>{current=(current+1)%3;render();});
       discoveryTabs.forEach((tab,i)=>{
         tab.addEventListener('click',()=>{discovery=i;render();});
         tab.addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();discovery=event.key==='Home'?0:event.key==='End'?1:1-i;render();discoveryTabs[discovery].focus();}});

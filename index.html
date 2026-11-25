@@ -6,50 +6,155 @@
 <meta name="theme-color" content="#f6f6f6"><link rel="canonical" href="https://nearbykorea.github.io/">
 <link rel="icon" type="image/svg+xml" href="assets/editorial/favicon.svg">
 <link rel="stylesheet" href="homepage.css?v=20261119">
-<script defer src="directory.js?v=20261116"></script><script defer src="assets/d3/d3.min.js"></script><script type="module" src="homepage.js?v=20261116"></script>
-<link rel="stylesheet" href="magazine-home.css?v=20261121b">
-<link rel="stylesheet" href="editor-greeting.css">
-<script defer src="editor-greeting.js"></script>
-<script type="module" src="magazine-home.js?v=20261119"></script>
+<script defer src="directory.js?v=20261116"></script><script defer src="assets/d3/d3.min.js"></script><script type="module" src="homepage.js?v=20261125m"></script>
+<link rel="stylesheet" href="magazine-home.css?v=20261125inline">
+<script type="module" src="magazine-home.js?v=20261125m"></script>
 <link rel="stylesheet" href="/analytics.css"><script defer src="/analytics.js" data-base-path="/" data-api-origin="https://nearbykorea.sound88sound.chatgpt.site"></script></head><body><a class="skip-link" href="#main-content">Skip to content</a>
 <div id="kn-jongno" aria-label="Korea, Nearby homepage with Jongno photographs">
 
   <main class="inner" id="main-content">
 <header class="site-header opening-mast">
   <span class="korean" lang="ko">한국을 조금 더 가까이</span>
-  <h1 class="masthead"><span class="cloth-signet" aria-hidden="true"></span>Korea, Nearby</h1>
+  <h1 class="masthead"><svg class="profile-wordmark" viewBox="0 0 1310 234" role="img" aria-label="Nearby Korea" focusable="false">
+    <defs>
+      <!-- The two words in the profile artwork overlap vertically at the tail of the y. -->
+      <clipPath id="profile-nearby"><path d="M0 0H705V236H500V190H0Z"/></clipPath>
+      <clipPath id="profile-korea"><path d="M0 190H500V236H705V387H0Z"/></clipPath>
+      <image id="profile-lettering-source" href="assets/editorial/nearby-korea-profile-lettering.png" width="705" height="387"/>
+      <g id="nearby-korea-inline">
+        <use href="#profile-lettering-source" clip-path="url(#profile-nearby)"/>
+        <g transform="translate(675 -187)"><use href="#profile-lettering-source" clip-path="url(#profile-korea)"/></g>
+      </g>
+    </defs>
+    <use href="#nearby-korea-inline"></use></svg></h1>
   <nav class="navigation" aria-label="Main navigation">
     <button class="menu-trigger" id="section-menu-open" type="button" aria-haspopup="dialog" aria-controls="section-menu" aria-expanded="false" aria-label="Menu · 목차"><span aria-hidden="true"></span></button>
-    <a class="direct-explore" href="#kn-explore">Explore</a><a href="#kn-magazine">Magazine</a><a class="direct-culture" href="#kn-culture">Culture</a>
+    <a href="#kn-magazine">Magazine</a><a class="direct-culture" href="#kn-culture">Culture</a><a class="direct-explore" href="#kn-explore">Explore</a>
   </nav>
 </header>
 <dialog id="section-menu" aria-labelledby="section-menu-title">
-  <header><span class="drawer-brand" lang="en-GB"><span class="cloth-signet" aria-hidden="true"></span>Korea, Nearby</span>
+  <header><span class="drawer-brand" lang="en-GB"><svg class="profile-wordmark" viewBox="0 0 1310 234" role="img" aria-label="Nearby Korea" focusable="false"><use href="#nearby-korea-inline"></use></svg></span>
     <button id="section-menu-close" type="button" aria-label="Close menu · 목차 닫기" autofocus>×</button>
   </header>
   <h2 id="section-menu-title"><span lang="en-GB">Contents</span> <small lang="ko">목차</small></h2>
   <nav aria-label="Sections · 섹션">
-    <a href="#kn-discover">Discover Korea <span lang="ko">한국 둘러보기</span></a>
     <a href="#kn-magazine">Magazine <span lang="ko">매거진</span></a>
-    <a href="#edit-letter-title">Editor’s letter <span lang="ko">편집자의 편지</span></a>
-    <a href="#magazine-shelf">Inside the magazine <span lang="ko">매거진 목차</span></a>
+    <a href="reader.html?from=letter#en/letter" data-reading="letter">Editor’s letter <span lang="ko">편집자의 편지</span></a>
+    <a href="reader.html?from=shelf#en/magazine" data-reading="magazine">Inside the magazine <span lang="ko">매거진 목차</span></a>
     <a href="#family-recipes">Family recipes <span lang="ko">우리 집 레시피</span></a>
     <a href="#kn-culture">Culture <span lang="ko">문화</span></a>
+    <a href="#kn-discover">Discover Korea <span lang="ko">한국 둘러보기</span></a>
     <a href="#kn-explore">Explore <span lang="ko">장소 찾기</span></a>
   </nav>
 </dialog>
 <section class="cover opening-intro" id="our-story" aria-label="Introduction">
   <details id="kn-intro">
     <summary>
-      <span class="intro-motto">Korean life, <em>a little closer.</em></span>
-      <span class="about-label">Our story <span class="expand-mark" aria-hidden="true"></span></span>
+      <span class="intro-motto"><span data-copy="en" lang="en-GB">Wherever there’s a Korean mum, there’s a little bit of Korea.</span><span data-copy="ko" lang="ko" hidden>한국 엄마가 있는 곳은 다 한국이거든요.</span></span>
+      <span class="about-label"><span data-copy="en">Our story</span><span data-copy="ko" lang="ko" hidden>우리 이야기</span><span class="expand-mark" aria-hidden="true"></span></span>
     </summary>
-    <div class="intro-copy">
-      <p>Living in the UK with my children, I’ve come to realise that Korea is right here, in the life we share.</p>
-      <p>Korea is deeply rooted in who I am, and I love sharing it with friends and neighbours. From food to everyday culture, this is where I bring those stories together and share a little of Korea with you.</p>
+    <div class="intro-copy" id="our-story-copy">
+      <p class="story-subtitle"><span data-copy="en" lang="en-GB">A Korean food &amp; culture journal, written in the UK.</span><span data-copy="ko" lang="ko" hidden>영국에서 쓰는 한국 음식과 문화 이야기.</span></p>
+      <p data-copy="en" lang="en-GB">Living in the UK with my children, I’ve come to realise that Korea isn’t far away—it’s right here, in the everyday life we share. Just as every Italian family has its own way with pasta, wherever there is a Korean mum, there is a rich, deeply rooted home culture unique to that household...</p>
+      <p data-copy="ko" lang="ko" hidden>영국에서 아이들과 살며 알게 됐어요. 한국은 우리가 함께 보내는 하루하루에 있다는 걸요. 이탈리아 집집마다 파스타를 만드는 법이 다르듯, 한국 엄마가 있는 집에는 저마다 오랜 세월 가꿔 온 고유한 살림 문화가 있어요…</p>
     </div>
   </details>
 </section>
+<section class="section" id="kn-magazine" aria-labelledby="kn-magazine-title" lang="en-GB">
+  <div class="section-top edition-top">
+    <h2 id="kn-magazine-title">Magazine</h2>
+    <div class="edition-tools">
+      <div class="edition-language" role="group" aria-label="Magazine language · 매거진 언어">
+        <button type="button" data-edition="en" aria-pressed="true" lang="en-GB">EN</button>
+        <button type="button" data-edition="ko" aria-pressed="false" lang="ko">한국어</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="magazine-shelf">
+    <article class="issue-feature" id="ingredient-notes" aria-labelledby="current-issue-title">
+      <div class="issue-feature-copy">
+        <p class="edit-eyebrow"><span data-copy="en">Ingredient notes · Issue 01</span><span data-copy="ko" hidden>식재료 노트 · 1호</span></p>
+        <h3 id="current-issue-title"><span data-copy="en">Gochujang</span><span data-copy="ko" hidden>고추장</span></h3>
+        <p class="lead-deck"><span data-copy="en">How sweet or spicy do you like your gochujang? Find a jar to suit your taste, then stir a spoonful into bibimbap.</span><span data-copy="ko" hidden>고추장마다 단맛과 매운맛이 달라요. 내 입맛에 맞는 장을 골라 비빔밥에 한 술 비벼 보세요.</span></p>
+        <a class="edit-link" href="reader.html?from=shelf#en/issue" data-reading="issue"><span data-copy="en">Read the issue</span><span data-copy="ko" hidden>이번 호 읽기</span></a>
+      </div>
+      <a class="cover-display" href="reader.html?from=shelf#en/issue" data-reading="issue" tabindex="-1" aria-hidden="true"><img src="assets/gochujang/cover.webp" alt="" width="1080" height="1350" fetchpriority="high"></a>
+    </article>
+    <aside class="issue-index" aria-labelledby="next-issues-heading">
+      <div class="issue-previews">
+        <h3 id="next-issues-heading"><span data-copy="en">Coming soon</span><span data-copy="ko" hidden>다음 호 예고 <small lang="en">Coming soon</small></span></h3>
+        <ol start="2">
+          <li><span class="issue-number" aria-hidden="true">02</span><span data-copy="en">Rice</span><span data-copy="ko" hidden>쌀</span></li>
+          <li><span class="issue-number" aria-hidden="true">03</span><span data-copy="en">Ssamjang</span><span data-copy="ko" hidden>쌈장</span></li>
+        </ol>
+      </div>
+      <nav aria-label="Magazine links · 매거진 바로가기">
+        <a href="reader.html?from=shelf#en/magazine" data-reading="magazine"><span data-copy="en">Contents</span><span data-copy="ko" hidden>전체 목차</span></a>
+        <a href="reader.html?from=letter#en/letter" data-reading="letter"><span data-copy="en">Editor’s letter</span><span data-copy="ko" hidden>편집자의 편지</span></a>
+      </nav>
+    </aside>
+  </div>
+
+  <section class="family-recipes" id="family-recipes" aria-labelledby="family-recipes-title">
+    <header class="recipes-heading" id="family-kitchens">
+      <h3 id="family-recipes-title"><span data-copy="en">Family recipes</span><span data-copy="ko" hidden>우리 집 레시피</span></h3>
+      <p class="recipes-intro"><span data-copy="en">I’ll start with the Korean dishes my whole family has enjoyed most, made with what I can find here in Britain. Then I’ll share the recipes other families have passed down for banchan (Korean side dishes), like the soy-marinated eggs we eat with rice.</span><span data-copy="ko" hidden>영국에서 구할 수 있는 재료로 만든 음식 가운데 우리 식구가 제일 잘 먹었던 것부터 소개할게요. 다른 집에서는 계란장처럼 밥에 곁들이는 반찬(side dishes)을 어떻게 대대로 해 먹는지도 한 집씩 담아볼게요.</span></p>
+    </header>
+    <div class="recipe-spread">
+      <a class="family-recipe-feature" href="reader.html?from=family#en/first/bap" data-reading="first/bap">
+        <img src="assets/magazine/bibimbap.webp" width="510" height="680" loading="lazy" alt="Bibimbap topped with a fried egg and gochujang in a blue floral bowl" data-alt-ko="파란 꽃무늬 그릇에 담아 달걀프라이와 고추장을 올린 비빔밥">
+        <div>
+          <p class="recipe-role"><span data-copy="en">Mum’s Banchan · Cooking with gochujang</span><span data-copy="ko" hidden>엄마의 반찬 · 고추장 활용</span></p>
+          <h4><span data-copy="en">Bibimbap with beef mince, leftover veg and a runny fried egg</span><span data-copy="ko" hidden>다진 소고기와 남은 채소, 반숙 달걀프라이로 만드는 비빔밥</span></h4>
+          <span class="edit-link"><span data-copy="en">Read the recipe</span><span data-copy="ko" hidden>레시피 읽기</span> <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <div class="recipe-upcoming">
+        <p class="family-next"><span data-copy="en">Coming soon</span><span data-copy="ko" hidden>다음 레시피 · 발행 준비 중</span></p>
+        <div class="recipe-grid">
+          <figure class="dish-gyeranjang"><img src="assets/magazine/gyeranjang.webp" width="680" height="420" loading="lazy" alt=""><figcaption><p class="recipe-role"><span data-copy="en" lang="en-GB">Mum’s Banchan</span><span data-copy="ko" lang="ko" hidden>엄마의 반찬</span></p><h4><span data-copy="en" lang="en-GB">Soy-marinated eggs</span><span data-copy="ko" lang="ko" hidden>계란장</span></h4></figcaption></figure>
+          <figure class="dish-miyeokguk"><img src="assets/magazine/miyeokguk.webp" width="680" height="420" loading="lazy" alt=""><figcaption><p class="recipe-role"><span data-copy="en" lang="en-GB">Mum’s recipes</span><span data-copy="ko" lang="ko" hidden>엄마의 레시피</span></p><h4><span data-copy="en" lang="en-GB">Seaweed soup</span><span data-copy="ko" lang="ko" hidden>미역국</span></h4></figcaption></figure>
+          <figure class="dish-soy-sauce-pork"><img src="assets/magazine/soy-sauce-pork.webp" width="680" height="420" loading="lazy" alt=""><figcaption><p class="recipe-role"><span data-copy="en" lang="en-GB">Mum’s recipes</span><span data-copy="ko" lang="ko" hidden>엄마의 레시피</span></p><h4><span data-copy="en" lang="en-GB">Soy pork stir-fry</span><span data-copy="ko" lang="ko" hidden>간장 돼지고기볶음</span></h4></figcaption></figure>
+          <figure class="dish-yangnyeom-chicken"><img src="assets/magazine/yangnyeom-chicken.webp" width="680" height="420" loading="lazy" alt=""><figcaption><p class="recipe-role"><span data-copy="en" lang="en-GB">Dad’s special</span><span data-copy="ko" lang="ko" hidden>아빠의 특별편</span></p><h4><span data-copy="en" lang="en-GB">Yangnyeom chicken</span><span data-copy="ko" lang="ko" hidden>양념치킨</span></h4></figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+<section class="section" id="kn-culture" aria-labelledby="kn-culture-title" lang="en-GB">
+  <div class="section-top edition-top">
+    <h2 id="kn-culture-title"><span data-copy="en">Culture</span><span data-copy="ko" hidden>문화</span></h2>
+    <div class="edition-tools">
+      <div class="edition-language" role="group" aria-label="Culture language · 문화 섹션 언어">
+        <button type="button" data-edition="en" aria-pressed="true" lang="en-GB">EN</button>
+        <button type="button" data-edition="ko" aria-pressed="false" lang="ko">한국어</button>
+      </div>
+    </div>
+  </div>
+  <article class="artist-entry" id="artist-profiles" aria-labelledby="artist-entry-title">
+    <figure class="artist-portrait">
+      <a class="artist-portrait-link" data-reading="chang-eungbok" href="reader.html?from=artists#en/chang-eungbok"><img src="assets/magazine/chang-eungbok-hanbok.webp" width="960" height="1440" loading="lazy" alt="Read about the hanbok the editor modelled for Chang Eungbok" data-alt-ko="편집자가 모델로 입었던 장응복의 한복 이야기 읽기"></a>
+      <figcaption><span data-copy="en">From episode 2 · The hanbok I wore</span><span data-copy="ko" hidden>2화에서 · 내가 입었던 한복</span></figcaption>
+    </figure>
+    <div>
+      <p class="edit-eyebrow"><span data-copy="en">Special issue</span><span data-copy="ko" hidden>특집호</span></p>
+      <h3 id="artist-entry-title"><span data-copy="en" lang="en-GB">By Korean Hands</span><span data-copy="ko" lang="ko" hidden>한국 사람들의 솜씨</span></h3>
+      <p class="edit-translation"><span data-copy="en" lang="ko">한국 사람들의 솜씨</span><i data-copy="ko" lang="en-GB" hidden>By Korean Hands</i></p>
+      <p class="artist-entry-deck"><span data-copy="en">Meet the people who shape clay and cloth in Korea, from the potter’s wheel to the textile studio.</span><span data-copy="ko" hidden>물레 위의 흙에서 한복의 무늬, 얇은 천으로 지은 집까지. 재료를 다루는 사람들을 만나요.</span></p>
+    </div>
+    <ol class="culture-episodes">
+      <li class="episode-pending">
+        <span data-copy="en">Episode 1 · Onggi <small>Korean earthenware jars for fermenting and storing food</small></span>
+        <span data-copy="ko" hidden>1화 · 옹기 <small>장과 김치를 익히고 보관하는 전통 흙항아리</small></span>
+        <span class="episode-status"><span data-copy="en">Coming soon</span><span data-copy="ko" hidden>Coming soon · 공개 예정</span></span>
+      </li>
+      <li><a data-reading="chang-eungbok" href="reader.html?from=artists#en/chang-eungbok"><span data-copy="en">Episode 2 · Korean textiles with Chang Eungbok</span><span data-copy="ko" hidden>2화 · 한국 섬유, 장응복</span></a></li>
+      <li><a data-reading="do-ho-suh" href="reader.html?from=artists#en/do-ho-suh"><span data-copy="en">Episode 3 · Do Ho Suh</span><span data-copy="ko" hidden>3화 · 서도호</span></a></li>
+    </ol>
+  </article>
+</section>
+
 <section class="section" id="kn-discover" aria-labelledby="kn-discover-title">
   <div class="discover-bar">
     <h2 id="kn-discover-title">Discover Korea</h2>
@@ -109,139 +214,6 @@
         <p class="uk-selection-note">A selection of 87 places across England. Restaurants, shops and cultural venues: Google 4.0+. Korean schools are included without ratings. Original selection checked 12 November 2026; Reading addition checked 15 November 2026.</p>
       </div>
     </section>
-<section class="section" id="kn-magazine" aria-labelledby="kn-magazine-title" lang="en-GB">
-  <div class="section-top edition-top">
-    <h2 id="kn-magazine-title">Magazine</h2>
-    <div class="edition-tools">
-      <p><span data-copy="en">Ingredients and family recipes.</span><span data-copy="ko" lang="ko" hidden>식재료와 우리 집 밥상.</span></p>
-      <div class="edition-language" role="group" aria-label="Magazine language · 매거진 언어">
-        <button type="button" data-edition="en" aria-pressed="true" lang="en-GB">EN</button>
-        <button type="button" data-edition="ko" aria-pressed="false" lang="ko">한국어</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="magazine-spread">
-  <article class="edit-letter" aria-labelledby="edit-letter-title">
-    <header class="edit-letter-head"><span id="editors-letter" class="letter-anchor" aria-hidden="true"></span>
-      <p class="edit-eyebrow"><span lang="en-GB">Editor’s letter</span><span class="edit-dot" aria-hidden="true">·</span><span lang="ko">편집자의 편지</span></p>
-      <h3 id="edit-letter-title"><span data-copy="en">The flavours<br>I grew up with</span><span data-copy="ko" lang="ko" hidden>내가 먹고<br>자란 맛</span></h3>
-      <p class="edit-translation"><span lang="ko" data-copy="en">내가 먹고 자란 맛</span><span lang="en-GB" data-copy="ko" hidden>The flavours I grew up with</span></p>
-    </header>
-    <figure class="edit-family">
-      <div class="album-mount"><img src="assets/gochujang/editor-family.webp" alt="Me as a child at my birthday table, with a carved watermelon and other fruit in the foreground" data-alt-ko="수박과 과일이 차려진 생일상 앞에 앉아 있는 어린 시절의 나" width="900" height="900" loading="lazy"></div>
-      <figcaption><span lang="en-GB">My childhood birthday party</span><span aria-hidden="true"> · </span><span lang="ko">내 어린시절 생일잔치</span></figcaption>
-    </figure>
-    <div class="edit-letter-copy">
-      <p class="edit-intro" data-copy="en">Would you believe that when I was a child, our family never bought rice, gochugaru (Korean chilli flakes), sesame oil or kimchi?</p>
-      <p class="edit-intro" data-copy="ko" lang="ko" hidden>어릴 때 우리 집에선 쌀도, 고춧가루도, 참기름도, 김치도 사 먹은 적이 없었다면 믿으시겠어요?</p>
-      <a class="edit-link" href="reader.html#en/letter" data-reading="letter"><span data-copy="en">Read the letter</span><span data-copy="ko" lang="ko" hidden>편지 이어 읽기</span><span aria-hidden="true">→</span></a>
-    </div>
-    <editor-greeting></editor-greeting>
-  </article>
-
-  <aside class="edition-rail" aria-labelledby="shelf-title">
-  <div class="shelf-line" id="magazine-shelf">
-    <h3 id="shelf-title"><span data-copy="en">Inside the magazine</span><span data-copy="ko" lang="ko" hidden>이번에 읽을 이야기</span></h3>
-    <a href="reader.html?from=shelf#en/magazine" data-reading="magazine"><span data-copy="en">Contents</span><span data-copy="ko" hidden>전체 목차</span> <span aria-hidden="true">↗</span></a>
-  </div>
-  <div class="books edition-books" aria-label="Magazine bookshelf · 매거진 책장">
-    <div class="book edition-book" id="ingredient-notes">
-      <a class="edition-art cover-print" href="reader.html?from=shelf#en/issue" data-reading="issue" aria-hidden="true" tabindex="-1"><img src="assets/gochujang/cover.webp" alt="고추장 · Gochujang" width="1080" height="1350" loading="lazy"></a>
-      <div class="edition-caption">
-        <p class="edit-eyebrow"><span data-copy="en">Ingredient notes · Issue 01</span><span data-copy="ko" hidden>식재료 노트 · 1호</span></p>
-        <a class="issue-entry-link" href="reader.html?from=shelf#en/issue" data-reading="issue">
-          <h4><span data-copy="en">Gochujang</span><span data-copy="ko" hidden>고추장</span></h4>
-          <p class="shelf-action"><span data-copy="en">Read the issue</span><span data-copy="ko" hidden>이번 호 읽기</span> <span aria-hidden="true">→</span></p>
-        </a>
-      </div>
-      <section class="upcoming-issue" aria-labelledby="sesame-issue-title">
-        <p class="edit-eyebrow"><span data-copy="en">Ingredient notes · Issue 02</span><span data-copy="ko" hidden>식재료 노트 · 2호</span></p>
-        <h4 id="sesame-issue-title"><span data-copy="en">Sesame oil</span><span data-copy="ko" hidden>참기름</span></h4>
-        <p class="issue-status" lang="en-GB">Coming soon</p>
-      </section>
-      <section class="upcoming-issue" aria-labelledby="ssamjang-issue-title">
-        <p class="edit-eyebrow"><span data-copy="en">Ingredient notes · Issue 03</span><span data-copy="ko" hidden>식재료 노트 · 3호</span></p>
-        <h4 id="ssamjang-issue-title"><span data-copy="en">Ssamjang</span><span data-copy="ko" hidden>쌈장</span></h4>
-        <p class="issue-status" lang="en-GB">Coming soon</p>
-      </section>
-    </div>
-    <a class="book edition-book" id="family-kitchens" href="#family-recipes">
-      <div class="edition-art egg-print"><img src="assets/magazine/gyeranjang.webp" alt="The editor’s soy-marinated eggs with chopped spring onions" data-alt-ko="양념장에 담가 파를 올린 편집자의 계란장" width="640" height="800" loading="lazy"></div>
-      <div class="edition-caption">
-        <p class="edit-eyebrow"><span data-copy="en">Family kitchens</span><span data-copy="ko" hidden>집집의 레시피</span></p>
-        <h4><span data-copy="en">Mum’s soy-marinated eggs</span><span data-copy="ko" hidden>엄마의 반찬, 계란장</span></h4>
-        <p class="shelf-coming"><span data-copy="en">Coming soon</span><span data-copy="ko" hidden>발행 준비 중</span></p>
-      </div>
-    </a>
-    <a class="book edition-book" href="reader.html?from=shelf#en/shop" data-reading="shop">
-      <div class="edition-art shopping-print">
-        <span class="shop-micro" lang="en-GB">At the British supermarket</span>
-        <span class="shop-type" lang="en-GB">Pork<br><em>shoulder</em></span>
-        <span class="shop-foot" lang="ko">제육볶음용 돼지 어깨살</span>
-      </div>
-      <div class="edition-caption">
-        <p class="edit-eyebrow"><span data-copy="en">UK shopping notes</span><span data-copy="ko" hidden>영국 장보기</span></p>
-        <h4><span data-copy="en">Which cut for jeyuk?</span><span data-copy="ko" hidden>제육에는 어느 부위가 좋을까?</span></h4>
-        <p class="shelf-action"><span data-copy="en">Read the note</span><span data-copy="ko" hidden>장보기 노트 읽기</span> <span aria-hidden="true">→</span></p>
-      </div>
-    </a>
-  </div>
-  <div class="book-controls"><button type="button" id="kn-book-prev" aria-label="Previous shelf entry · 이전 이야기">←</button><span id="kn-book-count" role="status" aria-live="polite">1 / 3</span><button type="button" id="kn-book-next" aria-label="Next shelf entry · 다음 이야기">→</button></div>
-  </aside>
-  </div>
-
-  <section class="family-recipes" id="family-recipes" aria-labelledby="family-recipes-title">
-    <header class="recipes-heading">
-      <h3 id="family-recipes-title"><span data-copy="en">Family recipes</span><span data-copy="ko" hidden>우리 집 레시피</span></h3>
-    </header>
-    <p class="recipes-intro"><span data-copy="en">I’ll start with the Korean dishes my whole family has enjoyed most, made with what I can find here in Britain. Then I’ll share the recipes other families have passed down for banchan (Korean side dishes), like the soy-marinated eggs we eat with rice.</span><span data-copy="ko" hidden>영국에서 구할 수 있는 재료로 만든 음식 가운데 우리 식구가 제일 잘 먹었던 것부터 소개할게요. 다른 집에서는 계란장처럼 밥에 곁들이는 반찬(side dishes)을 어떻게 대대로 해 먹는지도 한 집씩 담아볼게요.</span></p>
-    <a class="family-recipe-feature" href="reader.html?from=family#en/first/bap" data-reading="first/bap">
-      <img src="assets/magazine/bibimbap.webp" width="510" height="680" loading="lazy" alt="Bibimbap topped with a fried egg and gochujang in a blue floral bowl" data-alt-ko="파란 꽃무늬 그릇에 담아 달걀프라이와 고추장을 올린 비빔밥">
-      <div>
-        <p class="recipe-role"><span data-copy="en">Mum’s Banchan · Cooking with gochujang</span><span data-copy="ko" hidden>엄마의 반찬 · 고추장 활용</span></p>
-        <h4><span data-copy="en">Bibimbap with beef mince, leftover veg and a runny fried egg</span><span data-copy="ko" hidden>다진 소고기와 남은 채소, 반숙 달걀프라이로 만드는 비빔밥</span></h4>
-        <span class="edit-link"><span data-copy="en">Read the recipe</span><span data-copy="ko" hidden>레시피 읽기</span> <span aria-hidden="true">→</span></span>
-      </div>
-    </a>
-    <p class="family-next"><span data-copy="en">Coming soon</span><span data-copy="ko" hidden>다음 레시피 · 발행 준비 중</span></p>
-    <div class="recipe-grid">
-      <figure class="dish-gyeranjang"><img src="assets/magazine/gyeranjang.webp" width="680" height="420" loading="lazy" alt=""><figcaption><p class="recipe-role"><span data-copy="en" lang="en-GB">Mum’s Banchan</span><span data-copy="ko" lang="ko" hidden>엄마의 반찬</span></p><h4><span data-copy="en" lang="en-GB">Soy-marinated eggs</span><span data-copy="ko" lang="ko" hidden>계란장</span></h4></figcaption></figure>
-<figure class="dish-miyeokguk"><img src="assets/magazine/miyeokguk.webp" width="680" height="420" loading="lazy" alt=""><figcaption><p class="recipe-role"><span data-copy="en" lang="en-GB">Mum’s recipes</span><span data-copy="ko" lang="ko" hidden>엄마의 레시피</span></p><h4><span data-copy="en" lang="en-GB">Seaweed soup</span><span data-copy="ko" lang="ko" hidden>미역국</span></h4></figcaption></figure>
-<figure class="dish-soy-sauce-pork"><img src="assets/magazine/soy-sauce-pork.webp" width="680" height="420" loading="lazy" alt=""><figcaption><p class="recipe-role"><span data-copy="en" lang="en-GB">Mum’s recipes</span><span data-copy="ko" lang="ko" hidden>엄마의 레시피</span></p><h4><span data-copy="en" lang="en-GB">Soy pork stir-fry</span><span data-copy="ko" lang="ko" hidden>간장 돼지고기볶음</span></h4></figcaption></figure>
-<figure class="dish-yangnyeom-chicken"><img src="assets/magazine/yangnyeom-chicken.webp" width="680" height="420" loading="lazy" alt=""><figcaption><p class="recipe-role"><span data-copy="en" lang="en-GB">Dad’s special</span><span data-copy="ko" lang="ko" hidden>아빠의 특별편</span></p><h4><span data-copy="en" lang="en-GB">Yangnyeom chicken</span><span data-copy="ko" lang="ko" hidden>양념치킨</span></h4></figcaption></figure>
-    </div>
-  </section>
-</section>
-<section class="section" id="kn-culture" aria-labelledby="kn-culture-title" lang="en-GB">
-  <div class="section-top edition-top">
-    <h2 id="kn-culture-title"><span data-copy="en">Culture</span><span data-copy="ko" hidden>문화</span></h2>
-    <div class="edition-tools">
-      <div class="edition-language" role="group" aria-label="Culture language · 문화 섹션 언어">
-        <button type="button" data-edition="en" aria-pressed="true" lang="en-GB">EN</button>
-        <button type="button" data-edition="ko" aria-pressed="false" lang="ko">한국어</button>
-      </div>
-    </div>
-  </div>
-  <article class="artist-entry" id="artist-profiles" aria-labelledby="artist-entry-title">
-    <figure class="artist-portrait">
-      <a class="artist-portrait-link" data-reading="chang-eungbok" href="reader.html?from=artists#en/chang-eungbok"><img src="assets/magazine/chang-eungbok-hanbok.webp" width="960" height="1440" loading="lazy" alt="Read about the hanbok the editor modelled for Chang Eungbok" data-alt-ko="편집자가 모델로 입었던 장응복의 한복 이야기 읽기"></a>
-      <figcaption><span data-copy="en">From episode 2 · The hanbok I wore</span><span data-copy="ko" hidden>2화에서 · 내가 입었던 한복</span></figcaption>
-    </figure>
-    <div>
-      <p class="edit-eyebrow"><span data-copy="en">Special issue</span><span data-copy="ko" hidden>특집호</span></p>
-      <h3 id="artist-entry-title"><span data-copy="en" lang="en-GB">By Korean Hands</span><span data-copy="ko" lang="ko" hidden>한국 사람들의 솜씨</span></h3>
-      <p class="edit-translation"><span data-copy="en" lang="ko">한국 사람들의 솜씨</span><i data-copy="ko" lang="en-GB" hidden>By Korean Hands</i></p>
-      <p class="artist-entry-deck"><span data-copy="en">Meet the people who shape clay and cloth in Korea, from the potter’s wheel to the textile studio.</span><span data-copy="ko" hidden>물레 위의 흙에서 한복의 무늬, 얇은 천으로 지은 집까지. 재료를 다루는 사람들을 만나요.</span></p>
-      <ol class="culture-episodes">
-        <li><a data-reading="onggi" href="reader.html?from=artists#en/onggi"><span data-copy="en">Episode 1 · Onggi <small>Korean earthenware jars for fermenting and storing food</small></span><span data-copy="ko" hidden>1화 · 옹기 <small>장과 김치를 익히고 보관하는 전통 흙항아리</small></span></a></li>
-        <li><a data-reading="chang-eungbok" href="reader.html?from=artists#en/chang-eungbok"><span data-copy="en">Episode 2 · Korean textiles with Chang Eungbok</span><span data-copy="ko" hidden>2화 · 한국 섬유, 장응복</span></a></li>
-        <li><a data-reading="do-ho-suh" href="reader.html?from=artists#en/do-ho-suh"><span data-copy="en">Episode 3 · Do Ho Suh</span><span data-copy="ko" hidden>3화 · 서도호</span></a></li>
-      </ol>
-    </div>
-  </article>
-</section>
-
     <section class="section" id="kn-explore" aria-labelledby="kn-explore-title">
       <div class="section-top"><h2 id="kn-explore-title">Find your nearby.</h2><p>Korean places &amp; online discoveries in the UK.</p></div>
       <span id="directory"></span>

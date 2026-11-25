@@ -192,6 +192,7 @@
 #nk-supper .nk-culture-list li {border-top:1px solid var(--nk-rule);}
 #nk-supper .nk-title-with-description {display:flex; flex-wrap:wrap; align-items:baseline; gap:5px 22px;}
 #nk-supper .nk-title-description {max-width:100%; margin:0; color:#254d70; font:400 clamp(16px,1.65vw,20px)/1.5 var(--nk-sans); text-wrap:pretty; word-break:keep-all;}
+#nk-supper .nk-pending-title {margin:12px 0 5px; font-weight:600;}
 #nk-supper .nk-episode-description {display:block; margin:0 0 10px; color:var(--nk-soft); font:400 14px/1.45 var(--nk-sans); word-break:keep-all;}
 @media (max-width:610px) {
   #nk-supper .nk-title-with-description {flex-direction:column; align-items:flex-start;}

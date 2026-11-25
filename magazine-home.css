@@ -6,6 +6,11 @@
   padding: 0; margin: 0; max-width: none; white-space: nowrap;
   font: 400 clamp(40px, 4.6vw, 66px)/1.06 Georgia,serif; letter-spacing: -.065em;
 }
+#kn-jongno .profile-wordmark { display: block; width: clamp(225px, 23vw, 320px); height: auto; }
+#kn-jongno .drawer-brand .profile-wordmark { width: 150px; }
+@media (max-width: 639px), (max-height: 520px) {
+  #kn-jongno .masthead .profile-wordmark { width: clamp(138px, 40vw, 205px); }
+}
 #kn-jongno .opening-mast .navigation { justify-self: end; align-items: center; }
 #kn-jongno .cover.opening-intro { display: block; padding: 0; margin: 0; }
 #kn-jongno .opening-intro summary, #kn-jongno .album-size {
@@ -15,12 +20,14 @@
 #kn-jongno .opening-intro summary { padding: 6px 0; list-style: none; }
 #kn-jongno .opening-intro summary::-webkit-details-marker { display: none; }
 #kn-jongno .intro-motto { color: var(--ink); font: 400 clamp(20px,2.1vw,29px)/1.2 Georgia,serif; letter-spacing: -.04em; }
+#kn-jongno .opening-intro .intro-motto { text-wrap: balance; word-break: keep-all; }
+#kn-jongno .opening-intro .story-subtitle { color: var(--dye-ink); font: 600 14px/1.4 Arial,sans-serif; }
 #kn-jongno .about-label, #kn-jongno .album-size { font: 12px/1.4 Arial,sans-serif; }
 #kn-jongno .about-label { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
 #kn-jongno .expand-mark { font: 16px/1 Arial,sans-serif; }
 #kn-jongno .expand-mark::before { content: "+"; }
 #kn-jongno details[open] .expand-mark::before, #kn-jongno .album-size[aria-expanded="true"] .expand-mark::before { content: "−"; }
-#kn-jongno .opening-intro .intro-copy { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; max-width: 80ch; padding: 8px 0 20px; font: 16px/1.6 Georgia,serif; }
+#kn-jongno .opening-intro .intro-copy { display: grid; gap: 9px; max-width: 63ch; padding: 9px 0 22px; font: 17px/1.6 Georgia,serif; }
 #kn-jongno #kn-discover { padding-top: 12px; margin-bottom: 25px; }
 #kn-jongno .discover-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 #kn-jongno .discover-bar h2 { font: 400 clamp(23px,2.4vw,34px)/1.15 Georgia,serif; letter-spacing: -.045em; }
@@ -231,22 +238,27 @@
 }
 #nk-supper .nk-label, #nk-supper .nk-linkback { color: var(--dye-ink); }
 
-#kn-jongno #kn-magazine,
-#kn-jongno #kn-culture,
-#kn-jongno .family-recipes {
-  position: relative;
-  border-top: 1px solid #aab9c0;
+/* The section rule is continuous across the page; internal column rules are lighter. */
+#kn-jongno {
+  --dye-ink: #254d70;
+  --news-rule: #a4a9a5;
+  --news-paper: #f2f0e8;
+  background-image: linear-gradient(rgb(248 247 242 / 84%),rgb(248 247 242 / 84%)), url("assets/editorial/hanji.svg");
 }
-#kn-jongno #kn-magazine::before,
-#kn-jongno #kn-culture::before,
-#kn-jongno .family-recipes::before {
-  content: "";
-  position: absolute;
-  inset: -2px auto auto 0;
-  width: clamp(54px, 10%, 116px);
-  height: 3px;
-  background: var(--dye-ink);
+#kn-jongno .inner > .section, #kn-jongno #family-recipes {
+  border-top: 3px solid var(--ink);
+  margin-bottom: 0;
 }
+#kn-jongno .inner > .section + .section, #kn-jongno #family-recipes {
+  margin-top: clamp(30px, 3.6vw, 54px);
+}
+#kn-jongno .inner > .section { padding-top: 0; }
+#kn-jongno .section :is(.edition-top,.discover-bar),
+#kn-jongno #kn-explore > .section-top {
+  min-height: 48px; padding: 6px 0; margin: 0 0 18px;
+  border-bottom: 1px solid var(--news-rule);
+}
+#kn-jongno #kn-explore { margin-bottom: 48px; }
 #kn-jongno .edition-top .edition-language button[aria-pressed=true],
 #kn-jongno .edit-eyebrow, #kn-jongno .edit-link, #kn-jongno .shelf-action,
 #kn-jongno .shelf-line a, #kn-jongno .recipe-role { color: var(--dye-ink); }
@@ -261,6 +273,8 @@
 #kn-jongno .artist-portrait {margin:0;}
 #kn-jongno .artist-portrait figcaption {margin-top:6px; color:var(--muted); font-size:12px; line-height:1.4; word-break:keep-all;}
 #kn-jongno .culture-episodes {margin:14px 0 0; padding:0; max-width:46ch; list-style:none;}
+#kn-jongno .culture-episodes .episode-pending {display:grid; gap:4px; padding:8px 0; border-top:1px solid #bec9ce; font-size:15px; line-height:1.4; word-break:keep-all;}
+#kn-jongno .culture-episodes .episode-status {color:#585d59; font-size:13px;}
 #kn-jongno .culture-episodes a {display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:44px; padding:5px 0; border-top:1px solid #bec9ce; color:#254d70; font-size:15px; line-height:1.4; word-break:keep-all;}
 #kn-jongno .culture-episodes a::after {content:'→' / '';}
 #kn-jongno .culture-episodes small {display:block; margin-top:2px; color:#485956; font-size:14px; line-height:1.45; text-wrap:pretty;}
@@ -340,7 +354,7 @@ html:has(#section-menu[open]) { overflow: hidden; }
 #kn-jongno .issue-feature:not([hidden]) {
   display: grid; grid-template-columns: minmax(0, .87fr) minmax(0, 1.13fr);
   align-items: center; gap: clamp(30px,6vw,78px); padding: 0 0 28px;
-  margin-bottom: clamp(24px,3vw,44px); border-bottom: 1px solid var(--rule);
+  margin-bottom: 0; border-bottom: 1px solid var(--rule);
 }
 #kn-jongno .issue-feature-copy { padding-left: clamp(0px,1.8vw,26px); }
 #kn-jongno .issue-feature h3 {
@@ -348,14 +362,61 @@ html:has(#section-menu[open]) { overflow: hidden; }
   letter-spacing: -.065em; color: var(--ink);
 }
 #kn-jongno .issue-feature h3 em { font-weight: 400; }
-#kn-jongno .lead-deck { font: 18px/1.48 Georgia, "AppleMyungjo", serif; max-width: 35ch; word-break: keep-all; }
+#kn-jongno .lead-deck { font: 18px/1.48 Georgia, "AppleMyungjo", serif; max-width: 35ch; word-break: keep-all; text-wrap: pretty; }
 #kn-jongno .cover-display {
   display: grid; place-items: center; min-height: 0; padding: 18px;
-  background: #e2eaeb; border-block: 1px solid #cad7da;
+  background: #ede9e1;
 }
 #kn-jongno .cover-display img {
-  display: block; width: auto; max-width: 100%; height: clamp(240px,24vw,315px); object-fit: contain;
+  display: block; width: auto; max-width: 100%; height: clamp(270px,29vw,390px); object-fit: contain;
   box-shadow: 2px 5px 8px #263b4826;
+}
+#kn-jongno .issue-index { min-width: 0; }
+#kn-jongno .issue-previews h3, #kn-jongno .family-next {
+  color: var(--dye-ink); font: 600 14px/1.4 Arial, "Apple SD Gothic Neo", sans-serif;
+}
+#kn-jongno .issue-previews h3 small {
+  display: block; margin-top: 2px; color: var(--muted); font: 400 12px/1.5 Arial, sans-serif;
+}
+#kn-jongno .issue-previews ol { list-style: none; margin: 12px 0 0; padding: 0; }
+#kn-jongno .issue-previews li {
+  display: flex; align-items: baseline; gap: 12px; padding: 12px 0;
+  border-top: 1px solid var(--news-rule); font: 400 24px/1.1 Georgia, "AppleMyungjo", serif;
+}
+#kn-jongno .issue-number { color: #646c70; font: italic 18px/1.2 Georgia,serif; }
+#kn-jongno .issue-index nav { display: flex; flex-wrap: wrap; gap: 0 20px; }
+#kn-jongno .issue-index nav a {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  min-height: 44px; font: 14px/1.4 Arial,"Apple SD Gothic Neo",sans-serif; color: var(--dye-ink);
+}
+#kn-jongno .issue-index nav a::after { content: "→" / ""; }
+#kn-jongno .issue-index nav a:is(:hover,:focus-visible) { text-decoration: underline; }
+@media (min-width: 960px) {
+  #kn-jongno #magazine-shelf {
+    display: grid; grid-template-columns: minmax(0,3.4fr) minmax(170px,1fr);
+    gap: clamp(20px,2.2vw,32px);
+  }
+  #kn-jongno #magazine-shelf .issue-feature {
+    grid-template-columns: minmax(0,.87fr) minmax(0,1fr);
+    gap: clamp(16px,2.6vw,38px); padding: 0; border: 0;
+  }
+  #kn-jongno .issue-feature-copy { padding: 0; }
+  #kn-jongno .issue-feature h3 { font-size: clamp(54px,5.2vw,77px); }
+  #kn-jongno .issue-index {
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding-left: clamp(18px,2vw,28px); border-left: 1px solid var(--news-rule);
+  }
+  #kn-jongno .issue-index nav { display: grid; border-top: 2px solid var(--ink); }
+  #kn-jongno .issue-index nav a + a { border-top: 1px solid var(--news-rule); }
+}
+@media (max-width: 959px) {
+  #kn-jongno .issue-index {
+    display: grid; grid-template-columns: minmax(0,1fr) auto;
+    gap: 12px 24px; padding-top: 14px;
+  }
+  #kn-jongno .issue-previews ol { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 6px 0 0; }
+  #kn-jongno .issue-previews li { font-size: 20px; padding: 9px 0 3px; }
+  #kn-jongno .issue-index nav { align-content: center; }
 }
 @media (min-width: 940px) {
   #kn-jongno .magazine-spread {
@@ -403,8 +464,8 @@ html:has(#section-menu[open]) { overflow: hidden; }
   #kn-jongno .recipe-grid { grid-template-columns: repeat(2,minmax(0,1fr)); row-gap: 23px; }
 }
 @media (max-width: 639px) {
-  #kn-jongno .opening-mast .navigation { gap: 4px; }
-  #kn-jongno .opening-mast .navigation .direct-explore { display: none; }
+  #kn-jongno .opening-mast .navigation { gap: 10px; }
+  #kn-jongno .opening-mast .navigation :is(.direct-explore,.direct-culture) { display: none; }
   #kn-jongno .opening-mast .navigation a { display: inline-flex; align-items: center; }
   #kn-jongno .masthead .cloth-signet { width: .53em; margin-inline-end: .19em; }
   #kn-jongno .recipe-grid { gap: 18px 12px; }
@@ -421,7 +482,7 @@ html:has(#section-menu[open]) { overflow: hidden; }
   #kn-jongno .issue-feature h3 { grid-area: title; font-size: clamp(32px,9.5vw,58px); margin: 5px 0; }
   #kn-jongno .cover-display { grid-area: cover; padding: 10px; }
   #kn-jongno .cover-display img { height: auto; width: 100%; }
-  #kn-jongno .issue-feature .edit-link { grid-area: link; font-size: 12px; align-self: start; margin: 0; }
+  #kn-jongno .issue-feature .edit-link { grid-area: link; font-size: 14px; align-self: start; margin: 0; }
   #kn-jongno .issue-feature .lead-deck { grid-area: deck; margin-top: 12px; max-width: none; font-size: 16px; }
   #kn-jongno .recipes-heading { align-items: center; }
 }
@@ -445,3 +506,53 @@ html:has(#section-menu[open]) { overflow: hidden; }
 }
 
 #kn-magazine #editors-letter.letter-anchor { display:block; width:0; height:0; margin:0; padding:0; }
+
+/* Full-width section titles and a common gutter keep each spread on its own baseline. */
+#kn-jongno :is(#kn-magazine,#kn-culture,#kn-discover,#family-recipes) { padding-top: 0; }
+#kn-jongno .inner > .section + #kn-discover { margin-bottom: 0; }
+#kn-jongno .cover-display { background: #e8e4d8; }
+#kn-jongno .issue-feature .edit-eyebrow, #kn-jongno .recipe-role { font-weight: 600; }
+#kn-jongno .recipes-heading {
+  align-items: start; margin-bottom: 18px; padding: 12px 0; border-bottom: 1px solid var(--news-rule);
+}
+#kn-jongno .recipes-heading .recipes-intro {
+  max-width: 59ch; margin: 0; font: 14px/1.55 Arial, "Apple SD Gothic Neo", sans-serif;
+  color: #535a55; white-space: normal; word-break: keep-all;
+}
+#kn-jongno .recipe-spread { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px,2.2vw,32px); }
+#kn-jongno .family-recipe-feature {
+  display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start;
+  gap: 12px; margin: 0;
+}
+#kn-jongno .family-recipe-feature img { width: 100%; aspect-ratio: 16/9; object-fit: cover; object-position: 50% 53%; }
+#kn-jongno .family-recipe-feature h4 { max-width: 28ch; }
+#kn-jongno .family-recipe-feature .edit-link { margin-top: 0; }
+#kn-jongno .recipe-upcoming { padding-left: clamp(18px,2vw,28px); border-left: 1px solid var(--news-rule); }
+#kn-jongno .family-next { margin: 0 0 12px; padding: 0; border: 0; }
+#kn-jongno .recipe-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px 18px; }
+#kn-jongno .recipe-grid figcaption { padding-top: 5px; }
+#kn-jongno .recipe-grid h4 { font-size: clamp(18px,1.7vw,24px); }
+#kn-jongno .artist-entry {
+  grid-template-columns: minmax(100px,.7fr) minmax(0,1.35fr) minmax(0,1fr);
+  gap: clamp(18px,2.6vw,38px);
+}
+#kn-jongno .culture-episodes {
+  align-self: stretch; display: flex; flex-direction: column; justify-content: center;
+  margin: 0; max-width: none; padding-left: clamp(18px,2vw,28px); border-left: 1px solid var(--news-rule);
+}
+#kn-jongno .culture-episodes li:last-child { border-bottom: 1px solid var(--news-rule); }
+@media (max-width: 700px) {
+  #kn-jongno .recipes-heading { flex-direction: column; gap: 7px; }
+  #kn-jongno .recipe-spread { grid-template-columns: minmax(0,1fr); }
+  #kn-jongno .recipe-upcoming { border-left: 0; padding: 14px 0 0; border-top: 1px solid var(--news-rule); }
+  #kn-jongno .artist-entry { grid-template-columns: minmax(0,.65fr) minmax(0,1fr); gap: 16px; }
+  #kn-jongno .culture-episodes { grid-column: 1 / -1; padding: 0; border: 0; }
+}
+@media (max-width: 639px) {
+  #kn-jongno .issue-index { grid-template-columns: minmax(0,1fr); gap: 12px; }
+  #kn-jongno .issue-previews h3 small { display: inline; margin-left: 6px; }
+  #kn-jongno .issue-index nav { border-top: 1px solid var(--news-rule); }
+  #kn-jongno .issue-index nav a { gap: 8px; }
+  #kn-jongno.compact .section :is(.edition-top,.discover-bar) { margin-bottom: 12px; }
+  #kn-jongno .issue-feature:not([hidden]) { border-bottom: 1px solid var(--news-rule); padding-bottom: 12px; }
+}

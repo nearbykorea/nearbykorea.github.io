@@ -141,7 +141,7 @@
   };
   const order = {supper: ['pork','ssam','ricecakes'], first: ['bap','paste']};
   const cultureEpisodes = [
-    {page:'onggi', title:pair('옹기','Onggi'), description:pair(
+    {page:'onggi', comingSoon:true, title:pair('옹기','Onggi'), description:pair(
       '장과 김치를 익히고 보관하는 전통 흙항아리',
       'Korean earthenware jars for fermenting and storing food'
     )},
@@ -312,15 +312,8 @@
     }
   }
   function magazineHome() {
-    const opening=el('section','nk-opening');
-    const title=el('header','nk-opening-title');
-    title.append(el('p','nk-label',t(front.letter)),el('h1','',t(front.title)),el('p','nk-subtitle',t(front.subtitle)));
-    const lead=el('div','nk-opening-copy');
-    lead.append(el('p','nk-letter-lede',t(front.opening)),readButton(t(pair('편지 이어 읽기','Read the letter')),'page','letter'));
-    opening.append(title,photoBlock('nk-opening-photo',img('family',t(front.familyAlt)),t(front.familyCaption)),lead);
-
     const contents=el('section','nk-front-contents');
-    contents.append(el('h2','nk-contents-heading',t(pair('이번에 읽을 이야기','Inside the magazine'))));
+    contents.append(el('h1','nk-contents-heading',t(pair('이번에 읽을 이야기','Inside the magazine'))));
     const cols=el('div','nk-desk-contents');
     const ingredient=button('nk-directory-item nk-ingredient-item',null,'page','issue');
     const ingredientCopy=el('span');
@@ -329,7 +322,7 @@
     const issues=el('div','nk-ingredient-notes');
     issues.append(ingredient);
     const upcomingIssues = [
-      { label: pair('식재료 노트 2호', 'Ingredient notes · Issue 02'), title: pair('참기름', 'Sesame oil') },
+      { label: pair('식재료 노트 2호', 'Ingredient notes · Issue 02'), title: pair('쌀', 'Rice') },
       { label: pair('식재료 노트 3호', 'Ingredient notes · Issue 03'), title: pair('쌈장', 'Ssamjang') }
     ];
     for (const issue of upcomingIssues) {
@@ -347,10 +340,11 @@
     family.append(summary,readButton(t(dishes.bap.title),'dish','bap'),el('p','nk-entry-summary',t(front.familyKitchen)),el('p','nk-entry-summary',t(front.familyTraditions)),line);
     const shop=button('nk-directory-item',null,'page','shop');
     shop.append(el('span','nk-label',t(front.shop)),el('strong','',t(front.shopTitle)),arrow());
-    other.append(family,shop);
+    const letterLink=readButton(t(front.letter),'page','letter');
+    other.append(family,shop,letterLink);
     cols.append(issues,other);
     contents.append(cols,external(t(pair('영국의 가게와 사람들 · 지난 기사','Shops and people in Britain · Earlier stories')),'magazine.html#stories-title'));
-    body.replaceChildren(opening,contents);
+    body.replaceChildren(contents);
   }
   function letter() {
     const top=el('header','nk-article-top');
@@ -393,14 +387,16 @@
     const contents=el('ol','nk-culture-list');
     cultureEpisodes.forEach((episode,index)=>{
       const item=el('li');
-      const link=readButton(episodeNumber(index)+' · '+t(episode.title),'page',episode.page);
-      item.append(link);
+      const title=episodeNumber(index)+' · '+t(episode.title);
+      const heading=episode.comingSoon ? el('p','nk-pending-title',title) : readButton(title,'page',episode.page);
+      item.append(heading);
       if (episode.description) {
         const description=el('span','nk-episode-description',t(episode.description));
         description.id=episode.page+'-description';
-        link.setAttribute('aria-describedby',description.id);
+        if (!episode.comingSoon) heading.setAttribute('aria-describedby',description.id);
         item.append(description);
       }
+      if (episode.comingSoon) item.append(el('p','nk-episode-description',t(text.comingSoon)));
       contents.append(item);
     });
     body.replaceChildren(top,contents);
@@ -511,6 +507,10 @@
       head.append(heading);
     } else {
       head.append(title);
+    }
+    if (chapter.comingSoon) {
+      body.replaceChildren(head,el('p','nk-deck',t(text.comingSoon)),readButton(t(pair('특집 목차로','Back to the special issue')),'page','artists'));
+      return;
     }
     const stories={onggi:onggiChapter,'chang-eungbok':changChapter,'do-ho-suh':suhChapter};
     const next=cultureEpisodes[index+1];
@@ -683,8 +683,7 @@
     const from = params.get('from');
     const target = new URL('./', document.baseURI);
     if (state.language === 'ko') target.searchParams.set('edition', 'ko');
-    if (params.get('book') === '2') target.searchParams.set('book', '2');
-    const sections = {family:'family-recipes', shelf:'magazine-shelf', letter:'edit-letter-title'};
+    const sections = {family:'family-recipes', shelf:'magazine-shelf', letter:'kn-magazine'};
     target.hash = isCulture ? 'kn-culture' : (Object.hasOwn(sections, from) ? sections[from] : 'kn-magazine');
     const link = document.getElementById('home-return-link');
     link.href = target.href;

@@ -10,11 +10,7 @@
   const section = document.querySelector('#kn-magazine');
   const culture = document.getElementById('kn-culture');
   const home = document.getElementById('kn-jongno');
-  const books = Array.from(section.querySelectorAll('.edition-book'));
-  const next = section.querySelector('#kn-book-next');
-  const previous = section.querySelector('#kn-book-prev');
   const parameters = new URLSearchParams(location.search);
-  section.dataset.layout = 'letter';
 
   const menu = document.getElementById('section-menu');
   const opener = document.getElementById('section-menu-open');
@@ -58,12 +54,10 @@
     for (const link of home.querySelectorAll('[data-reading]')) {
       const page = link.dataset.reading;
       const target = new URL('reader.html', location.href);
-      if (link.closest('.edition-rail')) target.searchParams.set('from', 'shelf');
+      if (page === 'issue' || page === 'magazine') target.searchParams.set('from', 'shelf');
       if (link.closest('.family-recipes')) target.searchParams.set('from', 'family');
       if (page === 'letter') target.searchParams.set('from', 'letter');
       if (culture.contains(link)) target.searchParams.set('from', 'artists');
-      const index = books.indexOf(link);
-      if (index > 0) target.searchParams.set('book', String(index));
       target.hash = code + '/' + page;
       link.href = target.href;
     }
@@ -80,26 +74,20 @@
     });
   });
 
-  const shelf = section.querySelector('.books');
-  let start = null;
-  shelf.addEventListener('touchstart', event => {
-    start = event.touches.length === 1 ? { x: event.touches[0].clientX, y: event.touches[0].clientY } : null;
-  }, { passive: true });
-  shelf.addEventListener('touchcancel', () => { start = null; });
-  shelf.addEventListener('touchend', event => {
-    if (!start || !section.closest('.compact')) return;
-    const point = event.changedTouches[0];
-    const dx = point.clientX - start.x;
-    const dy = point.clientY - start.y;
-    start = null;
-    if (Math.abs(dx) > 50 && Math.abs(dx) > 1.5 * Math.abs(dy)) {
-      event.preventDefault();
-      (dx < 0 ? next : previous).click();
+  // Previous homepage editions linked to the full letter through these anchors.
+  function openLegacyLetter() {
+    if (location.hash === '#editors-letter' || location.hash === '#edit-letter-title') {
+      location.replace(section.querySelector('[data-reading="letter"]').href);
     }
-  }, { passive: false });
-
-  const initialBook = Number(parameters.get('book'));
-  if (Number.isInteger(initialBook) && initialBook > 0 && initialBook < books.length) {
-    for (let i = 0; i < initialBook; i++) next.click();
   }
+  // Old mobile shelf links selected the family recipes or shopping card by index.
+  if (location.hash === '#magazine-shelf') {
+    if (parameters.get('book') === '1') location.replace('#family-recipes');
+    if (parameters.get('book') === '2') {
+      const code = section.lang === 'ko' ? 'ko' : 'en';
+      location.replace('reader.html?from=shelf#' + code + '/shop');
+    }
+  }
+  openLegacyLetter();
+  window.addEventListener('hashchange', openLegacyLetter);
 })();
